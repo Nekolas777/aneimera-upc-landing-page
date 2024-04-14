@@ -1,5 +1,6 @@
 ---
 import Header from '../components/header.astro';
+import ContactSection from '../views/home/contact_section.astro';
 interface Props {
 	title: string;
 }
@@ -17,10 +18,12 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body class="overflow-x-hidden">
 
-		<Header/>
+		<!-- <Header/>--> 
+		<ContactSection/>
 		<slot />
 	</body>
 </html>
