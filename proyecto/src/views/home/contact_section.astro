@@ -10,15 +10,20 @@
         </div>
         <div class="contact_section_left text-center">
             <h1 class="text-4xl font-bold py-20">Contactanos</h1>
-            <div class="py-4">
-                <input class="appearance-none rounded-xl w-96 py-4 px-3 text-blanco leading-tight focus:outline-none focus:shadow-outline bg-rojo placeholder-blanco" type="text" placeholder="Nombre">
-            </div>
-            <div class="py-4">
-                <input class="appearance-none rounded-xl w-96 py-4 px-3 text-blanco leading-tight focus:outline-none focus:shadow-outline bg-rojo placeholder-blanco" type="text" placeholder="Email">
-            </div>
-            <div class="py-4">
-                <input class="appearance-none rounded-xl w-96 py-12 px-3 text-blanco leading-tight focus:outline-none focus:shadow-outline bg-rojo placeholder-blanco" type="text" placeholder="Mensaje">
-            </div>
+            <form action="https://formsubmit.co/andressotokr1@gmail.com" method="POST">
+                <div class="py-4">
+                    <input class="form-control appearance-none rounded-xl w-96 py-4 px-3 text-blanco leading-tight focus:outline-none focus:shadow-outline bg-rojo placeholder-blanco" type="text" placeholder="nombre" name="nombre" id="i_nombre"  required>
+                </div>
+                <div class="py-4">
+                    <input class="form-control appearance-none rounded-xl w-96 py-4 px-3 text-blanco leading-tight focus:outline-none focus:shadow-outline bg-rojo placeholder-blanco" type="text" placeholder="email" name="correo" id="i_correo" required>
+                </div>
+                <div class="py-4">
+                    <textarea cols="" rows="3" class="form-control appearance-none rounded-xl w-96 p-3 text-blanco leading-tight focus:outline-none focus:shadow-outline bg-rojo placeholder-blanco" placeholder="mensaje" name="mensaje" id="mensaje" required></textarea>
+                </div>
+                <div class="py-4">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
         </div>        
     </div>
 </contact_section>
