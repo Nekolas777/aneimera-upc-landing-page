@@ -31,28 +31,17 @@ const { title } = Astro.props;
 	</body>
 </html>
 
-<style>
+<style is:global>
 	html {
 		scroll-behavior: smooth;
 	}
-
 	body {
 		font-family: 'Poppins';
 	}
-
-	#content{
-		margin: 0 15%;
-	}
-
-	@media screen and (max-width: 1024px) {
-		#content{
-		margin: 0 10%;
-		}
-	}
-	@media screen and (max-width: 767px) {
-		#content{
-		margin: 0 5%;
-		}
+	.section-container{
+		width: 90%;
+		max-width: 1400px;
+		margin-inline: auto;
 	}
 </style>
 
