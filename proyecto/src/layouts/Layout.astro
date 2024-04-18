@@ -1,5 +1,7 @@
 ---
 import Header from '../components/header.astro';
+import AboutUs from '../views/home/about-us.astro';
+
 interface Props {
 	title: string;
 }
@@ -21,6 +23,12 @@ const { title } = Astro.props;
 	<body class="overflow-x-hidden">
 
 		<Header/>
+
+		<div id="content">
+			<!-- <Goal/> -->
+			<AboutUs/>
+		</div>
+		
 		<slot />
 	</body>
 </html>
