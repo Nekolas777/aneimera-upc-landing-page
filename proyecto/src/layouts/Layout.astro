@@ -1,5 +1,6 @@
 ---
 import Header from '../components/header.astro';
+import Goal from '../views/home/goal.astro';
 import ContactSection from '../views/home/contact_section.astro';
 import Hero from '../views/home/hero.astro';
 interface Props {
@@ -22,20 +23,32 @@ const { title } = Astro.props;
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body class="overflow-x-hidden">
-
-		<Header/> 
-		<ContactSection/>
+		<Header/>
     <Hero/>
+     <div id="content">
+			<Goal/>
+		</div>
+		<ContactSection/>
 		<slot />
 	</body>
 </html>
 
-<style>
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        font-family: 'Poppins';
-    }
+	html {
+		scroll-behavior: smooth;
+	}
+	body {
+		font-family: 'Poppins';
+	}
+	.section-container{
+		width: 90%;
+		max-width: 1400px;
+		margin-inline: auto;
+	}
 </style>
+
+<script>
+    var navbar = document.querySelector('header');
+    var navbarHeight = navbar!.offsetHeight;
+	var cotent = document.getElementById('content');
+    cotent!.style.marginTop = navbarHeight + 'px';
+</script>
