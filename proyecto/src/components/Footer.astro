@@ -1,108 +1,60 @@
 
 
 <footer>
-    <section class="Footer">
-      <div class="Background">
-      <div class="grid">
-        <div class="UsefulLinks">
-          <div class="Heading">Links de apoyo</div>
-          <div class="Links">
-            <a class="Home"><span class="ChevronsRight"></span>Inicio</div>
-            <a class="Home"><span class="ChevronsRight"></span>Aneimera Peru</div>
-            <a class="Home"><span class="ChevronsRight"></span>Directiva</div>
-            <a class="Home"><span class="ChevronsRight"></span>Eventos</div>
-          </div>
+    <section class="Footer w-full">
+      <div class="m-20">
+      <div class="space-x-4 flex text-md mb-6 justify-between flex-col md:flex-row">
+        <div class="UsefulLinks m-4">
+          <div class="font-bold">Links de apoyo</div>
+          <ul class="Links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Aneimera Peru</a></li>
+            <li><a href="#">Directiva</a></li>
+            <li><a href="#">Eventos</a></li>
+          </ul>
         </div>
-        <div class="Contact">
-          <div class="Heading">Contacto</div>
+        <div class="Contact m-4">
+          <div class="font-bold">Contacto</div>
           <div class="Info">
-            <div class="PhoneNumber">+51 945 146 828</div>
-            <div class="Email">aneimera.upc@gmail.com</div>
+            <a class="PhoneNumber" href="#">+51 945 146 828</a>
+            <a class="Email" href="#">aneimera.upc@gmail.com</a>
           </div>
         </div>
-        <div class="Legal">
-          <div class="Heading">Legal</div>
-          <div class="PopularServices">
-            <div class="Home">Politica de privacidad</div>
-            <div class="Home">Terminos y condiciones</div>
+        <div class="Legal m-4">
+          <div class="font-bold">Legal</div>
+          <div class="LegalServices">
+            <a href="#">Politica de privacidad</a>
+            <a href="#">Terminos y condiciones</a>
           </div>
         </div>
       </div>
-      <div class="Copyright">(c) Copyright ANEIMERA UPC. All rights reserved.</div>
+      <div class="Copyright font-normal p-3">(c) Copyright ANEIMERA UPC. All rights reserved.</div>
     </div>
     </section>
 </footer>
   
   <style>
-    .Footer {
-      width: 100%;
-      background: #434A51;
-      position: relative;
-    }
+    
   
-    .UsefulLinks{
-      display: grid;
+    .Footer {
+      background: #DFDFDF;
     }
 
-    .Background {
-      width: 100%;
-      height: 515px;
-      position: absolute;
-      background: #DFDFDF;
-      border: 1px solid;
-    }
-  
-    .Content {
-      width: 90%;
-      max-width: 1820px;
-      margin: auto;
-      padding-top: 50px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .Heading {
-      color: #231F20;
-      font-size: 24px;
-      font-family: Poppins;
-      font-weight: 700;
-      line-height: 33px;
-      word-wrap: break-word;
-    }
-  
     .Links,
     .Info,
-    .PopularServices {
+    .LegalServices {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 5px;
+      a{
+      text-decoration: none;
     }
-  
-    .Home {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #251F21;
-      font-size: 18px;
-      font-family: Poppins;
-      font-weight: 400;
-      word-wrap: break-word;
-    }
-  
-    .ChevronsRight {
-      width: 20px;
-      height: 20px;
-      position: relative;
     }
   
     .Copyright {
-      color: #251F21;
       font-size: 14px;
-      font-family: Poppins;
-      font-weight: 400;
       word-wrap: break-word;
-      padding: 20px;
     }
+   
   </style>
   
