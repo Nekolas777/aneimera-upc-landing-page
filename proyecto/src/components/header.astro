@@ -1,23 +1,39 @@
-<header class="bg-blanco fixed top-0 w-full z-10 opacity-90">
-    <section>
-        <div class="">
-            <div class="row">
-                <div class="grid grid-cols-2">
-                    <div class="logo flex justify-normal">
-                        <a href="#">
-                            <img src="Imagenes/Logo.png" alt="Logo" class="h-20 w-72">
-                        </a>
-                    </div>
-                    <nav class="nav-menu grid content-center">
-                        <ul class="text-black flex justify-center ">
-                            <li><a href="" class="hover:text-slate-400 md:me-6 decoration-transparent">Inicio</a></li>
-                            <li><a href="" class="hover:text-slate-400 me-4 hover:underline md:me-6 decoration-transparent">Aneimera peru</a></li>
-                            <li><a href="" class="hover:text-slate-400 me-4 hover:underline md:me-6 decoration-transparent">Directiva</a></li>
-                            <li><a href="" class="hover:text-slate-400 me-4 hover:underline md:me-6 decoration-transparent">Eventos</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+<header class="bg-blanco dark:bg-gris fixed w-full top-0 start-0 border-b border-gris dark:border-gris">
+    <div class="flex max-w-screen-xl flex-wrap items-center justify-evenly mx-auto p-4">
+        <div class="logo flex">
+            <a href="#" class="flex items-center">
+                <img src="Imagenes/Logo.png" alt="Logo" class="h-8">
+                <h1 class="ml-2 text-3xl font-bold">ANEIMERA</h1>
+            </a>
         </div>
-    </section>
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ">
+            <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-Titulos rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rtl:space-x-reverse md:flex-row">
+                <li>
+                    <a href="" class="text-center block py-2 px-3 text-Titulos hover:bg-gris rounded md:bg-transparent md:p-0">Inicio</a>
+                </li>
+                <li>
+                    <a href="" class="text-center block py-2 px-3 text-Titulos hover:bg-gris rounded md:p-0 ">Aneimera Peru</a>
+                </li>
+                <li>
+                    <a href="" class="text-center block py-2 px-3 text-Titulos hover:bg-gris rounded md:p-0 ">Directiva</a>
+                </li>
+                <li>
+                    <a href="" class="text-center block py-2 px-3 text-Titulos hover:bg-gris rounded md:p-0 ">Eventos</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </header>
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+        document.getElementById('navbar-sticky').classList.toggle('hidden');
+    });
+</script>
