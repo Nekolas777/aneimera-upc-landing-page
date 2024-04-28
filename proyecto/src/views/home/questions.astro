@@ -1,75 +1,86 @@
-<script
-  type="module"
-  src="https://unpkg.com/@astrouxds/astro-web-components/dist/astro-web-components/astro-web-components.esm.js"
-></script>
-
 <div class="flex justify-center">
+  <div class="accordion w-1/2">
+      <h1 class="font-bold text-xl m-4">Preguntas Frecuentes</h1>
 
-   
-<rux-accordion class="w-1/2">
+      <div class="accordion-item">
+          <div class="accordion-header">
+              <a>¿Donde puedo inscribirme a los talleres proporcionados?
+                </a>
+          </div>
+          <div class="accordion-content">
+              <p>En la sección Eventos, en la parte inferior de la misma se encuentran nuestros talleres. De la misma forma puede acceder a la sección haciendo click <a href="#">aquí</a>.</p>
+          </div>
+      </div>
 
-    <h1 class="font-bold text-xl m-4">
-        <p>Preguntas Frecuentes</p>
-    </h1>
+      <div class="accordion-item">
+          <div class="accordion-header">
+              <a>¿Cómo podria volverme embajador?</a>
+          </div>
+          <div class="accordion-content">
+              <p>Aquí iría el contenido de la pregunta sobre cómo volverse embajador.</p>
+          </div>
+      </div>
 
+      <div class="accordion-item">
+          <div class="accordion-header">
+              <a>¿Con quién me podria contactar para resolver mis dudas?</a>
+          </div>
+          <div class="accordion-content">
+              <p>Aquí iría el contenido de la pregunta sobre con quién contactar para resolver dudas.</p>
+          </div>
+      </div>
 
-  <rux-accordion-item class="light-theme">
-    <div slot="label" class="AccordionHeader">
-      ¿Donde puedo inscribirme a los talleres proporcionados?
-    </div>
-    <p class="AccordionContent">
-      En la sección Eventos, en la parte inferior de la misma se encuentran
-      nuestros talleres. De la misma forma puede acceder a la sección haciendo
-      click <a href="#">aquí</a>.
-    </p>
-  </rux-accordion-item>
-  <rux-accordion-item>
-    <div slot="label" class="AccordionHeader">
-      ¿Como podria volverme embajador?
-    </div>
-    <p class="AccordionContent">
-      Aquí iría el contenido de la pregunta sobre cómo volverse embajador.
-    </p>
-  </rux-accordion-item>
-  <rux-accordion-item>
-    <div slot="label" class="AccordionHeader">
-      ¿Con quien me podria contactar para resolver mis dudas?
-    </div>
-    <p class="AccordionContent">
-      Aquí iría el contenido de la pregunta sobre con quién contactar para
-      resolver dudas.
-    </p>
-  </rux-accordion-item>
-  <rux-accordion-item>
-    <div slot="label" class="AccordionHeader">
-      ¿Cada cuanto tiempo se realizan los eventos?
-    </div>
-    <p class="AccordionContent">
-      Aquí iría el contenido de la pregunta sobre la frecuencia de los eventos.
-    </p>
-  </rux-accordion-item>
-</rux-accordion>
+      <div class="accordion-item">
+          <div class="accordion-header">
+              <a>¿Cada cuánto tiempo se realizan los eventos?</a>
+          </div>
+          <div class="accordion-content">
+              <p>Aquí iría el contenido de la pregunta sobre la frecuencia de los eventos.</p>
+          </div>
+      </div>
+  </div>
 </div>
 
 <style>
-   
-  .AccordionHeader {
-    font-family: Poppins;
-    background: #c42626;
-    color: #fefefe;
-    padding: 15px 30px;
-    border-radius: 5px;
-  }
-  .AccordionContent {
+.accordion {
+    width: 50%;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+}
+
+.accordion-header {
+  font-family: Poppins;
+  background: #c42626;
+  color: #fefefe;
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+.accordion-content {
+    display: none;
+    padding: 0 30px;
     font-family: Poppins;
     color: black;
-    padding: 0 30px;
-    a{
-        text-decoration:underline
-    }
-  }
+}
 
-  .AccordionItem.open .AccordionContent {
+.accordion-item.open .accordion-content {
     display: block;
-  }
+}
+
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', function () {
+            const accordionItem = this.parentNode;
+            accordionItem.classList.toggle('open');
+        });
+    });
+});
+
+</script>
