@@ -1,18 +1,20 @@
 <html lang="en">
   <section class="bg-rojo">
     <div
-      class="Hero w-11/12 max-w-screen-xl mx-auto grid grid-cols-1 grid-rows-2 gap-10
-      md:grid-cols-2 md:grid-rows-1"
-    >
+      class="Hero section-container h-screen gap-10"
+     id="hero">
       <div class="Info">
         <div class="UPC">
           <h1>ANEIMERA UPC</h1>
         </div>
+        <div class="logoHero2 hidden">
+          <a href="#">
+            <img src="Imagenes/logoHero.png" alt="Logo" />
+          </a>
+        </div>
         <div class="texto">
           <p>
-            Busca el desarrollo de la investigación en las facultades de las
-            universidades asociadas, a traves de transmitir conocimientos, ideas
-            , sana competencia y sobre todo experiencias.
+            Busca fomentar el desarrollo de la investigación en las facultades de las universidades asociadas, mediante la transmisión de conocimientos, ideas, promoviendo una sana competencia y, sobre todo, compartiendo experiencias.
           </p>
         </div>
 
@@ -23,9 +25,9 @@
         </div>
       </div>
 
-      <div class="logoHero">
+      <div class="logoHero flex justify-end">
         <a href="#">
-          <img src="Imagenes/logoHero.jpg" alt="Logo" class="h-75 w-75" />
+          <img src="Imagenes/logoHero.png" alt="Logo" />
         </a>
       </div>
     </div>
@@ -35,24 +37,27 @@
     .Hero {
       background-color: #c42626;
       display: flex; /*un div al lado del otro */
+      align-items: center;
+      justify-content: space-between;
     }
 
     .Info {
       width: 60%;
     }
     .UPC h1 {
-      font-size: 50px;
-
-      padding: 10px 10px 10px 30px;
+      font-size: 70px;
+      letter-spacing: 2px;
+      padding: 10px 10px 10px 20px;
     }
     .texto p {
       color: #ffffff;
-      padding: 10px 50px 30px 30px;
-      font-size: 20px;
+      padding: 10px 40px 30px 20px;
+      font-size: 30px;
+      letter-spacing: 2px;
     }
 
     .unete {
-      padding: 0px 50px 30px 30px;
+      padding: 10px 40px 30px 20px;
       color: #ffffff;
     }
     button {
@@ -62,10 +67,12 @@
     }
     button p {
       color: #231f20;
+      font-size: 30px;
+      letter-spacing: 2px;
     }
 
     .logoHero {
-      padding: 20px 0px 0px 0px; /*arriba,,,Izquierda*/
+      padding: 0px 0px 0px 0px; /*arriba,,,Izquierda*/
     }
 
     button:hover {
@@ -75,6 +82,33 @@
     button p:hover {
       color:black;
     } 
+
+    @media screen and (max-width: 768px) {
+      .logoHero{
+        display: none;
+      }
+      .Info {
+        width: 100%;
+        text-align: center;
+      }
+      .logoHero2{
+        display: block;
+        width: 300px;
+        padding-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+	  }
   </style>
+
+  <script>
+    var navbar = document.querySelector('header');
+    var navbarHeight = navbar!.offsetHeight;
+    var hero = document.getElementById('hero');
+    var computedStyles = window.getComputedStyle(hero);
+    var currentHeight = parseFloat(computedStyles.height);
+    var newHeight = currentHeight - navbarHeight;
+    hero.style.height = newHeight + "px";
+  </script>
 
 </html>
