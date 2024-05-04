@@ -1,12 +1,12 @@
 ---
-import Header from '../components/header.astro';
-import Footer from '../components/Footer.astro';
-import AboutUs from '../views/home/about-us.astro';
-import Goal from '../views/home/goal.astro';
-import ContactSection from '../views/home/contact_section.astro';
-import Hero from '../views/home/hero.astro';
+import Header from "../components/header.astro";
+import Footer from "../components/Footer.astro";
+import AboutUs from "../views/home/about-us.astro";
+import Goal from "../views/home/goal.astro";
+import ContactSection from "../views/home/contact_section.astro";
+import Hero from "../views/home/hero.astro";
 interface Props {
-    title: string;
+	title: string;
 }
 
 const { title } = Astro.props;
@@ -21,18 +21,24 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link
+			href="https://fonts.googleapis.com/css?family=Poppins"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
 	</head>
 	<body class="overflow-x-hidden">
-     	<div id="content">
-			  <Header/>
-    		<Hero/>
-        <AboutUs/>
-			  <Goal/>
-			  <ContactSection/>
-        <Footer></Footer>
-		</div>		
+		<div id="content">
+			<Header />
+			<Hero />
+			<AboutUs />
+			<Goal />
+			<ContactSection />
+			<Footer />
+		</div>
 	</body>
 </html>
 
@@ -41,18 +47,34 @@ const { title } = Astro.props;
 		scroll-behavior: smooth;
 	}
 	body {
-		font-family: 'Poppins';
+		font-family: "Poppins";
 	}
-	.section-container{
+	.section-container {
 		width: 90%;
 		max-width: 1400px;
 		margin-inline: auto;
 	}
+
+	h2 {
+		@apply text-lg sm:text-xl;
+	}
+
+	h3 {
+		@apply text-sm sm:text-base;
+	}
+
+	h4 {
+		@apply text-xs sm:text-sm;
+	}
+
+	p {
+		@apply text-sm sm:text-base;
+	}
 </style>
 
 <script>
-    var navbar = document.querySelector('header');
-    var navbarHeight = navbar!.offsetHeight;
-	var cotent = document.getElementById('content');
-    cotent!.style.marginTop = navbarHeight + 'px';
+	var navbar = document.querySelector("header");
+	var navbarHeight = navbar!.offsetHeight;
+	var cotent = document.getElementById("content");
+	cotent!.style.marginTop = navbarHeight + "px";
 </script>
