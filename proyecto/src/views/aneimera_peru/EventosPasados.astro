@@ -1,0 +1,158 @@
+<html lang="en">
+  <!--- 
+  <section>
+    <div class="EventosPasados">
+        
+
+        <div class="parte1">
+            <div class="imagen1">
+                <img src="Imagenes/EventoPas1.png" alt="Logo" />
+            </div>
+            <div class="texto1">
+                <h1>Coneimera Huancayo</h1>
+                <p>
+                    Congreso y exposición internacional de ingeniería mecánica, 
+                    mecatrónica, eléctrica, electrónica y ramas afines del 30 de 
+                    septiembre 2012 al 6 de octubre 2012
+                </p>
+            </div>
+        </div>
+
+        <div class="parte2">
+            <div class="imagen2">
+                <img src="Imagenes/EventoPas2.png" alt="Logo" />
+            </div>
+            <div class="texto2">
+                <h1>Coneimera UNP</h1>
+                <p>
+                    Congreso y exposición internacional de ingeniería mecánica,
+                     mecatrónica, eléctrica, electrónica y
+                      ramas afines. Coneimera 2016 Piura
+                </p>
+            </div>
+        </div>
+
+        <div class="parte3">
+            <div class="imagen3">
+                <img src="Imagenes/EventoPas3.png" alt="Logo" />
+            </div>
+            <div class="texto3">
+                <h1>Coneimera UNT</h1>
+                <p>
+                    Concurso de proyectos en Trujillo, realizado en el año 2017
+                </p>
+            </div>
+        </div>
+
+      </div>
+    
+  </section>
+-->
+
+  <section>
+  <div class="carousel">
+    <ul >
+     <li>
+      <img src="Imagenes/EventoPas1.png" alt="Logo">
+      <div class="texto">
+        <h1><b>Coneimera Huancayo</b></h1>
+                <p>
+                    Congreso y exposición internacional de ingeniería mecánica, 
+                    mecatrónica, eléctrica, electrónica y ramas afines del 30 de 
+                    septiembre 2012 al 6 de octubre 2012
+                </p>
+      </div>
+    </li>
+      <li>
+        <img src="Imagenes/EventoPas2.png" alt="Imagen 2">
+          <div class="texto">
+            <h1><b>Coneimera UNP</b></h1>
+          <p>
+              Congreso y exposición internacional de ingeniería mecánica,
+               mecatrónica, eléctrica, electrónica y
+                ramas afines. Coneimera 2016 Piura
+          </p>
+          </div>
+      </li>
+      <li>
+        <img src="Imagenes/EventoPas3.png" alt="Imagen 3">
+        <div class="texto">
+          <h1><b>Coneimera UNT</b></h1>
+                <p>
+                    Concurso de proyectos en Trujillo, realizado en el año 2017
+                </p>
+        </div>
+      </li>
+      <li>
+        <img src="Imagenes/EventoPas1.png" alt="Logo">
+        <div class="texto">
+          <h1><b>Coneimera Huancayo</b></h1>
+                  <p>
+                      Congreso y exposición internacional de ingeniería mecánica, 
+                      mecatrónica, eléctrica, electrónica y ramas afines del 30 de 
+                      septiembre 2012 al 6 de octubre 2012
+                  </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+  <style>    
+    .carousel{
+      width: 1280px;
+      height: auto;
+      margin: 50px auto 0;
+      overflow: hidden;
+    }
+
+    .carousel ul{
+      display: flex;
+      padding: 0;
+      width: 400%;
+      animation: slide 20s infinite alternate ease-in-out;
+    }
+    .carousel li{
+     width: 100%;
+     list-style: none;
+     position: relative;
+     
+    }
+    /*
+    .texto{
+     position: absolute;
+     text-align: center;
+     padding: 0 250px;
+     top: 250px;
+    }*/
+    .texto{
+      text-align: center;
+      padding: 0 350px;
+    }
+    .texto h1{
+      font-size: 45px;
+      
+    }
+    .carousel img{
+     width: 60%;
+     padding: 0 200px;
+     margin:auto;		
+    }
+
+    @keyframes slide{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+    }
+  </style>
+
+</html>
