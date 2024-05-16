@@ -1,10 +1,11 @@
-<div class="flex justify-center">
-  <div class="accordion m-5 lg:w-1/2 sm:w-full">
-      <h1 class="font-bold text-xl m-4">Preguntas Frecuentes</h1>
+<div class="flex justify-center section-container">
+  <div class="accordion my-10 mx-auto">
+      <h2 class="mb-8">Preguntas Frecuentes</h2>
 
       <div class="accordion-item">
           <div class="accordion-header">
               <a>¿Donde puedo inscribirme a los talleres proporcionados?</a>
+              <img class="plus" src="Imagenes/plus-solid.svg" alt="">
           </div>
           <div class="accordion-content">
               <p>En la sección Eventos, en la parte inferior de la misma se encuentran nuestros talleres. 
@@ -15,6 +16,7 @@
       <div class="accordion-item">
           <div class="accordion-header">
               <a>¿Cómo podria volverme embajador?</a>
+              <img class="plus" src="Imagenes/plus-solid.svg" alt="">
           </div>
           <div class="accordion-content">
               <p>Aquí iría el contenido de la pregunta sobre cómo volverse embajador.</p>
@@ -24,6 +26,7 @@
       <div class="accordion-item">
           <div class="accordion-header">
               <a>¿Con quién me podria contactar para resolver mis dudas?</a>
+              <img class="plus" src="Imagenes/plus-solid.svg" alt="">
           </div>
           <div class="accordion-content">
               <p>Aquí iría el contenido de la pregunta sobre con quién contactar para resolver dudas.</p>
@@ -33,6 +36,7 @@
       <div class="accordion-item">
           <div class="accordion-header">
               <a>¿Cada cuánto tiempo se realizan los eventos?</a>
+              <img class="plus" src="Imagenes/plus-solid.svg" alt="">
           </div>
           <div class="accordion-content">
               <p>Aquí iría el contenido de la pregunta sobre la frecuencia de los eventos.</p>
@@ -43,37 +47,59 @@
 
 <style>
 
+.accordion{
+    width: 60%;
+}
 .accordion-item {
     margin-bottom: 1rem;
 }
-
 .accordion-header {
   background: #c42626;
   color: #fefefe;
   padding: 15px 30px;
-  border-radius: 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap:20px;
 }
-
+.accordion-header a{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.accordion-header img{
+  height: 30px;
+  cursor: pointer;
+}
 .accordion-content {
     display: none;
-    margin: 3%;
-    padding: 0 30px;
+    margin-top: 10px;
+}
+.open {
+    display: block;
 }
 
-.accordion-item.open .accordion-content {
-    display: block;
+@media screen and (max-width: 1025px) {
+    .accordion{
+        width: 100%;
+    }
 }
 
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    const imagenes = document.querySelectorAll('.plus');
 
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', function () {
-            const accordionItem = this.parentNode;
-            accordionItem.classList.toggle('open');
+    imagenes.forEach((imagen) => {
+        imagen.addEventListener('click', () => {
+            const accordionItem = imagen.closest('.accordion-item');
+            const accordionContent = accordionItem.querySelector('.accordion-content');
+            accordionContent.classList.toggle('open');
+            if (accordionContent.classList.contains('open')) {
+                (imagen as HTMLImageElement).src = 'Imagenes/minus-solid.svg';
+            } else {
+                (imagen as HTMLImageElement).src = 'Imagenes/plus-solid.svg';
+            }
         });
     });
 });
