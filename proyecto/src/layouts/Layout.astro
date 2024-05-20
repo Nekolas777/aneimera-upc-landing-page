@@ -8,6 +8,7 @@ import ContactSection from '../views/home/contact_section.astro';
 import Hero from '../views/home/hero.astro';
 import Questions from '../views/home/questions.astro';
 import AneimeraPeru from '../views/aneimera_peru/aneimera-peru.astro';
+import Gallery from '../components/Gallery.astro';
         
 interface Props {
 	title: string;
@@ -36,6 +37,7 @@ const { title } = Astro.props;
 	</head>
 	<body class="overflow-x-hidden">
      	<div id="content">
+			<Gallery></Gallery>
 			  <Header/>
     		<Hero/>
         <AboutUs/>
