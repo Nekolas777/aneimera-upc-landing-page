@@ -1,6 +1,14 @@
+interface CardWorkshop {
+    workshop_img: string;
+    title: string;
+    description: string;
+    profile_img: string;
+    name: string;
+    status: string;
+}
 
 // Aqui almacenaremos la data de los cards de manera dinámica
-export const cards = [
+export const cards: CardWorkshop[] = [
     {
         "workshop_img": '../../Imagenes/python-workshop.png',
         "title": "Programación con Python",
