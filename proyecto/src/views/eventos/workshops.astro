@@ -1,6 +1,6 @@
 ---
-import Card from "../../components/Card.astro";
-import { cards } from "../../data/cards.js";
+import WorkshopCard from "../../components/WorkshopCard.astro";
+import { cards } from "../../data/workshops-cards.ts";
 ---
 
 <section class="py-20 bg-rojo">
@@ -9,7 +9,7 @@ import { cards } from "../../data/cards.js";
         <div
             class="mt-10 grid grid-cols-1 md:grid-cols-2 grid-rows-auto gap-12"
         >
-            {cards.map((card) => <Card {...card} />)}
+            {cards.map((card) => <WorkshopCard {...card} />)}
         </div>
     </div>
 </section>
