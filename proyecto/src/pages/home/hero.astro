@@ -1,0 +1,127 @@
+<html lang="en">
+  <section class="bg-rojo">
+    <div
+      class="Hero section-container h-screen gap-10"
+     id="hero">
+      <div class="Info">
+        <div class="UPC">
+          <h1>ANEIMERA UPC</h1>
+        </div>
+        <div class="logoHero2 hidden">
+          <a href="#">
+            <img src="Imagenes/logoHero.png" alt="Logo" />
+          </a>
+        </div>
+        <div class="texto">
+          <p>
+            Busca fomentar el desarrollo de la investigación en las facultades de las universidades asociadas, mediante la transmisión de conocimientos, ideas, promoviendo una sana competencia y, sobre todo, compartiendo experiencias.
+          </p>
+        </div>
+
+        <div class="unete">
+          <button>
+            <p>Únete a nuestros talleres</p>
+          </button>
+        </div>
+      </div>
+
+      <div class="logoHero flex justify-end">
+        <a href="#">
+          <img src="Imagenes/logoHero.png" alt="Logo" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .Hero {
+      background-color: #c42626;
+      display: flex; /*un div al lado del otro */
+      align-items: center;
+      justify-content: space-between;
+    }
+    .Info {
+      width: 60%;
+    }
+    .UPC h1 {
+      font-size: 60px;
+      font-weight: bold;
+      padding: 10px 10px 10px 20px;
+    }
+    .texto p {
+      color: #ffffff;
+      padding: 10px 40px 30px 20px;
+      font-size: 20px;
+    }
+    .unete {
+      padding: 10px 40px 30px 20px;
+      color: #ffffff;
+    }
+    button {
+      padding: 20px 40px 20px 40px;
+      border-radius: 30px;
+      background-color: #ffffff;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+    }
+    button p {
+      color: #231f20;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .logoHero {
+      padding: 0px 0px 0px 0px; /*arriba,,,Izquierda*/
+    }
+    button:hover {
+      background-color:darkgrey; 
+    }
+    button p:hover {
+      color:black;
+    } 
+
+    @media screen and (max-width: 768px) {
+      .logoHero{
+        display: none;
+      }
+      .Info {
+        width: 100%;
+        text-align: center;
+      }
+      .logoHero2{
+        display: block;
+        width: 250px;
+        padding-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .UPC h1 {
+        font-size: 40px;
+        font-weight: bold;
+        padding: 10px 10px 10px 20px;
+      }
+      .texto p {
+        padding: 0;
+        padding-bottom: 20px;
+        font-size: 15px;
+      }
+      button p {
+        font-size: 15px;
+      }
+	  }
+    @media screen and (max-width: 400px) {
+      button {
+        padding: 10px 10px 10px 10px;
+      }
+	  }
+  </style>
+
+  <script>
+    var navbar = document.querySelector('header');
+    var navbarHeight = navbar!.offsetHeight;
+    var hero = document.getElementById('hero');
+    var computedStyles = window.getComputedStyle(hero);
+    var currentHeight = parseFloat(computedStyles.height);
+    var newHeight = currentHeight - navbarHeight;
+    hero.style.height = newHeight + "px";
+  </script>
+
+</html>
