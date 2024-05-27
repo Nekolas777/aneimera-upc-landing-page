@@ -1,0 +1,24 @@
+---
+import NotFound from "../../components/NotFound.astro";
+import VisitCard from "../../components/VisitCard.astro";
+import { cards } from "../../data/visits-cards.ts";
+---
+
+<section class="py-20 bg-blanco">
+    <div class="section-container">
+        <h1 class="text-2xl text-black font-medium">
+            Visitas técnicas programadas:
+        </h1>
+        {
+            cards.length > 0 ? (
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 grid-rows-auto gap-12">
+                    {cards.map((card) => (
+                        <VisitCard {...card} />
+                    ))}
+                </div>
+            ) : (
+                <NotFound />
+            )
+        }
+    </div>
+</section>
