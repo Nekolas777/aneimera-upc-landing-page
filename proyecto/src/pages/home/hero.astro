@@ -1,8 +1,6 @@
 <html lang="en">
   <section class="bg-rojo">
-    <div
-      class="Hero section-container h-screen gap-10"
-     id="hero">
+    <div class="Hero section-container h-screen gap-10" id="hero">
       <div class="Info">
         <div class="UPC">
           <h1>ANEIMERA UPC</h1>
@@ -13,8 +11,11 @@
           </a>
         </div>
         <div class="texto">
-          <p>
-            Busca fomentar el desarrollo de la investigación en las facultades de las universidades asociadas, mediante la transmisión de conocimientos, ideas, promoviendo una sana competencia y, sobre todo, compartiendo experiencias.
+          <p class="tracking-wide leading-normal">
+            Busca fomentar el desarrollo de la investigación en las facultades
+            de las universidades asociadas, mediante la transmisión de
+            conocimientos, ideas, promoviendo una sana competencia y, sobre
+            todo, compartiendo experiencias.
           </p>
         </div>
 
@@ -72,21 +73,21 @@
       padding: 0px 0px 0px 0px; /*arriba,,,Izquierda*/
     }
     button:hover {
-      background-color:darkgrey; 
+      background-color: darkgrey;
     }
     button p:hover {
-      color:black;
-    } 
+      color: black;
+    }
 
     @media screen and (max-width: 768px) {
-      .logoHero{
+      .logoHero {
         display: none;
       }
       .Info {
         width: 100%;
         text-align: center;
       }
-      .logoHero2{
+      .logoHero2 {
         display: block;
         width: 250px;
         padding-bottom: 20px;
@@ -106,22 +107,23 @@
       button p {
         font-size: 15px;
       }
-	  }
+    }
     @media screen and (max-width: 400px) {
       button {
         padding: 10px 10px 10px 10px;
       }
-	  }
+    }
   </style>
 
   <script>
-    var navbar = document.querySelector('header');
+    var navbar = document.querySelector("header");
     var navbarHeight = navbar!.offsetHeight;
-    var hero = document.getElementById('hero');
+    var hero = document.getElementById("hero");
     var computedStyles = window.getComputedStyle(hero);
     var currentHeight = parseFloat(computedStyles.height);
     var newHeight = currentHeight - navbarHeight;
     hero.style.height = newHeight + "px";
   </script>
+
 
 </html>
