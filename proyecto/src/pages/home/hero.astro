@@ -1,3 +1,7 @@
+---
+import Boton from "../../components/boton.astro";
+---
+
 <html lang="en">
   <section class="header">
     <div class="xl:container mx-auto w-full md:w-2/3 text-center md:text-left">
@@ -6,7 +10,7 @@
         <p class="py-5 md:text-2xl font-light text-white ">Fomentamos el desarrollo de la investigación mediante la transmisión de conocimientos, ideas y experiencias</p>
       </div>
       <div class="py-5">
-        <a href="/eventos_page" class="py-3 px-7 font-semibold text-white bg-rojo rounded-full cursor-pointer">Únete a nuestros talleres</a>
+        <Boton buttonSrc="/eventos_page" buttonText="Unete a nuestros talleres" buttonColorBack="bg-rojo"  buttonColorText="text-white"/>
       </div>
     </div>   
   </section>

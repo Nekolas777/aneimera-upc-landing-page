@@ -1,3 +1,7 @@
+---
+const { buttonText, buttonSrc, buttonColorBack, buttonColorText } = Astro.props
+---
+
 <button-component>
-    <a href="/eventos_page" class="py-3 px-7 font-semibold text-white bg-rojo rounded-full cursor-pointer">{{ }}</a>
+    <a href={buttonSrc} class={`py-3 px-7 font-semibold rounded-full cursor-pointer ${buttonColorBack} ${buttonColorText}`}>{buttonText}</a>
 </button-component>
