@@ -1,20 +1,18 @@
 <div id="blur-overlay"></div>
 
-<header id="main-header" class="bg-transparent fixed w-full top-0 start-0 border-b border-gris dark:border-gris z-10">
-    <div class="flex max-w-screen-xl flex-wrap items-center justify-evenly mx-auto p-4">
+<header id="main-header" class="bg-transparent fixed w-full top-0 start-0 z-10">
+    <div class="flex max-w-screen-xl flex-wrap items-center justify-between mx-auto p-4">
         <div class="logo flex">
             <a href="/" class="flex items-center">
                 <img src="Imagenes/Logo.png" alt="Logo" class="h-8">
                 <h1 class="ml-2 text-3xl font-bold">ANEIMERA</h1>
             </a>
         </div>
-        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ">
-            <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-Titulos rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                </svg>
-            </button>
-        </div>
+        <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-Titulos rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
         <div class="hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
             <ul class="flex flex-col p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rtl:space-x-reverse md:flex-row">
                 <li>
@@ -35,24 +33,30 @@
 </header>
 
 
+
 <style>
-    #blur-overlay {
+#blur-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.651); /* Color de fondo con 60% de opacidad */
-    backdrop-filter: blur(20px); /* Aplica un filtro de desenfoque */
-    z-index: 5; /* Asegúrate de que esté por debajo del header */
-    pointer-events: none; /* Evita que el overlay interfiera con los elementos debajo */
+    background-color: rgba(255, 255, 255, 0.651);
+    backdrop-filter: blur(20px);
+    z-index: 5;
+    pointer-events: none;
 }
-
 
 </style>
 
 <script>
- // Función para actualizar el efecto de borrosidad del fondo
+document.getElementById('menu-toggle').addEventListener('click', () => {
+    var navbarSticky = document.getElementById('navbar-sticky');
+    navbarSticky.classList.toggle('hidden');
+    navbarSticky.classList.toggle('active');
+    updateHeaderBlur();
+});
+
 function updateHeaderBlur() {
     var header = document.getElementById('main-header');
     var blurOverlay = document.getElementById('blur-overlay');
@@ -62,21 +66,18 @@ function updateHeaderBlur() {
     blurOverlay.style.top = headerRect.top + 'px';
     blurOverlay.style.height = headerRect.height + 'px';
 
-    // Calcula el brillo del fondo
     var rgb = window.getComputedStyle(blurOverlay, null).getPropertyValue('background-color').match(/\d+/g);
     var brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
 
-    // Cambia el color del texto según el brillo del fondo
     if (brightness > 125) {
-        header.style.color = '#000000'; // Texto negro para fondos claros
+        header.style.color = '#000000';
     } else {
-        header.style.color = '#ffffff'; // Texto blanco para fondos oscuros
+        header.style.color = '#ffffff';
     }
 }
 
-// Llamamos a la función al cargar la página y cuando se redimensiona la ventana
 window.onload = updateHeaderBlur;
-window.onresize = updateHeaderBlur;
+
 
 
 </script>
