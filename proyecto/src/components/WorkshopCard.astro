@@ -1,7 +1,6 @@
 ---
 import ExternalIcon from "../assets/LinkExternal.astro";
 ---
-
 <article class="w-full flex flex-col bg-slate-200">
     <div>
         <img
@@ -11,7 +10,7 @@ import ExternalIcon from "../assets/LinkExternal.astro";
     </div>
     <div class="flex flex-col p-5">
         <div class="flex flex-col gap-3">
-            <h2 class="font-medium">{ Astro.props.title }</h3>
+            <h2 class="font-medium">{ Astro.props.title }</h2>
             <p class="text-sm py-1 tracking-wide leading-relaxed">
                 { Astro.props.description }
             </p>
@@ -22,7 +21,7 @@ import ExternalIcon from "../assets/LinkExternal.astro";
                         src={ Astro.props.profile_img } />
                     <div class="flex flex-col justify-center gap-1">
                         <h3 class="font-normal">{ Astro.props.name }</h3>
-                        <span class="text-[12px] tracking-wide text-slate-500"
+                        <span class="text-[13px] tracking-wide text-slate-500"
                             >{ Astro.props.status }</span
                         >
                     </div>
