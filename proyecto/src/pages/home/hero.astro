@@ -1,107 +1,54 @@
+---
+import Boton from "../../components/boton.astro";
+---
+
 <html lang="en">
-  <section class="bg-rojo">
-    <div
-      class="Hero section-container h-screen gap-10"
-     id="hero">
-      <div class="Info">
-        <div class="UPC">
-          <h1>ANEIMERA UPC</h1>
-        </div>
-        <div class="logoHero2 hidden">
-          <a href="#">
-            <img src="Imagenes/logoHero.png" alt="Logo" />
-          </a>
-        </div>
-        <div class="texto">
-          <p>
-            Busca fomentar el desarrollo de la investigación en las facultades de las universidades asociadas, mediante la transmisión de conocimientos, ideas, promoviendo una sana competencia y, sobre todo, compartiendo experiencias.
-          </p>
-        </div>
-
-        <div class="unete">
-          <button>
-            <p>Únete a nuestros talleres</p>
-          </button>
-        </div>
+  <section class="header">
+    <div class="xl:container mx-auto w-full md:w-2/3 text-center md:text-left">
+      <div class="leading-relaxed mb-5">
+        <h1 class="py-5 text-3xl text-white md:text-7xl font-semibold">ANEIMERA UPC</h1>
+        <p class="py-5 md:text-2xl font-light text-white ">Fomentamos el desarrollo de la investigación mediante la transmisión de conocimientos, ideas y experiencias</p>
       </div>
-
-      <div class="logoHero flex justify-end">
-        <a href="#">
-          <img src="Imagenes/logoHero.png" alt="Logo" />
-        </a>
+      <div class="py-5">
+        <Boton buttonSrc="/eventos_page" buttonText="Unete a nuestros talleres" buttonColorBack="bg-rojo"  buttonColorText="text-white"/>
       </div>
-    </div>
+    </div>   
   </section>
 
   <style>
-    .Hero {
-      background-color: #c42626;
-      display: flex; /*un div al lado del otro */
-      align-items: center;
-      justify-content: space-between;
-    }
-    .Info {
-      width: 60%;
-    }
-    .UPC h1 {
-      font-size: 60px;
-      font-weight: bold;
-      padding: 10px 10px 10px 20px;
-    }
-    .texto p {
-      color: #ffffff;
-      padding: 10px 40px 30px 20px;
-      font-size: 20px;
-    }
-    .unete {
-      padding: 10px 40px 30px 20px;
-      color: #ffffff;
-    }
-    button {
-      padding: 20px 40px 20px 40px;
-      border-radius: 30px;
-      background-color: #ffffff;
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
-    }
-    button p {
-      color: #231f20;
-      font-size: 20px;
-      font-weight: 600;
-    }
-    .logoHero {
-      padding: 0px 0px 0px 0px; /*arriba,,,Izquierda*/
-    }
-    button:hover {
-      background-color:darkgrey; 
-    }
-    button p:hover {
-      color:black;
-    } 
+    .header {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
 
+    height: 100vh;
+    max-height: 800px;
+    min-height: 640px;
+
+    background-image: 
+        /* Degradado sobre la imagen */
+        linear-gradient(180deg, rgba(255, 255, 255, 0.00) 83.33%, #DFDFDF 100%),
+        /* Imagen de fondo */
+        linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 100%), 
+        linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), 
+        url("../Imagenes/heroBackground.jpg");
+    background-size: cover;
+    background-position: top;
+  
+    @media (max-width: 730px) {
+      padding: 2rem;
+    }
+}
+
+.header h1 {
+  line-height: 1.3;
+}
+    
     @media screen and (max-width: 768px) {
-      .logoHero{
-        display: none;
-      }
-      .Info {
-        width: 100%;
-        text-align: center;
-      }
-      .logoHero2{
-        display: block;
-        width: 250px;
-        padding-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .UPC h1 {
-        font-size: 40px;
-        font-weight: bold;
-        padding: 10px 10px 10px 20px;
-      }
-      .texto p {
+      .texto h2 {
         padding: 0;
         padding-bottom: 20px;
-        font-size: 15px;
+        font-size: 10px;
       }
       button p {
         font-size: 15px;
