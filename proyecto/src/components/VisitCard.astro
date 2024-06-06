@@ -1,5 +1,6 @@
 ---
 import CalendarIcon from "../assets/CalendarIcon.astro";
+import Boton from "./boton.astro";
 
 const { visit_img, title, visit_date, description, link_url } = Astro.props;
 ---
@@ -23,12 +24,7 @@ const { visit_img, title, visit_date, description, link_url } = Astro.props;
             </p>
             <div class="flex flex-row justify-between items-center">
                 <div class="flex flex-row gap-3">
-                    <a
-                        class="px-3 py-2 bg-[#2B2E4A] text-white hover:bg-slate-900 transition-all duration-200 ease-in"
-                        href={link_url} target="_blank"
-                    >
-                        Mas información
-                    </a>
+                    <Boton buttonSrc={link_url} buttonText="Mas información" buttonColorBack="bg-rojo"  buttonColorText="text-white"/>
                 </div>
                 <div
                     class="calendar-btn cursor-pointer bg-[#3C3737] p-2 rounded-full
