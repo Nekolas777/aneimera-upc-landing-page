@@ -1,4 +1,6 @@
-<header class="bg-blanco dark:bg-gris fixed w-full top-0 start-0 border-b border-gris dark:border-gris z-10">
+<div id="blur-overlay"></div>
+
+<header id="main-header" class="bg-transparent fixed w-full top-0 start-0 border-b border-gris dark:border-gris z-10">
     <div class="flex max-w-screen-xl flex-wrap items-center justify-evenly mx-auto p-4">
         <div class="logo flex">
             <a href="/" class="flex items-center">
@@ -32,8 +34,49 @@
     </div>
 </header>
 
+
+<style>
+    #blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.651); /* Color de fondo con 60% de opacidad */
+    backdrop-filter: blur(20px); /* Aplica un filtro de desenfoque */
+    z-index: 5; /* Asegúrate de que esté por debajo del header */
+    pointer-events: none; /* Evita que el overlay interfiera con los elementos debajo */
+}
+
+
+</style>
+
 <script>
-    document.getElementById('menu-toggle').addEventListener('click', () => {
-        document.getElementById('navbar-sticky').classList.toggle('hidden');
-    });
+ // Función para actualizar el efecto de borrosidad del fondo
+function updateHeaderBlur() {
+    var header = document.getElementById('main-header');
+    var blurOverlay = document.getElementById('blur-overlay');
+
+    var headerRect = header.getBoundingClientRect();
+
+    blurOverlay.style.top = headerRect.top + 'px';
+    blurOverlay.style.height = headerRect.height + 'px';
+
+    // Calcula el brillo del fondo
+    var rgb = window.getComputedStyle(blurOverlay, null).getPropertyValue('background-color').match(/\d+/g);
+    var brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
+
+    // Cambia el color del texto según el brillo del fondo
+    if (brightness > 125) {
+        header.style.color = '#000000'; // Texto negro para fondos claros
+    } else {
+        header.style.color = '#ffffff'; // Texto blanco para fondos oscuros
+    }
+}
+
+// Llamamos a la función al cargar la página y cuando se redimensiona la ventana
+window.onload = updateHeaderBlur;
+window.onresize = updateHeaderBlur;
+
+
 </script>
