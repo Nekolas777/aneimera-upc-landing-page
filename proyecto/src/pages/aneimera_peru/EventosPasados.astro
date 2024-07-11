@@ -1,130 +1,285 @@
-<!-- Contenedor principal de Swiper -->
-<section class="py-16 md:py-20 bg-rojo">
-    <div class="swiper section-container">
-        <!-- Wrapper adicional requerido -->
-        <div class="swiper-wrapper" id="my-slider">
-            <!-- Los slides -->
-            <a
-                class="swiper-slide"
-                href="/Imagenes/EventoPas1.png"
-                data-pswp-width="800"
-                data-pswp-height="800"
-                target="_blank"
-                data-cropped="true"
-            >
-                <img src="/Imagenes/EventoPas1.png" alt="" />
-                <h2><b>Coneimera Huancayo</b></h2>
-                <p>
-                    Congreso y exposición internacional de ingeniería mecánica,
-                    mecatrónica, eléctrica, electrónica y ramas afines del 30 de
-                    septiembre 2012 al 6 de octubre 2012
-                </p>
-            </a>
-            <a
-                class="swiper-slide"
-                href="/Imagenes/EventoPas2.png"
-                data-pswp-width="800"
-                data-pswp-height="800"
-                target="_blank"
-                data-cropped="true"
-            >
-                <img src="/Imagenes/EventoPas2.png" alt="" />
-                <h2><b>Coneimera UNP</b></h2>
-                <p>
-                    Congreso y exposición internacional de ingeniería mecánica,
-                    mecatrónica, eléctrica, electrónica y ramas afines. Coneimera
-                    2016 Piura
-                </p>
-            </a>
-            <a
-                class="swiper-slide"
-                href="/Imagenes/EventoPas3.png"
-                data-pswp-width="800"
-                data-pswp-height="800"
-                target="_blank"
-                data-cropped="true"
-            >
-                <img src="/Imagenes/EventoPas3.png" alt="" />
-                <h2><b>Coneimera UNT</b></h2>
-                <p>Concurso de proyectos en Trujillo, realizado en el año 2017</p>
-            </a>
-            <a
-                class="swiper-slide"
-                href="/Imagenes/EventoPas1.png"
-                data-pswp-width="800"
-                data-pswp-height="800"
-                target="_blank"
-                data-cropped="true"
-            >
-                <img src="/Imagenes/EventoPas2.png" alt="" />
-                <h2><b>Coneimera Huancayo</b></h2>
-                <p>
-                    Congreso y exposición internacional de ingeniería mecánica,
-                    mecatrónica, eléctrica, electrónica y ramas afines del 30 de
-                    septiembre 2012 al 6 de octubre 2012
-                </p>
-            </a>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap"
+            rel="stylesheet"
+        />
+        <!----agregar-->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css"
+        />
+    </head>
+    <section>
+        <div class="contenedor">
+            <div class="carousel__contenedor">
+                <button aria-label="Anterior" class="carousel__anterior">
+                    <img src="Imagenes/left-arrow.png" alt="" />
+                </button>
+
+                <div class="carousel__lista">
+                    <div class="carousel__elemento">
+                        <img src="Imagenes/EventoPas1.png" />
+                        <h1 class="title"><b>Coneimera Huancayo</b></h1>
+                        <p class="texto">
+                            Congreso y exposición internacional de ingeniería
+                            mecánica, mecatrónica, eléctrica, electrónica y
+                            ramas afines del 30 de septiembre 2012 al 6 de
+                            octubre 2012
+                        </p>
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="/Imagenes/EventoPas2.png" alt="" />
+                        <h1 class="title"><b>Coneimera UNP</b></h1>
+                        <p class="texto">
+                            Congreso y exposición internacional de ingeniería
+                            mecánica, mecatrónica, eléctrica, electrónica y
+                            ramas afines. Coneimera 2016 Piura
+                        </p>
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="Imagenes/EventoPas3.png" />
+                        <h1 class="title"><b>Coneimera UNT</b></h1>
+                        <p class="texto">
+                            Concurso de proyectos en Trujillo, realizado en el
+                            año 2017
+                        </p>
+                    </div>
+                    <div class="carousel__elemento">
+                        <img src="Imagenes/EventoPas1.png" />
+                        <h1 class="title"><b>Coneimera xyz</b></h1>
+                        <p class="texto">
+                            Lorem ipsum dolor sit, amet consecteturç
+                        </p>
+                    </div>
+
+                    <div class="carousel__elemento">
+                        <img src="Imagenes/EventoPas2.png" />
+                        <h1 class="title"><b>Coneimera xyz</b></h1>
+                        <p class="texto">
+                            Lorem ipsum dolor sit, amet consecteturç
+                        </p>
+                    </div>
+                </div>
+
+                <button aria-label="Siguiente" class="carousel__siguiente">
+                    <img src="Imagenes/right-arrow.png" alt="" />
+                </button>
+            </div>
+
+            <div role="tablist" class="carousel__indicadores"></div>
         </div>
-        <!-- Botones de navegación -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    </div>
-</section>
 
-<script>
-    // Core de Swiper y estilos
-    import Swiper from "swiper";
-    import "swiper/css";
-    // Módulo Navigation de Swiper y estilos
-    import { Navigation } from "swiper/modules";
-    import "swiper/css/navigation";
-    // Photoswipe y estilos
-    import PhotoSwipeLightbox from "photoswipe/lightbox";
-    import "photoswipe/style.css";
+        <!----agregar-->
+        <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"
+        ></script>
+        <script
+            src="https://kit.fontawesome.com/2c36e9b7b1.js"
+            crossorigin="anonymous"></script>
+    </section>
 
-    // Configurar e inicializar Photoswipe
-    const lightbox = new PhotoSwipeLightbox({
-        gallery: "#my-slider",
-        children: "a",
-        pswpModule: () => import("photoswipe"),
-    });
-    lightbox.init();
+    <style>
+        section{background-color:#C42626;}
+        .contenedor {
+            max-width: 1200px;
+            width: 90%;
+            margin: auto;
+        }
 
-    // Configurar Swiper
-    const swiper = new Swiper(".swiper", {
-        modules: [Navigation], // definir los módulos a usar
-        loop: true, // definir si los slides estarán en bucle
-        slidesPerView: 3, // agregar número de slides para la pantalla
-        spaceBetween: 40, // separación entre slides en px
-        navigation: {
-            // definir botones next y prev para el módulo Navigation
-            prevEl: ".swiper-button-prev",
-            nextEl: ".swiper-button-next",
-        },
-    });
-</script>
-
-<style>
-    .swiper {
-        padding-left: 60px;
-    }
-    .swiper-wrapper{
+        /* --- --- CAROUSEL --- --- */
+        .carousel__contenedor {
+            position: relative;
+        }
         
-    }
-    .swiper-slide {
-        height: 460px;
-        width: 400px;
-        overflow: hidden;
-      
-    }
-    .swiper-slide img {
-        width: 70%;
-        height: 70%;
-    }
-    h1 {
-        padding-top: 5%;
-    }
-    p{
-        padding-right: 5%;
-    }
-</style>
+        .title{font-size:20px;text-align: center;}
+        .texto{
+            padding-left:20%;
+            padding-right:15%;
+            text-align: center;
+        }
+
+/*
+       .carousel__elemento {
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
+        }*/
+        .carousel__elemento img {
+            padding-left: 10%;
+        }
+
+        .carousel__anterior,
+        .carousel__siguiente {
+            position: absolute;
+            display: block;
+            border: none;
+            top: calc(50% - 35px);
+            cursor: pointer;
+            line-height: 30px;
+            text-align: center;
+            background: none;
+            opacity: 50%;
+
+            top: 290px;
+            width: 6%; /*tamaño imagen flecha */
+        }
+
+        .carousel__anterior:hover,
+        .carousel__siguiente:hover {
+            opacity: 100%;
+        }
+
+        .carousel__lista {
+            padding-top: 10%;
+            overflow: hidden;
+        }
+
+        .carousel__elemento {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .carousel__indicadores .glider-dot {
+            display: block;
+            border-radius: 50;
+        }
+
+        .carousel__indicadores .glider-dot:hover {
+            opacity: 0.5;
+            color: black;
+        }
+
+        .carousel__indicadores .glider-dot.active {opacity: 1;}
+
+        .carousel__anterior {left: -30px;z-index:1;}
+        .carousel__siguiente {right: -63px;}
+        /*responsive*/
+
+        @media screen and (max-width: 1440px) {
+            .contenedor {
+                width: 100%;
+                max-width: 80%;
+            }
+
+            .carousel__anterior {left: -40px;}
+            .carousel__siguiente {right: -60px;}
+
+            .carousel__anterior,
+            .carousel__siguiente {
+                width: 6%; /*tamaño imagen flecha */
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .carousel__anterior,
+            .carousel__siguiente {
+                width: 7%; /*tamaño imagen flecha */
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            .carousel__anterior {left: -30px;}
+            .carousel__siguiente {right: -50px;}
+
+            .carousel__anterior,
+            .carousel__siguiente {top: 290px;  width: 9%; /*tamaño imagen flecha */}
+        }
+
+        @media screen and (max-width: 680px) {
+
+
+                .carousel__elemento img {padding-left: 25%;width:70%;}
+
+                .carousel__anterior,
+            .carousel__siguiente {top: 240px;  width: 10%; /*tamaño imagen flecha */}
+                
+
+            .carousel__anterior {left: 40px;}
+            .carousel__siguiente {right: 40px;}
+        }
+
+        @media screen and (max-width: 600px) {
+            .carousel__anterior,
+            .carousel__siguiente {top: 240px;  width: 10%; /*tamaño imagen flecha */}
+
+            .carousel__elemento img {padding-left: 25%;width:70%;}
+
+            .carousel__anterior {left: 40px;}
+            .carousel__siguiente {right: 40px;}
+        }
+
+        @media screen and (max-width: 500px) {
+            .carousel__anterior,
+            .carousel__siguiente {top: 180px;  width: 11%; /*tamaño imagen flecha */}
+
+            .carousel__anterior {left: 20px;}
+            .carousel__siguiente {right: 20px;}
+        }
+
+        @media screen and (max-width: 400px) {
+             .carousel__elemento img {width: 80%;}
+
+             .title{font-size:18px;text-align: center;}
+            .texto{
+                padding-left:20%;
+                padding-right:15%;
+                text-align: center;
+            }
+
+            .carousel__anterior,
+            .carousel__siguiente {top: 200px;  width: 15%; /*tamaño imagen flecha */}
+
+            .carousel__anterior {left: 15px;}
+            .carousel__siguiente {right: -5px;}
+        }
+
+
+        @media screen and (max-width: 300px);{
+            .title{font-size:15px;text-align: center;}
+            .carousel__anterior {left: 15px;}
+            .carousel__siguiente {right: 10px;}
+        }
+    </style>
+
+    <script is:inline>
+        //is:line-->reconoce los eventos de javascript
+        window.addEventListener("load", function () {
+            new Glider(document.querySelector(".carousel__lista"), {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: ".carousel__indicadores",
+                arrows: {
+                    prev: ".carousel__anterior",
+                    next: ".carousel__siguiente",
+                },
+                responsive: [
+                    {
+                        // screens greater than >= 775px
+                        breakpoint: 700,
+                        settings: {
+                            // Set to `auto` and provide item width to adjust to viewport
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                        },
+                    },
+                    {
+                        // screens greater than >= 1024px
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3, //de cuanto en cuanto
+                            slidesToScroll: 3,
+                        },
+                    },
+                ],
+            });
+        });
+    </script>
+
+</html>
