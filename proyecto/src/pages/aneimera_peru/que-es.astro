@@ -3,27 +3,21 @@ import AneimeraPeruQueEs from "../../../Imagenes/aneimera-peru-que-es.png";
 ---
 
 <section class="flex justify-center flex-col lg:flex-row lg:w-full py-16 md:py-20">
-  <div class="section-container grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 gap-10">
-    <div class="border-[2px] bg-gris flex flex-col p-8 md:p-10">
-      <p class="uppercase text-2xl tracking-wide text-start font-medium mb-5">¿Qué es?</p>
-      <p class="font-light text-lg text-justify tracking-wide text-pretty leading-[1.9]">
-        Busca el desarrollo de la investigación en las facultades de las
-        universidades asociadas, a través de transmitir conocimientos, ideas,
-        sana competencia y sobre todo experiencias.
-      </p>
-      <div class="flex-1 flex items-end">
-        <button class="px-3 py-2 bg-rojo text-white 
-          hover:bg-red-800 transition-all duration-200 ease">
-          Mas información
-        </button>
-      </div>
+    <div class="section-container grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 gap-10">
+        <div class="bg-gris p-8 md:p-10">
+            <p class="uppercase text-2xl tracking-wide text-start font-medium mb-5">¿QUÉ ES?</p>
+            <p class="font-light text-lg text-justify tracking-wide text-pretty leading-[1.9]">
+                Busca el desarrollo de la investigación en las facultades de las
+                universidades asociadas, a través de transmitir conocimientos, ideas,
+                sana competencia y sobre todo experiencias.
+            </p>
+        </div>
+        <img class="border self-center w-full h-96" src={AneimeraPeruQueEs.src} />
     </div>
-    <img class="border self-center w-full h-96" src={AneimeraPeruQueEs.src} />
-  </div>
 </section>
 
 <style>
-  .borde {
-    border: 1px black solid;
-  }
+    .border {
+        border: 1px black solid;
+    }
 </style>
