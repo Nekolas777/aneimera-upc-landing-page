@@ -14,17 +14,22 @@ const { visit_img, title, visit_date, description, link_url } = Astro.props;
             <div class="flex flex-row justify-between items-center">
                 <h2 class="font-medium">{title}</h2>
                 <p class="text-sm">
-                    <span class="font-medium mr-1">Fecha:</span>{visit_date}
+                    <span class="font-medium mr-1.5" style="font-size: 17px;">Fecha:</span>{visit_date}
                 </p>
             </div>
             <p
-                class="description text-sm py-1 tracking-wide text-wrap leading-relaxed"
+                class="description font-normal text-sm md:text-base py-1 tracking-wide text-wrap 
+                    leading-relaxed text-slate-900"
+                style="line-height: 1.65;"
             >
                 {description}
             </p>
             <div class="flex flex-row justify-between items-center">
                 <div class="flex flex-row gap-3">
-                    <Boton buttonSrc={link_url} buttonText="Mas información" buttonColorBack="bg-rojo"  buttonColorText="text-white"/>
+                    <button class="px-4 py-2 bg-red-700 text-white text-lg mt-2 self-center sm:self-start
+                    hover:bg-red-800 transition-all duration-200 ease">
+                    Mas información
+                    </button>
                 </div>
                 <div
                     class="calendar-btn cursor-pointer bg-[#3C3737] p-2 rounded-full
