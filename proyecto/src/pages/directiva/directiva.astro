@@ -1,8 +1,9 @@
-<section>
+<section class="pt-10 pb-16">
     <div>
-        <div class="section-container pt-10">
+        <div class="section-container">
             <div id="dir-part1" class="text-center mx-auto">
-                <h2 class="font-bold sm:pb-6 pb-2">Mesa Directiva</h2>
+                <h1 class="font-semibold text-rojo text-3xl sm:text-4xl text-center tracking-wide
+                uppercase mb-10 text-pretty leading-snug">Mesa Directiva</h1>
                 <p>Tenemos el mejor equipo de estudiantes de ingeniería mecatrónica, electrónica y afines para cumplir con los objetivos de la asociación</p>
                 <div id="list-card" class="mt-20 sm:mt-24 flex flex-wrap gap-4 gap-y-20 sm:gap-y-24 justify-around">
                     <div class="dir-card">
@@ -12,7 +13,7 @@
                             <h3>Delegacion</h3>
                         </div>
                         <img class="icono" id="icono1" src="Imagenes/flecha.png" alt="">
-                        <p class="descripcion" id="descripcion1" style="display:none">Estudiante de Ingeniería Mecatrónica con experiencia en proyectos de diseño y construcción, incluyendo un brazo robótico, un mástil automático para sensor LIDAR en un Rover, y una línea de producción con PLC en módulos Fischertechnik. Coordinador de logística en el capítulo ComSoc de IEEE en la UPC.</p>
+                        <p class="descripcion" id="descripcion1">Estudiante de Ingeniería Mecatrónica con experiencia en proyectos de diseño y construcción, incluyendo un brazo robótico, un mástil automático para sensor LIDAR en un Rover, y una línea de producción con PLC en módulos Fischertechnik. Coordinador de logística en el capítulo ComSoc de IEEE en la UPC.</p>
                     </div>
                     <div class="dir-card">
                         <img id="dir-img" src="Imagenes/persona2.png" alt="">
@@ -21,7 +22,7 @@
                             <h3>Delegacion</h3>
                         </div>
                         <img class="icono" id="icono2" src="Imagenes/flecha.png" alt="">
-                        <p class="descripcion" id="descripcion2" style="display:none">Estudiante de octavo ciclo en la UPC, especializado en ingeniería enfocada en robótica y programación. Ganador del concurso PASKA 2021, becado por la Alianza del Pacífico en 2023 para un intercambio académico en México. Voluntario en eventos como INTERCON 2023 y el International Congress of Artificial Intelligence 2022. Líder como Presidente del área de Electrónica en la rama AESS en la UNAM en 2023.</p>
+                        <p class="descripcion" id="descripcion2">Estudiante de octavo ciclo en la UPC, especializado en ingeniería enfocada en robótica y programación. Ganador del concurso PASKA 2021, becado por la Alianza del Pacífico en 2023 para un intercambio académico en México. Voluntario en eventos como INTERCON 2023 y el International Congress of Artificial Intelligence 2022. Líder como Presidente del área de Electrónica en la rama AESS en la UNAM en 2023.</p>
                     </div>
                     <div class="dir-card">
                         <img id="dir-img" src="Imagenes/persona3.png" alt="">
@@ -30,7 +31,7 @@
                             <h3>Delegacion</h3>
                         </div>
                         <img class="icono" id="icono3" src="Imagenes/flecha.png" alt="">
-                        <p class="descripcion" id="descripcion3" style="display:none">Estudiante de Ingeniería Electrónica en octavo ciclo, líder en proyectos en la UPC y presidente de IEEE ComSoc UPC en 2023. Ganadora de premios en competencias como Coneimera y RAS TRAINING, y becada para la IEEE ComSoc School Series Atlanta. Experiencia en robótica y biomédica, con presentaciones internacionales y una beca para una pasantía en la Universidad de Alberta en 2024.</p>
+                        <p class="descripcion" id="descripcion3">Estudiante de Ingeniería Electrónica en octavo ciclo, líder en proyectos en la UPC y presidente de IEEE ComSoc UPC en 2023. Ganadora de premios en competencias como Coneimera y RAS TRAINING, y becada para la IEEE ComSoc School Series Atlanta. Experiencia en robótica y biomédica, con presentaciones internacionales y una beca para una pasantía en la Universidad de Alberta en 2024.</p>
                     </div>
                     <div class="dir-card">
                         <img id="dir-img" src="Imagenes/persona4.png" alt="">
@@ -39,7 +40,7 @@
                             <h3>Delegacion</h3>
                         </div>
                         <img class="icono" id="icono4" src="Imagenes/flecha.png" alt="">
-                        <p class="descripcion" id="descripcion4" style="display:none">Estudiante de ingeniería mecatrónica en la UPC. Técnico electricista en automatización PLC y variadores de frecuencia, con experiencia en diseño de circuitos eléctricos de corriente alterna, especialmente en maquinaria SORSA. Encargado del comité de Logística en INTERCON 2023 y ganador del segundo lugar en la competencia de automatización con PLC en RAS WEEK 2023.</p>
+                        <p class="descripcion" id="descripcion4">Estudiante de ingeniería mecatrónica en la UPC. Técnico electricista en automatización PLC y variadores de frecuencia, con experiencia en diseño de circuitos eléctricos de corriente alterna, especialmente en maquinaria SORSA. Encargado del comité de Logística en INTERCON 2023 y ganador del segundo lugar en la competencia de automatización con PLC en RAS WEEK 2023.</p>
                     </div>
                 </div>
             </div>
@@ -61,7 +62,7 @@
     <div>
         <div class="section-container pt-10">
             <div id="dir-part3" class="text-center mx-auto">
-                <h2 class="font-bold sm:pb-6 pb-2">Asesores</h2>
+                <h2 class="text-center font-semibold tracking-wider pb-10">Asesores</h2>
                 <p>Tenemos los mejores asesores en ingeniería mecatrónica, electrónica y afines para cumplir con los objetivos de la asociación</p>
                 <div id="list-card" class="mt-20 sm:mt-24 flex flex-wrap gap-4 gap-y-20 sm:gap-y-24 justify-around">
                     <div class="dir-card">
@@ -117,19 +118,37 @@
         width: 35px;
         margin: 0 auto 10px;
         cursor: pointer;
+        transform: rotate(0deg);
+        transition: transform 0.5s ease;
     }
     .descripcion{
         width: 85%;
         margin: 0 auto;
         color: white;
         padding-bottom: 20px;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        max-height: 0;
+        opacity: 0;
+        text-align: justify;
     }
     #dir-part2>h2{
         width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+
     }
     #dir-part2>il{
         width: 60%;
     }
+    .open {
+        opacity: 1;
+        max-height: 500px;
+    }
+    .girar{
+        transform: rotate(180deg);
+    }
+
     @media screen and (max-width: 1200px) {
         #dir-part1,#dir-part3{
             width: 80% !important;
@@ -154,51 +173,15 @@
 </style>
 <script>
     const icono1 = document.getElementById("icono1");
-    icono1.addEventListener("click", () => {
-        const texto = document.getElementById('descripcion1');
-        if(texto.style.display=="none"){
-            texto.style.display="block";
-            icono1.style.transform="rotate(180deg)";
-        }
-        else{
-            texto.style.display="none";
-            icono1.style.transform="rotate(0deg)";
-        }
-    });
-    const icono2 = document.getElementById("icono2");
-    icono2.addEventListener("click", () => {
-        const texto = document.getElementById('descripcion2');
-        if(texto.style.display=="none"){
-            texto.style.display="block";
-            icono2.style.transform="rotate(180deg)";
-        }
-        else{
-            texto.style.display="none";
-            icono2.style.transform="rotate(0deg)";
-        }
-    });
-    const icono3 = document.getElementById("icono3");
-    icono3.addEventListener("click", () => {
-        const texto = document.getElementById('descripcion3');
-        if(texto.style.display=="none"){
-            texto.style.display="block";
-            icono3.style.transform="rotate(180deg)";
-        }
-        else{
-            texto.style.display="none";
-            icono3.style.transform="rotate(0deg)";
-        }
-    });
-    const icono4 = document.getElementById("icono4");
-    icono4.addEventListener("click", () => {
-        const texto = document.getElementById('descripcion4');
-        if(texto.style.display=="none"){
-            texto.style.display="block";
-            icono4.style.transform="rotate(180deg)";
-        }
-        else{
-            texto.style.display="none";
-            icono4.style.transform="rotate(0deg)";
-        }
+
+    const iconos = document.querySelectorAll('.icono');
+
+    iconos.forEach((icono) => {
+        icono.addEventListener('click', () => {
+            icono.classList.toggle('girar');
+            const accordionItem = icono.closest('.dir-card');
+            const accordionContent = accordionItem.querySelector('.descripcion');
+            accordionContent.classList.toggle('open');
+        });
     });
 </script>
