@@ -1,24 +1,36 @@
 ---
-import AneimeraPeruQueEs from "../../../Imagenes/aneimera-peru-que-es.png"
+import AneimeraPeruQueEs from "../../../Imagenes/aneimera-peru-que-es.png";
 ---
 
-<section class="flex justify-center flex-col lg:flex-row lg:w-full py-16 md:py-20">
-    <div class="section-container grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 gap-10">
-      <div class="border bg-gris p-8 md:p-10">
-        <p class="uppercase text-2xl tracking-wide text-start font-medium mb-5">¿QUÉ ES?</p>
-        <p class="font-light text-lg text-justify tracking-wide text-pretty leading-[1.9]">
-          Busca el desarrollo de la investigación en las facultades de las
-          universidades asociadas, a través de transmitir conocimientos, ideas,
-          sana competencia y sobre todo experiencias.
-        </p>
-      </div>
-      <img class="border self-center w-full h-96" src={AneimeraPeruQueEs.src} />
+<section
+  class="flex justify-center flex-col lg:flex-row lg:w-full py-16 md:py-20"
+>
+  <div
+    class="section-container grid grid-cols-1 grid-rows-[auto,1fr] md:grid-cols-2 md:grid-rows-1 gap-10"
+  >
+    <div class="p-0 md:p-8 flex flex-col gap-5">
+      <h2 class="font-semibold tracking-wider uppercase">¿Qué es?</h2>
+      <p
+        class="font-base text-normal md:text-lg text-justify tracking-wide text-pretty"
+        style="line-height: 2"
+      >
+        Busca el desarrollo de la investigación en las facultades de las
+        universidades asociadas, a través de la transmisión de conocimientos, ideas,
+        sana competencia y sobre todo experiencias. Fomenta la colaboración
+        entre estudiantes y profesores, promoviendo la innovación y el avance en
+        diversas áreas del conocimiento.
+      </p>
+      <a href="https://www.facebook.com/aneimeraof/?locale=es_LA" class="px-4 py-2 bg-red-700 text-white text-lg self-start mt-2
+        hover:bg-red-800 transition-all duration-200 ease" target="_blank" rel="noopener noreferrer" >
+        Más información
+      </a>
     </div>
-  </section>
-  
+    <img class="self-center w-full h-96" src={AneimeraPeruQueEs.src} alt="evento" />
+  </div>
+</section>
 
 <style>
-    .borde {
-        border: 1px black solid;
-    }
+  .border {
+    border: 1px black solid;
+  }
 </style>
