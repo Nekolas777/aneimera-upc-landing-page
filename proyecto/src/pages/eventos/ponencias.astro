@@ -3,31 +3,35 @@ import Ponencia1 from "../../../Imagenes/ponencia1.png";
 import Ponencia11 from "../../../Imagenes/ponencia11.png";
 ---
 
-<section class="w-full bg-zinc-100 py-16 md:py-20">
+<section class="w-full py-16 md:py-20">
     <div class="section-container flex flex-col gap-8">
         <h1
             class="font-semibold text-rojo text-3xl sm:text-4xl text-center tracking-wide
-            uppercase mb-5 text-pretty leading-snug"
+            uppercase mb-4 md:mb-12 text-pretty leading-snug"
         >
             Conoce nuestros próximos eventos
         </h1>
-        <h2 class="text-start text-rojo font-medium">Próximas ponencias:</h2>
         <div
-            class="grid grid-rows-1 grid-cols-1 md:grid-cols-2 xl:grid-cols-[4fr,3fr] gap-10"
+            class="grid grid-rows-1 grid-cols-1 md:grid-cols-2 xl:grid-cols-[4fr,3fr] gap-5 md:gap-10"
         >
-            <div class="flex flex-col gap-8 bg-blanco p-8 md:p-10">
-                <h2 class="uppercase font-medium tracking-wide">
+            <div class="flex flex-col gap-5 md:gap-6 bg-blanco py-5 pr-0 md:pr-8 md:py-10
+                text-center sm:text-start">
+                <h2 class="uppercase font-semibold tracking-wide">
                     Ema sección Lima 2024
                 </h2>
-                <p class="tracking-wide text-pretty leading-[1.9]">
+                <p class="tracking-wide text-pretty text-normal md:text-lg"
+                    style="line-height: 2"
+                >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex ea commodo consequat
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat
                 </p>
+                <button class="px-4 py-2 bg-red-700 text-white text-lg self-center sm:self-start mt-2
+                hover:bg-red-800 transition-all duration-200 ease">
+                    Mas información
+                </button>
             </div>
             <div class="w-full h-full flex items-center">
                 <img
@@ -37,26 +41,31 @@ import Ponencia11 from "../../../Imagenes/ponencia11.png";
             </div>
         </div>
         <div
-            class="grid grid-rows-1 grid-cols-1 md:grid-cols-2 xl:grid-cols-[3fr,4fr] gap-10 mt-5"
+            class="grid grid-rows-1 grid-cols-1 md:grid-cols-2 xl:grid-cols-[3fr,4fr] gap-5 md:gap-10 mt-5"
         >
             <div class="order-2 md:order-1 w-full h-full flex items-center">
                 <img class="bg-red-900 w-full h-96" src={Ponencia11.src} />
             </div>
             <div
-                class="order-1 md:order-2 flex flex-col gap-8 bg-blanco p-8 md:p-10"
+                class="order-1 md:order-2 flex flex-col gap-6 md:gap-8 bg-blanco py-5 pl-0 md:pl-8 md:py-10
+                    text-center sm:text-start"
             >
-                <h2 class="uppercase font-medium tracking-wide">
+                <h2 class="uppercase font-semibold tracking-wide">
                     Misión y Objetivo
                 </h2>
-                <p class="tracking-wide text-pretty leading-[1.9]">
+                <p class="tracking-wide text-pretty leading-[1.9] text-normal md:text-lg"
+                    style="line-height: 2"
+                >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex ea commodo consequat
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat
                 </p>
+                <button class="px-4 py-2 bg-red-700 text-white text-lg mt-2 self-center sm:self-start
+                hover:bg-red-800 transition-all duration-200 ease">
+                    Mas información
+                </button>
             </div>
         </div>
     </div>

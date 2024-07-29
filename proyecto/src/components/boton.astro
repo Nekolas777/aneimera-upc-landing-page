@@ -1,7 +1,11 @@
 ---
-const { buttonText, buttonSrc, buttonColorBack, buttonColorText } = Astro.props
+const { buttonText, buttonSrc, buttonColorBack, buttonColorText } = Astro.props;
 ---
 
 <button-component>
-    <a href={buttonSrc} class={`py-3 px-7 font-semibold rounded-full cursor-pointer ${buttonColorBack} ${buttonColorText}`}>{buttonText}</a>
+  <a
+    href={buttonSrc}
+    class={`py-3 px-5 font-medium rounded-full cursor-pointer ${buttonColorBack} ${buttonColorText}`}
+    >{buttonText}</a
+  >
 </button-component>

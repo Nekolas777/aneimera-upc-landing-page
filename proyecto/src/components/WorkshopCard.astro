@@ -11,7 +11,9 @@ import ExternalIcon from "../assets/LinkExternal.astro";
     <div class="flex flex-col p-5">
         <div class="flex flex-col gap-3">
             <h2 class="font-medium">{ Astro.props.title }</h2>
-            <p class="text-sm py-1 tracking-wide leading-relaxed">
+            <p class="py-1 tracking-wide leading-relaxed text-sm md:text-base text-slate-900"
+                style="line-height: 1.65;"
+            >
                 { Astro.props.description }
             </p>
             <div class="flex flex-row justify-between items-center">
