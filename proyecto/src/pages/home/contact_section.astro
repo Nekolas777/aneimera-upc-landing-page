@@ -5,6 +5,7 @@ import EmailIcon from "../../assets/EmailIcon.astro";
 import WhatsappIcon from "../../assets/WhatsappIcon.astro";
 import FacebookIcon from "../../assets/FacebookIcon.astro";
 import LinkedinIcon from "../../assets/LinkedinIcon.astro";
+import InstagramIcon from "../../assets/InstagramIcon.astro";
 ---
 
 <section class="bg-gris py-16 md:py-20">
@@ -75,45 +76,47 @@ import LinkedinIcon from "../../assets/LinkedinIcon.astro";
       </div>
       <div class="flex items-center justify-center">
         <div
-          class="max-w-[550px] mx-auto grid grid-cols-1 xs:grid-cols-2 grid-rows-auto xs:grid-rows-2 gap-x-12 gap-y-10"
+          class="max-w-[550px] mx-auto grid grid-cols-1 xs:grid-cols-2 grid-rows-auto xs:grid-rows-2
+          gap-y-8 md:gap-y-6 lg:gap-y-10 md:gap-x-6 lg:gap-x-12 gap-x-8"
         >
           <a
-            href="https://wa.me/51987654321"
+            href="https://wa.me/51945146828"
             aria-label="Redirigir a chat de WhatsApp de Aneimera UPC"
             rel="noopener noreferrer"
             target="_blank"
             class="flex flex-col items-center text-center gap-3 p-5 bg-blanco group cursor-pointer
-            hover:bg-red-100/80 transition-all duration-200 social-card"
+            hover:bg-red-100/80 transition-all duration-200 social-card overflow-x-hidden"
           >
             <WhatsappIcon />
             <h3 class="text-lg md:text-xl font-medium text-[#A91D3A]">
-              Dejanos un mensaje
+              Déjanos un mensaje
             </h3>
-            <p>Comunicate con nosotros a través de nuestro canal de WhatsApp</p>
+            <p class="text-balance">Comunícate con nosotros a través de nuestro canal de WhatsApp</p>
           </a>
           <a
-            href="mailto:example@example.com?subject=Asunto%20Predeterminado&body=Cuerpo%20del%20mensaje"
-            aria-label="Enviar un correo electronico a Aneimera UPC"
+            href="https://www.instagram.com/aneimera.upc/?fbclid=IwZXh0bgNhZW0CMTAAAR1zVIBkqGjuWZx5S71qP8bpoU98B5jRS46Wpwg7l4_tUF6qsl9xbIxpTQU_aem_X9M-YJBWUHudK5Np5ddzAw"
+            aria-label="Ir a la pagina oficial en Instagram de Aneimera UPC"
             rel="noopener noreferrer"
             target="_blank"
             class="flex flex-col items-center text-center gap-3 p-5 bg-blanco group cursor-pointer
-            hover:bg-red-100/80 transition-all duration-200 social-card"
+            hover:bg-red-100/80 transition-all duration-200 social-card overflow-x-hidden"
           >
-            <EmailIcon size="16" fillColor="#000" />
+            <InstagramIcon />
             <h3 class="text-lg md:text-xl font-medium text-[#A91D3A]">
-              Enviános un correo
+              Últimos posts
             </h3>
-            <p>
-              Comunicate con nosotros a través de nuestro correo electronico
+            <p class="text-balance">
+              Revisa nuestras últimas publicaciones a través de nuestra cuenta
+              oficial
             </p>
           </a>
           <a
             href="https://www.facebook.com/profile.php?id=61556567363828"
-            aria-label="Redirigir a la pagina de Facebook"
+            aria-label="Redirigir a la página de Facebook"
             rel="noopener noreferrer"
             target="_blank"
             class="flex flex-col items-center text-center gap-3 p-5 bg-blanco group cursor-pointer
-            hover:bg-red-100/80 transition-all duration-200 social-card"
+            hover:bg-red-100/80 transition-all duration-200 social-card overflow-x-hidden"
           >
             <div
               class="border-[3px] border-black p-2 rounded-full transform
@@ -122,20 +125,20 @@ import LinkedinIcon from "../../assets/LinkedinIcon.astro";
               <FacebookIcon />
             </div>
             <h3 class="text-lg md:text-xl font-medium text-[#A91D3A]">
-              Ultimas noticias
+              Últimas noticias
             </h3>
-            <p>
-              Enteraté de nuestros ultimas publicaciones en nuestra pagina
+            <p class="text-balance">
+              Entérate de nuestras últimas publicaciones en nuestra página
               oficial
             </p>
           </a>
           <a
             href="https://www.linkedin.com/company/aneimera-upc/about/"
-            aria-label="Redirigir al linkedin oficial de Aneimera UPC"
+            aria-label="Redirigir al LinkedIn oficial de Aneimera UPC"
             rel="noopener noreferrer"
             target="_blank"
             class="flex flex-col items-center text-center gap-3 p-5 bg-blanco group cursor-pointer
-            hover:bg-red-100/80 transition-all duration-200 social-card"
+            hover:bg-red-100/80 transition-all duration-200 social-card overflow-x-hidden"
           >
             <div
               class="border-[3px] border-black p-2 rounded-full transform transition-transform duration-300 group-hover:scale-105"
@@ -145,7 +148,7 @@ import LinkedinIcon from "../../assets/LinkedinIcon.astro";
             <h3 class="text-lg md:text-xl font-medium text-[#A91D3A]">
               Últimos aportes
             </h3>
-            <p>Descubre nuestras ultimas colaboraciones a través de Linkedin</p>
+            <p class="text-balance">Descubre nuestras últimas colaboraciones a través de LinkedIn</p>
           </a>
         </div>
       </div>
