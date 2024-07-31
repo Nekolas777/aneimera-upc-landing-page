@@ -1,111 +1,136 @@
+---
+import PlusIcon from "../../assets/PlusIcon.astro";
+---
 
 <section class="flex justify-center section-container py-16 md:py-20">
   <div class="accordion mx-auto">
-      <h2 class="mb-8 font-semibold uppercase">Preguntas Frecuentes</h2>
+    <h2 class="mb-8 font-semibold uppercase">Preguntas Frecuentes</h2>
 
-      <div class="accordion-item">
-          <div class="accordion-header">
-              <a class="text-base md:text-lg">¿Donde puedo inscribirme a los talleres proporcionados?</a>
-              <img class="plus" src="Imagenes/plus-solid.svg" alt="">
-          </div>
-          <div class="accordion-content text-normal md:text-lg">
-              <p class="text-basel md:text-lg">En la sección Eventos, en la parte inferior de la misma se encuentran nuestros talleres. 
-                De la misma forma puede acceder a la sección haciendo click <a href="/eventos_page" class="underline">aquí</a>.</p>
-          </div>
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <p class="text-base md:text-lg">
+          ¿Donde puedo inscribirme a los talleres proporcionados?
+        </p>
+        <PlusIcon/>
       </div>
+      <div class="accordion-content text-normal md:text-lg">
+        <p class="text-basel md:text-lg">
+          En la sección Eventos, en la parte inferior de la misma se encuentran
+          nuestros talleres. De la misma puedes encontrar mayor informacion llendo a la seccion de <a
+            href="/eventos_page"
+            class="underline"
+            aria-label="Ir a la vista de eventos en la sección de Eventos"
+            >eventos</a
+          >.
+        </p>
+      </div>
+    </div>
 
-      <div class="accordion-item">
-          <div class="accordion-header">
-              <a class="text-base md:text-lg">¿Cómo podria volverme embajador?</a>
-              <img class="plus" src="Imagenes/plus-solid.svg" alt="">
-          </div>
-          <div class="accordion-content">
-              <p class="text-base md:text-lg">Aquí iría el contenido de la pregunta sobre cómo volverse embajador.</p>
-          </div>
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <p class="text-base md:text-lg">¿Cómo podria volverme embajador?</p>
+        <PlusIcon/>
       </div>
+      <div class="accordion-content">
+        <p class="text-base md:text-lg">
+          Aquí iría el contenido de la pregunta sobre cómo volverse embajador.
+        </p>
+      </div>
+    </div>
 
-      <div class="accordion-item">
-          <div class="accordion-header">
-              <a class="text-base md:text-lg">¿Con quién me podria contactar para resolver mis dudas?</a>
-              <img class="plus" src="Imagenes/plus-solid.svg" alt="">
-          </div>
-          <div class="accordion-content">
-              <p class="text-base md:text-lg">Aquí iría el contenido de la pregunta sobre con quién contactar para resolver dudas.</p>
-          </div>
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <p class="text-base md:text-lg">
+          ¿Con quién me podria contactar para resolver mis dudas?
+        </p>
+        <PlusIcon/>
       </div>
+      <div class="accordion-content">
+        <p class="text-base md:text-lg">
+          Aquí iría el contenido de la pregunta sobre con quién contactar para
+          resolver dudas.
+        </p>
+      </div>
+    </div>
 
-      <div class="accordion-item">
-          <div class="accordion-header">
-              <a class="text-base md:text-lg">¿Cada cuánto tiempo se realizan los eventos?</a>
-              <img class="plus" src="Imagenes/plus-solid.svg" alt="">
-          </div>
-          <div class="accordion-content">
-              <p class="text-base md:text-lg">Aquí iría el contenido de la pregunta sobre la frecuencia de los eventos.</p>
-          </div>
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <p class="text-base md:text-lg">
+          ¿Cada cuánto tiempo se realizan los eventos?
+        </p>
+        <PlusIcon/>
       </div>
+      <div class="accordion-content">
+        <p class="text-base md:text-lg">
+          Aquí iría el contenido de la pregunta sobre la frecuencia de los
+          eventos.
+        </p>
+      </div>
+    </div>
   </div>
-  
-<style>
-  
-  .accordion{
+
+  <style>
+    .accordion {
       width: 60%;
-  }
-  .accordion-item {
+    }
+    .accordion-item {
       margin-bottom: 1rem;
-  }
-  .accordion-header {
-    background: #c42626;
-    color: #fefefe;
-    padding: 15px 30px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    gap:20px;
-  }
-  .accordion-header a{
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-  .accordion-header img{
-    height: 30px;
-    cursor: pointer;
-  }
-  .accordion-content {
+    }
+    .accordion-header {
+      background: #c42626;
+      color: #fefefe;
+      padding: 15px 30px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .accordion-header a {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    .accordion-header svg {
+      height: 30px;
+      cursor: pointer;
+    }
+    .accordion-content {
       margin-top: 10px;
       overflow: hidden;
-      transition: max-height 0.5s ease, opacity 0.5s ease;
+      transition:
+        max-height 0.5s ease,
+        opacity 0.5s ease;
       max-height: 0;
       opacity: 0;
-  }
-  .open {
+    }
+    .open {
       opacity: 1;
       max-height: 500px;
-  }
-  
-  @media screen and (max-width: 1025px) {
-      .accordion{
-          width: 100%;
+    }
+
+    @media screen and (max-width: 1025px) {
+      .accordion {
+        width: 100%;
       }
-  }
-  
+    }
   </style>
-  
+
   <script>
-  document.addEventListener('astro:page-load', function () {
-      const imagenes = document.querySelectorAll('.plus');
-  
+    document.addEventListener("astro:page-load", function () {
+      const imagenes = document.querySelectorAll(".plus");
+
       imagenes.forEach((imagen) => {
-          imagen.addEventListener('click', () => {
-              const accordionItem = imagen.closest('.accordion-item');
-              const accordionContent = accordionItem.querySelector('.accordion-content');
-              accordionContent.classList.toggle('open');
-              if (accordionContent.classList.contains('open')) {
-                  (imagen as HTMLImageElement).src = 'Imagenes/minus-solid.svg';
-              } else {
-                  (imagen as HTMLImageElement).src = 'Imagenes/plus-solid.svg';
-              }
-          });
+        imagen.addEventListener("click", () => {
+          const accordionItem = imagen.closest(".accordion-item");
+          const accordionContent =
+            accordionItem.querySelector(".accordion-content");
+          accordionContent.classList.toggle("open");
+          if (accordionContent.classList.contains("open")) {
+            (imagen as HTMLImageElement).src = "Imagenes/minus-solid.svg";
+          } else {
+            (imagen as HTMLImageElement).src = "Imagenes/plus-solid.svg";
+          }
+        });
       });
-  });
-  
+    });
   </script>
+</section>

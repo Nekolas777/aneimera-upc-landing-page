@@ -1,105 +1,164 @@
-<section>
-  <div class="bg-gris py-16 md:py-20">
-    <div class="grid md:grid-cols-2 bg-gris section-container">
-      <div class="text-center">
-        <h2 class="font-semibold mb-8 uppercase">síguenos</h2>
-        <ul
-          class="flex items-stretch justify-center gap-10 md:gap-20 text-white"
-        >
-          <a
-            href="https://www.facebook.com/profile.php?id=61556567363828"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-rojo rounded-full p-3 w-16"
-            aria-label="Ir a la pagina de Facebook de Aneimera UPC"
+---
+import UserIcon from "../../assets/UserIcon.astro";
+import PhoneIcon from "../../assets/PhoneIcon.astro";
+import EmailIcon from "../../assets/EmailIcon.astro";
+import WhatsappIcon from "../../assets/WhatsappIcon.astro";
+import FacebookIcon from "../../assets/FacebookIcon.astro";
+import LinkedinIcon from "../../assets/LinkedinIcon.astro";
+---
+
+<section class="bg-gris py-16 md:py-20">
+  <div class="section-container">
+    <div
+      class="grid grid-cols-1 grid-rows-auto md:grid-cols-[auto,auto] md:grid-rows-1 gap-14 md:gap-10"
+    >
+      <div class="flex flex-col justify-center">
+        <div class="w-full max-w-[600px] mx-auto">
+          <h2 class="text-3xl font-semibold uppercase">Contáctanos</h2>
+          <p class="mt-5 mb-7 text-base md:text-lg leading-relaxed">
+            Comunicate con nosotros para obtener informacion acerca de los
+            ultimos eventos y proyectos de Aneimera UPC!
+          </p>
+          <form
+            class="flex flex-col gap-7"
+            action="https://formsubmit.co/0ad95f96ccdd28e6f37e440e6460acb1"
+            method="POST"
+            aria-label="Formulario para contactarse con Aneimera UPC"
           >
-            <i class="fa fa-facebook text-5xl"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/aneimera.upc/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-rojo rounded-full p-3"
-            aria-label="Ir a la pagina de Instagram de Aneimera UPC"
-          >
-            <i class="fa fa-instagram text-5xl"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/company/aneimera-upc/?viewAsMember=true"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-rojo rounded-full p-3"
-            aria-label="Ir a la pagina de Linkedin de Aneimera UPC"
-          >
-            <i class="fa fa-linkedin-square text-5xl"></i>
-          </a>
-        </ul>
-      </div>
-      <div class="md:order-2 contact_section_right text-center">
-        <h2 class="font-semibold mb-8 uppercase">Contáctanos</h2>
-        <form
-          action="https://formsubmit.co/0ad95f96ccdd28e6f37e440e6460acb1"
-          method="POST"
-          aria-label="Formulario para contactarse con Aneimera UPC"
-        >
-          <div class="mb-5">
-            <input
-              class="form-control appearance-none rounded-xl py-4 px-8 text-rojo leading-tight focus:outline-none focus:shadow-outline bg-blanco placeholder-rojo"
-              type="text"
-              placeholder="Nombre"
-              name="nombre"
-              id="i_nombre"
-              required
-            />
-          </div>
-          <div class="mb-5">
-            <input
-              class="form-control appearance-none rounded-xl py-4 px-8 text-rojo leading-tight focus:outline-none focus:shadow-outline bg-blanco placeholder-rojo"
-              type="email"
-              placeholder="Correo electrónico"
-              name="correo"
-              id="i_correo"
-              required
-            />
-          </div>
-          <div class="mb-5">
+            <div
+              class="w-full flex flex-row items-center py-2 bg-blanco px-3 focus-within:bg-red-50/90"
+            >
+              <input
+                placeholder="Nombre"
+                class="bg-transparent w-full outline-none"
+                type="text"
+                required
+              />
+              <UserIcon />
+            </div>
+            <div
+              class="w-full flex flex-row items-center py-2 bg-blanco px-3 focus-within:bg-red-50/90"
+            >
+              <input
+                placeholder="Correo Electronico"
+                class="bg-transparent w-full outline-none"
+                type="email"
+                required
+              />
+              <EmailIcon size="5" fillColor="#C63C51" />
+            </div>
+            <div
+              class="w-full flex flex-row items-center py-2 bg-blanco px-3 focus-within:bg-red-50/90"
+            >
+              <input
+                placeholder="Telefono de contacto"
+                class="bg-transparent w-full outline-none"
+                type="text"
+                required
+              />
+              <PhoneIcon />
+            </div>
             <textarea
-              cols=""
-              rows="3"
-              class="form-control appearance-none rounded-xl py-4 px-8 text-rojo leading-tight focus:outline-none focus:shadow-outline bg-blanco placeholder-rojo"
-              placeholder="Mensaje"
-              name="mensaje"
-              id="mensaje"
+              placeholder="Escribe tu mensaje aquí"
+              class="px-3 bg-blanco w-full py-2 outline-none resize-none h-36 focus-within:bg-red-50/90"
               required></textarea>
-          </div>
-          <div class="">
             <button
               type="submit"
-              class="bg-rojo font-semibold text-white py-3 px-7 rounded-3xl cursor-pointer
-                            hover:bg-red-600 transition-all duration-200 ease"
-              aria-label="Enviar formulario a Aneimera UPC">Enviar</button
+              class="self-center py-2 px-12 rounded-xl bg-rojo text-blanco sm:self-end
+              hover:bg-red-800 transition-all duration-200 ease"
+              aria-label="Enviar formulario de contacto a Aneimera UPC"
             >
-          </div>
-        </form>
+              Enviar
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <div
+          class="max-w-[550px] mx-auto grid grid-cols-1 xs:grid-cols-2 grid-rows-auto xs:grid-rows-2 gap-x-12 gap-y-10"
+        >
+          <a
+            href="https://wa.me/51987654321"
+            aria-label="Redirigir a chat de WhatsApp de Aneimera UPC"
+            rel="noopener noreferrer"
+            target="_blank"
+            class="flex flex-col items-center text-center gap-3 p-5 bg-blanco group cursor-pointer
+            hover:bg-red-100/80 transition-all duration-200 social-card"
+          >
+            <WhatsappIcon />
+            <h3 class="text-lg md:text-xl font-medium text-[#A91D3A]">
+              Dejanos un mensaje
+            </h3>
+            <p>Comunicate con nosotros a través de nuestro canal de WhatsApp</p>
+          </a>
+          <a
+            href="mailto:example@example.com?subject=Asunto%20Predeterminado&body=Cuerpo%20del%20mensaje"
+            aria-label="Enviar un correo electronico a Aneimera UPC"
+            rel="noopener noreferrer"
+            target="_blank"
+            class="flex flex-col items-center text-center gap-3 p-5 bg-blanco group cursor-pointer
+            hover:bg-red-100/80 transition-all duration-200 social-card"
+          >
+            <EmailIcon size="16" fillColor="#000" />
+            <h3 class="text-lg md:text-xl font-medium text-[#A91D3A]">
+              Enviános un correo
+            </h3>
+            <p>
+              Comunicate con nosotros a través de nuestro correo electronico
+            </p>
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61556567363828"
+            aria-label="Redirigir a la pagina de Facebook"
+            rel="noopener noreferrer"
+            target="_blank"
+            class="flex flex-col items-center text-center gap-3 p-5 bg-blanco group cursor-pointer
+            hover:bg-red-100/80 transition-all duration-200 social-card"
+          >
+            <div
+              class="border-[3px] border-black p-2 rounded-full transform
+              transition-transform duration-300 group-hover:scale-105"
+            >
+              <FacebookIcon />
+            </div>
+            <h3 class="text-lg md:text-xl font-medium text-[#A91D3A]">
+              Ultimas noticias
+            </h3>
+            <p>
+              Enteraté de nuestros ultimas publicaciones en nuestra pagina
+              oficial
+            </p>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/aneimera-upc/about/"
+            aria-label="Redirigir al linkedin oficial de Aneimera UPC"
+            rel="noopener noreferrer"
+            target="_blank"
+            class="flex flex-col items-center text-center gap-3 p-5 bg-blanco group cursor-pointer
+            hover:bg-red-100/80 transition-all duration-200 social-card"
+          >
+            <div
+              class="border-[3px] border-black p-2 rounded-full transform transition-transform duration-300 group-hover:scale-105"
+            >
+              <LinkedinIcon />
+            </div>
+            <h3 class="text-lg md:text-xl font-medium text-[#A91D3A]">
+              Últimos aportes
+            </h3>
+            <p>Descubre nuestras ultimas colaboraciones a través de Linkedin</p>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 <style>
-  .contact_section_right input,
-  .contact_section_right textarea {
-    width: 70%;
-    margin: 0 auto;
-  }
-  @media screen and (max-width: 1025px) {
-    .contact_section_right input,
-    .contact_section_right textarea {
-      width: 90%;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .contact_section_right {
-      margin-top: 2rem;
-    }
+  .social-card p {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 </style>

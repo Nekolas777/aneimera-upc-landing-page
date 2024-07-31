@@ -1,3 +1,8 @@
+---
+import { Image } from "astro:assets";
+import EventoPasadoUno from "../../Imagenes/logo-aneimeraUPC.webp";
+---
+
 <!-- <div id="blur-overlay"></div> -->
 <header
   id="main-header"
@@ -6,10 +11,11 @@
   <div class="flex section-container items-center justify-between mx-auto">
     <div class="logo flex">
       <a href="/" class="flex items-center">
-        <img
-          src="Imagenes/logo-aneimeraUPC.webp"
-          alt="Logo"
-          class="w-10 mb-0.5"
+        <Image
+          src={EventoPasadoUno}
+          alt="logo-aneimeraUPC"
+          height={40}
+          width={40}
         />
         <h1 class="ml-2 text-3xl font-bold text-black">ANEIMERA</h1>
       </a>
