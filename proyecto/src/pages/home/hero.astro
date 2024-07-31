@@ -92,17 +92,3 @@ import Boton from "../../components/boton.astro";
     }
   }
 </style>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    var navbar = document.querySelector("header");
-    var navbarHeight = navbar!.offsetHeight;
-    var hero = document.getElementById("hero");
-    if (hero) {
-      var computedStyles = window.getComputedStyle(hero);
-      var currentHeight = parseFloat(computedStyles.height);
-      var newHeight = currentHeight - navbarHeight;
-      hero.style.height = newHeight + "px";
-    }
-  });
-</script>
