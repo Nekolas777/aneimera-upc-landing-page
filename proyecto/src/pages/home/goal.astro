@@ -1,3 +1,8 @@
+---
+import { Image } from "astro:assets";
+import GoalImage from "../../../Imagenes/img-goal.webp";
+---
+
 <section class="py-16 md:py-20">
     <div class="section-container">
         <div id="goal">
@@ -12,7 +17,10 @@
                         <li class="text-pretty tracking-wide text-base md:text-lg leading-[1.9]">Canalizar proyectos y programas hacia personas naturales o jurídicas para su financiamiento.</li>
                     </ul>
                 </div>
-                <img src="Imagenes/img-goal.jpg" alt="" class="h-60 my-auto">
+                <Image
+                    src={GoalImage}
+                    alt="goal-image"
+                />
             </div>
         </div>
     </div>

@@ -1,5 +1,6 @@
 ---
-import Coneimera from "../../../Imagenes/coneimera2023.png"
+import { Image } from "astro:assets"
+import Coneimera from "../../../Imagenes/coneimera2023.webp"
 ---
 
 <section class="bg-blanco h-auto py-16 md:py-20 text-black">
@@ -8,7 +9,11 @@ import Coneimera from "../../../Imagenes/coneimera2023.png"
             Coneimera 2023 Arequipa
         </h2>
         <div class="text-2xl font-normal flex justify-center flex-col md:flex-row md:w-full">
-            <img class="m-10 md:w-1/3" src={Coneimera.src} alt="evento"/>
+            <Image
+                src={Coneimera}
+                alt="coneimera-arequipa-image"
+                class="m-10 md:w-1/3 mx-auto md:m-10"
+            />
             <ul class="m-10 text-justify list-disc">
                 <br>
                 <li>

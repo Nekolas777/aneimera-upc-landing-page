@@ -14,9 +14,12 @@
     "@astrojs/tailwind": "^5.1.0",
     "@astrouxds/astro-web-components": "^7.22.0",
     "astro": "^4.6.0",
-    "photoswipe": "^5.4.4",
+    "glider-js": "^1.7.9",
     "swiper": "^11.1.4",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@types/glider-js": "^1.7.11"
   }
 }

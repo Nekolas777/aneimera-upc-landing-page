@@ -1,5 +1,6 @@
 ---
-import AneimeraPeruQueEs from "../../../Imagenes/aneimera-peru-que-es.png";
+import { Image } from "astro:assets";
+import AneimeraPeruQueEs from "../../../Imagenes/aneimera-peru-que-es.webp";
 ---
 
 <section
@@ -15,17 +16,27 @@ import AneimeraPeruQueEs from "../../../Imagenes/aneimera-peru-que-es.png";
         style="line-height: 2"
       >
         Busca el desarrollo de la investigación en las facultades de las
-        universidades asociadas, a través de la transmisión de conocimientos, ideas,
-        sana competencia y sobre todo experiencias. Fomenta la colaboración
-        entre estudiantes y profesores, promoviendo la innovación y el avance en
-        diversas áreas del conocimiento.
+        universidades asociadas, a través de la transmisión de conocimientos,
+        ideas, sana competencia y sobre todo experiencias. Fomenta la
+        colaboración entre estudiantes y profesores, promoviendo la innovación y
+        el avance en diversas áreas del conocimiento.
       </p>
-      <a href="https://www.facebook.com/aneimeraof/?locale=es_LA" class="px-4 py-2 bg-red-700 text-white text-lg self-start mt-2
-        hover:bg-red-800 transition-all duration-200 ease" target="_blank" rel="noopener noreferrer" >
+      <a
+        href="https://www.facebook.com/aneimeraof/?locale=es_LA"
+        class="px-4 py-2 bg-red-700 text-white text-lg self-start mt-2
+        hover:bg-red-800 transition-all duration-200 ease"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ir a la pagina de Facebook de Aneimera UPC"
+      >
         Más información
       </a>
     </div>
-    <img class="self-center w-full h-96" src={AneimeraPeruQueEs.src} alt="evento" />
+    <Image
+      src={AneimeraPeruQueEs}
+      alt="que-es-aneimera-image"
+      class="self-center h-96"
+    />
   </div>
 </section>
 

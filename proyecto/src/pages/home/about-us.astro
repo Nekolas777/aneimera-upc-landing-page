@@ -1,3 +1,9 @@
+---
+import { Image } from "astro:assets";
+import AboutImage1 from "../../../Imagenes/about-image-1.png";
+import AboutImage2 from "../../../Imagenes/about-image-2.png";
+---
+
 <section class="bg-gris py-16 md:py-20">
     <div class="section-container mx-auto grid grid-cols-auto grid-rows-2 gap-10 md:grid-cols-2 md:grid-rows-1">
         <div class="flex flex-col items-center gap-5 p-5 text-center sm:text-start">
@@ -9,7 +15,10 @@
                 su participación activa tanto en la comunidad universitaria como
                 a nivel nacional.
             </p>
-            <img class="mt-3 h-full" src="../../../Imagenes/about-image-1.png" />
+            <Image
+                src={AboutImage1}
+                alt="desarrollo-integral-image"
+            />
         </div>
         <div class="flex flex-col items-center gap-5 p-5 text-center sm:text-start">
             <h2 class="font-semibold tracking-wider mb-2 uppercase">Nuestra visión</h2>
@@ -20,7 +29,10 @@
                 investigación y su impacto positivo en el desarrollo profesional
                 y personal de sus miembros.
             </p>
-            <img class="mt-3 h-full" src="../../../Imagenes/about-image-2.png" />
+            <Image
+                src={AboutImage2}
+                alt="asociacion-lider-image"
+            />
         </div>
     </div>
 </section>

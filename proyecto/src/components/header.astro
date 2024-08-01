@@ -1,83 +1,114 @@
-<div id="blur-overlay"></div>
+---
+import { Image } from "astro:assets";
+import EventoPasadoUno from "../../Imagenes/logo-aneimeraUPC.webp";
+---
 
-<header id="main-header" class="bg-transparent fixed w-full top-0 start-0 z-10">
-    <div class="flex max-w-screen-xl flex-wrap items-center justify-between mx-auto p-4">
-        <div class="logo flex">
-            <a href="/" class="flex items-center">
-                <img src="Imagenes/logo-aneimeraUPC.png" alt="Logo" class="w-10 mb-0.5">
-                <h1 class="ml-2 text-3xl font-bold">ANEIMERA</h1>
-            </a>
-        </div>
-        <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-Titulos rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-            </svg>
-        </button>
-        <div class="hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-            <ul class="flex flex-col p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rtl:space-x-reverse md:flex-row">
-                <li>
-                    <a href="/" class="text-center block py-2 px-3 text-Titulos hover:bg-gris rounded md:bg-transparent md:p-0">Inicio</a>
-                </li>
-                <li>
-                    <a href="/aneimera_peru_page" class="text-center block py-2 px-3 text-Titulos hover:bg-gris rounded md:p-0 ">Aneimera Perú</a>
-                </li>
-                <li>
-                    <a href="/directiva_page" class="text-center block py-2 px-3 text-Titulos hover:bg-gris rounded md:p-0 ">Directiva</a>
-                </li>
-                <li>
-                    <a href="/eventos_page" class="text-center block py-2 px-3 text-Titulos hover:bg-gris rounded md:p-0 ">Eventos</a>
-                </li>
-            </ul>
-        </div>
+<!-- <div id="blur-overlay"></div> -->
+<header
+  id="main-header"
+  class="sticky w-full top-0 h-20 z-10 flex items-center"
+>
+  <div class="flex section-container items-center justify-between mx-auto">
+    <div class="logo flex">
+      <a href="/" class="flex items-center">
+        <Image
+          src={EventoPasadoUno}
+          alt="logo-aneimeraUPC"
+          height={40}
+          width={40}
+        />
+        <h1 class="ml-2 text-3xl font-bold text-black">ANEIMERA</h1>
+      </a>
     </div>
+    <button
+      id="menu-toggle"
+      type="button"
+      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-Titulos rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+      aria-controls="navbar-sticky"
+      aria-expanded="false"
+      aria-label="Mostrar la barra de navegación"
+    >
+      <svg
+        class="w-5 h-5"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 17 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 1h15M1 7h15M1 13h15"></path>
+      </svg>
+    </button>
+    <div class="hidden absolute bg-blanco left-0 top-20 md:top-0 md:bg-transparent w-full md:relative md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul
+        class="flex flex-col p-4 md:p-0 md:mt-0 md:space-x-8 rtl:space-x-reverse md:flex-row"
+      >
+        <li>
+          <a
+            href="/"
+            class="text-center block py-2 px-3 text-Titulos hover:bg-gris rounded md:bg-transparent md:p-0"
+            aria-label="Ir a la sección de inicio"
+            >Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            href="/aneimera_peru_page"
+            class="text-center block py-2 px-3 text-Titulos hover:bg-gris rounded md:p-0"
+            aria-label="Ir a la sección de Aneimera Perú"
+            >Aneimera Perú</a
+          >
+        </li>
+        <li>
+          <a
+            href="/directiva_page"
+            class="text-center block py-2 px-3 text-Titulos hover:bg-gris rounded md:p-0"
+            aria-label="Ir a la sección de Directiva de Aneimera"
+            >Directiva</a
+          >
+        </li>
+        <li>
+          <a
+            href="/eventos_page"
+            class="text-center block py-2 px-3 text-Titulos hover:bg-gris rounded md:p-0"
+            aria-label="Ir a la sección de Eventos"
+            >Eventos</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
 </header>
 
-
-
 <style>
-#blur-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.651);
-    backdrop-filter: blur(20px);
-    z-index: 5;
-    pointer-events: none;
-}
-
+  .header-scrolled {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+  }
 </style>
 
-<script>
-document.getElementById('menu-toggle').addEventListener('click', () => {
-    var navbarSticky = document.getElementById('navbar-sticky');
-    navbarSticky.classList.toggle('hidden');
-    navbarSticky.classList.toggle('active');
-    updateHeaderBlur();
-});
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    document.getElementById("menu-toggle").addEventListener("click", () => {
+      const navbarSticky = document.getElementById("navbar-sticky");
+      navbarSticky.classList.toggle("hidden");
+      navbarSticky.classList.toggle("active");
+    });
+  });
 
-function updateHeaderBlur() {
-    var header = document.getElementById('main-header');
-    var blurOverlay = document.getElementById('blur-overlay');
+  document.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener("scroll", () => {
+      const header = document.getElementById("main-header");
 
-    var headerRect = header.getBoundingClientRect();
-
-    blurOverlay.style.top = headerRect.top + 'px';
-    blurOverlay.style.height = headerRect.height + 'px';
-
-    var rgb = window.getComputedStyle(blurOverlay, null).getPropertyValue('background-color').match(/\d+/g);
-    var brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
-
-    if (brightness > 125) {
-        header.style.color = '#000000';
-    } else {
-        header.style.color = '#ffffff';
-    }
-}
-
-window.onload = updateHeaderBlur;
-
-
-
+      if (window.scrollY > 0) {
+        header.classList.add("header-scrolled");
+      } else {
+        header.classList.remove("header-scrolled");
+      }
+    });
+  });
 </script>

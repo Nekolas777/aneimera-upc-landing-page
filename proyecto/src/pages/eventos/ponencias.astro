@@ -1,6 +1,7 @@
 ---
-import Ponencia1 from "../../../Imagenes/ponencia1.png";
-import Ponencia11 from "../../../Imagenes/ponencia11.png";
+import { Image } from "astro:assets";
+import PonenciaUno from "../../../Imagenes/ponencia1.png";
+import PonenciaDos from "../../../Imagenes/ponencia11.png";
 ---
 
 <section class="w-full py-16 md:py-20">
@@ -34,9 +35,10 @@ import Ponencia11 from "../../../Imagenes/ponencia11.png";
                 </button>
             </div>
             <div class="w-full h-full flex items-center">
-                <img
-                    class="bg-red-900 w-full h-96 object-cover"
-                    src={Ponencia1.src}
+                <Image
+                    src={PonenciaUno}
+                    alt="ponencia-uno-image"
+                    class="object-cover h-96"
                 />
             </div>
         </div>
@@ -44,7 +46,11 @@ import Ponencia11 from "../../../Imagenes/ponencia11.png";
             class="grid grid-rows-1 grid-cols-1 md:grid-cols-2 xl:grid-cols-[3fr,4fr] gap-5 md:gap-10 mt-5"
         >
             <div class="order-2 md:order-1 w-full h-full flex items-center">
-                <img class="bg-red-900 w-full h-96" src={Ponencia11.src} />
+                <Image
+                    src={PonenciaDos}
+                    alt="ponencia-uno-image"
+                    class="object-cover h-96"
+                />
             </div>
             <div
                 class="order-1 md:order-2 flex flex-col gap-6 md:gap-8 bg-blanco py-5 pl-0 md:pl-8 md:py-10

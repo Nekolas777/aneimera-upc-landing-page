@@ -1,9 +1,9 @@
 ---
-import type { GetStaticPaths } from "astro";
-import Header from '../components/header.astro';
-import Footer from '../components/Footer.astro';
+import Header from "../components/header.astro";
+import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -11,73 +11,75 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-		/>
-	</head>
-	<body class="overflow-x-hidden">
-     	<div id="content">
-			<Header />
-			<slot/>
-			<Footer />
-		</div>		
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- DNS Prefetch for Google Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <!-- Load fonts with font-display: swap -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="./Imagenes/heroBackground.webp" as="image" />
+  </head>
+  <ViewTransitions fallback="none" />
+
+  <body class="overflow-x-hidden min-h-screen">
+    <div id="" class="h-full">
+      <Header />
+      <slot />
+      <Footer />
+    </div>
+  </body>
+
+  <style is:global>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: "Poppins";
+    }
+    .section-container {
+      width: 90%;
+      max-width: 1400px;
+      margin-inline: auto;
+    }
+    h1 {
+      @apply text-7xl sm:text-7xl font-bold;
+    }
+
+    h2 {
+      @apply text-xl sm:text-2xl;
+    }
+
+    h3 {
+      @apply text-sm sm:text-base;
+    }
+
+    h4 {
+      @apply text-xs sm:text-sm;
+    }
+
+    p {
+      @apply text-sm sm:text-base;
+    }
+
+    .border {
+      border: 1px solid red;
+    }
+  </style>
+
 </html>
-
-<style is:global>
-	html {
-		scroll-behavior: smooth;
-	}
-	body {
-		font-family: "Poppins";
-	}
-	.section-container {
-		width: 90%;
-		max-width: 1400px;
-		margin-inline: auto;
-	}
-	h1{
-		@apply text-7xl sm:text-7xl font-bold;
-	}
-
-	h2 {
-		@apply text-xl sm:text-2xl;
-	}
-
-	h3 {
-		@apply text-sm sm:text-base;
-	}
-
-	h4 {
-		@apply text-xs sm:text-sm;
-	}
-
-	p {
-		@apply text-sm sm:text-base;
-	}
-
-	.border {
-		border: 1px solid red;
-	}
-</style>
-
-<script>
-	var navbar = document.querySelector("header");
-	var navbarHeight = navbar!.offsetHeight;
-	var cotent = document.getElementById("content");
-	cotent!.style.marginTop = navbarHeight + "px";
-</script>
