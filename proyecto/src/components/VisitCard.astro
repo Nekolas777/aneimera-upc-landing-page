@@ -5,80 +5,87 @@ const { visit_img, title, visit_date, description, link_url } = Astro.props;
 ---
 
 <article class="w-full flex flex-col bg-slate-200">
-    <div>
-        <img class="w-full h-[22rem] object-cover sm:object-fill" src={visit_img} />
-    </div>
-    <div class="flex flex-col py-6 px-5">
-        <div class="flex flex-col gap-5">
-            <div class="flex flex-row justify-between items-center">
-                <h2 class="font-medium">{title}</h2>
-                <p class="text-sm">
-                    <span class="font-medium mr-1.5" style="font-size: 17px;">Fecha:</span>{visit_date}
-                </p>
-            </div>
-            <p
-                class="description font-normal text-sm md:text-base py-1 tracking-wide text-wrap 
+  <div>
+    <img class="w-full h-[22rem] object-cover sm:object-fill" src={visit_img} />
+  </div>
+  <div class="flex flex-col py-6 px-5">
+    <div class="flex flex-col gap-5">
+      <div class="flex flex-row justify-between items-center">
+        <h2 class="font-medium">{title}</h2>
+        <p class="text-sm">
+          <span class="font-medium mr-1.5" style="font-size: 17px;">Fecha:</span
+          >{visit_date}
+        </p>
+      </div>
+      <p
+        class="description font-normal text-sm md:text-base py-1 tracking-wide text-wrap
                     leading-relaxed text-slate-900"
-                style="line-height: 1.65;"
-            >
-                {description}
-            </p>
-            <div class="flex flex-row justify-between items-center">
-                <div class="flex flex-row gap-3">
-                    <button class="px-4 py-2 bg-red-700 text-white text-lg mt-2 self-center sm:self-start
-                    hover:bg-red-800 transition-all duration-200 ease">
-                    Más información
-                    </button>
-                </div>
-                <div
-                    class="calendar-btn cursor-pointer bg-[#3C3737] p-2 rounded-full
-                    hover:bg-black transition-all duration-200 ease-in"
-                    data-visit-date={visit_date}
-                    data-visit-title={title}
-                >
-                    <CalendarIcon class="icon" />
-                </div>
-            </div>
+        style="line-height: 1.65;"
+      >
+        {description}
+      </p>
+      <div class="flex flex-row justify-between items-center">
+        <div class="flex flex-row gap-3">
+          <a
+            href={link_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ir a la pagina de Facebook de Aneimera UPC"
+            class="px-4 py-2 bg-red-700 text-white text-lg mt-2 self-center sm:self-start
+                    hover:bg-red-800 transition-all duration-200 ease"
+          >
+            Más información
+          </a>
         </div>
+        <div
+          class="calendar-btn cursor-pointer bg-[#3C3737] p-2 rounded-full
+                    hover:bg-black transition-all duration-200 ease-in"
+          data-visit-date={visit_date}
+          data-visit-title={title}
+        >
+          <CalendarIcon class="icon" />
+        </div>
+      </div>
     </div>
+  </div>
 </article>
 
 <script>
-    document.addEventListener("DOMContentLoaded", (e) => {
-        let calendarButtons = document.querySelectorAll(".calendar-btn");
+  document.addEventListener("DOMContentLoaded", (e) => {
+    let calendarButtons = document.querySelectorAll(".calendar-btn");
 
-        calendarButtons.forEach((button) => {
-            button.addEventListener("click", (e) => {
-                let currentTitle = (e.currentTarget as Element).getAttribute(
-                    "data-visit-title",
-                );
-                let currentlyDate = (e.currentTarget as Element).getAttribute(
-                    "data-visit-date",
-                );
+    calendarButtons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        let currentTitle = (e.currentTarget as Element).getAttribute(
+          "data-visit-title"
+        );
+        let currentlyDate = (e.currentTarget as Element).getAttribute(
+          "data-visit-date"
+        );
 
-                let parts = currentlyDate.split("/");
-                let formattedDate = `20${parts[2]}${parts[1]}${parts[0]}`;
+        let parts = currentlyDate.split("/");
+        let formattedDate = `20${parts[2]}${parts[1]}${parts[0]}`;
 
-                let googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&dates=${formattedDate}/${formattedDate}&text=${currentTitle}`;
-                window.open(googleCalendarUrl, "_blank");
-                console.log("La fecha de visita es " + currentlyDate);
-            });
-        });
+        let googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&dates=${formattedDate}/${formattedDate}&text=${currentTitle}`;
+        window.open(googleCalendarUrl, "_blank");
+        console.log("La fecha de visita es " + currentlyDate);
+      });
     });
+  });
 </script>
 
 <style>
-    .icon:hover {
-        scale: 1.2;
-    }
+  .icon:hover {
+    scale: 1.2;
+  }
 
-    @media (min-width: 1024px) {
-        .description {
-            display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+  @media (min-width: 1024px) {
+    .description {
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
+  }
 </style>
