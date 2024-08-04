@@ -2,8 +2,6 @@
 import Header from "../components/header.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
-import PoliticasPrivacidad from "../components/PoliticasPrivacidad.astro";
-import TerminosCondiciones from "../components/TerminosCondiciones.astro";
 interface Props {
   title: string;
 }
@@ -100,6 +98,16 @@ const { title } = Astro.props;
 
     .no-scroll {
       overflow: hidden;
+    }
+
+    #modal {
+      max-height: 550px;
+    }
+
+    @media (max-height: 900px) {
+      #modal {
+        max-height: 400px;
+      }
     }
   </style>
 </html>
