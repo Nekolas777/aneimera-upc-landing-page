@@ -1,7 +1,8 @@
 ---
 import NotFound from "../../components/NotFound.astro";
+import PastVisitCard from "../../components/PastVisitCard.astro";
 import VisitCard from "../../components/VisitCard.astro";
-import { cards } from "../../data/VisitCards.ts";
+import { cards } from "../../data/PastTechnicalVisits";
 
 // Función para convertir fecha de DD/MM/AAAA a AAAA-MM-DD
 function convertDate(dateStr) {
@@ -24,7 +25,7 @@ const pastCards = cards.filter(card => convertDate(card.visit_date) < today);
         {pastCards.length > 0 ? (
             <div class="mt-10 grid grid-cols-1 md:grid-cols-2 grid-rows-auto gap-12">
                 {pastCards.map((card) => (
-                    <VisitCard {...card} />
+                    <PastVisitCard {...card} />
                 ))}
             </div>
         ) : (

@@ -11,7 +11,8 @@ import ExternalIcon from "../assets/LinkExternal.astro";
       <div class="flex flex-row justify-between items-center">
         <h2 class="font-medium">{Astro.props.title}</h2>
         <p class="text-sm">
-            <span class="font-medium mr-1.5" style="font-size: 17px;">Fecha:</span>{Astro.props.date}
+          <span class="font-medium mr-1.5" style="font-size: 17px;">Fecha:</span
+          >{Astro.props.date}
         </p>
       </div>
       <p
@@ -33,9 +34,15 @@ import ExternalIcon from "../assets/LinkExternal.astro";
             >
           </div>
         </div>
-        <div class="cursor-pointer">
+        <a
+          href={Astro.props.form_link}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Abrir formulario del taller ${Astro.props.title}`}
+          class="cursor-pointer"
+        >
           <ExternalIcon class="icon" />
-        </div>
+        </a>
       </div>
     </div>
   </div>
