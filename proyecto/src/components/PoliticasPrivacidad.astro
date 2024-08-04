@@ -1,0 +1,125 @@
+---
+import VerifiedIcon from "../assets/VerifiedIcon.astro"
+---
+
+<section
+  id="politicas-modal"
+  class="bg-slate-900/50 fixed top-0 left-0 bottom-0 right-0 hidden items-center justify-center z-50"
+>
+  <div
+    class="bg-slate-100 w-11/12 max-w-[650px] mx-auto relative rounded-lg overflow-hidden"
+  >
+    <header
+      class="w-full bg-rojo absolute left-0 top-0 h-28 px-5 flex flex-row items-center justify-between gap-1.5"
+    >
+      <div class="w-full flex-col items-center gap-2">
+        <h1 class="text-xl sm:text-3xl text-slate-50 font-semibold mb-1">
+          Políticas y Privacidad
+        </h1>
+        <span class="text-slate-50/85 text-base sm:text-lg"
+          >Política de Privacidad de Aneimera UPC</span
+        >
+      </div>
+      <VerifiedIcon/>
+    </header>
+    <div
+      class="bg-slate-50 mt-28 bg-slate-50/70 divide-y-2 divide-slate-400/40"
+    >
+      <div
+        id="modal"
+        class="overflow-y-auto max-h-[400px] relative bg-slate-50 p-5 overflow-hidden"
+      >
+        <p class="text-justify">
+          <span class="font-bold text-lg">Introducción</span><br /> En Aneimera UPC,
+          valoramos y respetamos la privacidad de nuestros miembros y visitantes.
+          Esta política de privacidad describe cómo recopilamos, utilizamos, y protegemos
+          la información personal que nos proporcionas. Al unirte a nuestra comunidad
+          o utilizar nuestros servicios, aceptas los términos de esta política de
+          privacidad.
+          <br /><br /><span class="font-bold text-lg"
+            >Recopilamos varios tipos de información, incluyendo:</span
+          ><br />
+          <span class="text-red-600/90">Información de contacto:</span> como nombre,
+          dirección de correo electrónico, número de teléfono, y dirección postal.<br
+          /><span class="text-red-600/90">Información demográfica:</span> como edad,
+          género, y preferencias educativas. Información de uso: detalles sobre cómo
+          utilizas nuestro sitio web, redes sociales, y otros servicios. <br
+          /><span class="text-red-600/90">Información técnica:</span> como dirección
+          IP, tipo de navegador, y datos sobre la interacción con nuestro sitio web.<br
+          /><br /><span class="font-bold text-lg"
+            >Utilizamos la información recopilada para diversos fines,
+            incluyendo:
+          </span><br /><span class="text-red-600/90">Comunicación:</span>
+          para enviarte información importante, noticias, y actualizaciones sobre
+          nuestros eventos y actividades.<br /><span class="text-red-600/90"
+            >Personalización:</span
+          > para ofrecerte contenido y servicios que se ajusten a tus intereses y
+          necesidades.
+          <br /><span class="text-red-600/90">Analisís y mejoras:</span> para entender
+          cómo se utilizan nuestros servicios y mejorar la experiencia de usuario.
+          Compartir Información con Terceros <br />Con el fin de proveer y
+          mejorar nuestros servicios: para gestionar inscripciones a talleres,
+          eventos y otras actividades.<br /><br /><span
+            class="font-bold text-lg"
+            >No vendemos ni compartimos tu información personal con terceros,
+            excepto en los siguientes casos:</span
+          ><br /><span class="text-red-600/90">Proveedores de servicios:</span> compartimos
+          información con terceros que nos ayudan a operar nuestros servicios, siempre
+          bajo estrictos acuerdos de confidencialidad. <br /><span
+            class="text-red-600/90">Cumplimiento legal:</span
+          > cuando es requerido por ley o para proteger nuestros derechos legales
+          y seguridad.<br /><br /><span class="font-bold text-lg"
+            >Como usuario tienes derecho a:</span
+          ><br /> Implementamos medidas de seguridad adecuadas para proteger tu información
+          personal contra acceso no autorizado, alteración, divulgación o destrucción.
+          Utilizamos tecnologías de encriptación y prácticas seguras de manejo de
+          datos para garantizar la seguridad de tu información.<br /><br /><span
+            class="font-bold text-lg">Como usuario tienes derecho a:</span
+          ><br /><span class="text-red-600/90">Acceder a tu información:</span> solicitar
+          una copia de la información personal que tenemos sobre ti. Rectificar tu
+          información: corregir cualquier información incorrecta o incompleta.<br
+          /><span class="text-red-600/90">Eliminar tu Información:</span>
+          solicitar la eliminación de tu información personal.<br /><span
+            class="text-red-600/90">Retirar el consentimiento:</span
+          >
+          retirar tu consentimiento para el procesamiento de tus datos en cualquier
+          momento.<br /><br /><span class="font-bold text-lg"
+            >Cambios en la Política de Privacidad:</span
+          ><br /> Podemos actualizar esta política de privacidad de vez en cuando.
+          Te notificaremos sobre cualquier cambio significativo a través de nuestras
+          redes sociales y sitio web.<br /><br /><span
+            class="text-red-600/80 font-medium">Contacto:</span
+          > Si tienes preguntas o inquietudes sobre estos Términos, contáctanos en
+          <span class="text-blue-500">aneimera.upc@gmail.com.</span>
+        </p>
+      </div>
+      <div
+        class="flex flex-row p-5 gap-3 flex-wrap justify-center sm:flex-nowrap sm:justify-end"
+      >
+        <button
+          class="rounded-xl w-full xs:w-auto bg-slate-100 text-black border-[1px] border-black py-2 px-5
+           hover:bg-slate-300 transition-all duration-200 ease"
+          onclick="hidePoliticasModal()"
+        >
+          Cancelar
+        </button>
+        <button
+          class="rounded-xl w-full xs:w-auto bg-red-700 text-blanco py-2 px-5
+          hover:bg-red-800 transition-all duration-200 ease"
+          onclick="hidePoliticasModal()"
+        >
+          Estoy de acuerdo
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  function hidePoliticasModal() {
+    const modal = document.getElementById("politicas-modal");
+    modal.classList.remove("flex");
+    modal.classList.add("hidden");
+    document.body.classList.remove("no-scroll");
+  }
+</script>

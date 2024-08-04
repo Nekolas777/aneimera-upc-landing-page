@@ -4,6 +4,7 @@ interface CardWorkshop {
     description: string;
     profile_img: string;
     name: string;
+    date: string;
     status: string;
 }
 
@@ -15,6 +16,7 @@ export const cards: CardWorkshop[] = [
         "description": "Explora el poder de Python en nuestro taller. Desde principiantes hasta expertos, descubre cómo escribir código eficiente, crear aplicaciones web y automatizar tareas",
         "profile_img": 'https://www.show.news/__export/1693849403093/sites/debate/img/2023/09/04/nicola-porcella.jpg_943222218.jpg',
         "name": "Dax Collas",
+        "date": "29/06/2019",
         "status": "Experto en HTML"
     },
     {
@@ -23,6 +25,7 @@ export const cards: CardWorkshop[] = [
         "description": "Explora el poder de Python en nuestro taller. Desde principiantes hasta expertos, descubre cómo escribir código eficiente, crear aplicaciones web y automatizar tareas",
         "profile_img": '../../Imagenes/profile-one.png',
         "name": "Luis Reyes",
+        "date": "29/06/2019",
         "status": "Experto en HTML"
     },
     {
@@ -31,6 +34,7 @@ export const cards: CardWorkshop[] = [
         "description": "Explora el poder de Python en nuestro taller. Desde principiantes hasta expertos, descubre cómo escribir código eficiente, crear aplicaciones web y automatizar tareas",
         "profile_img": 'https://avatars.githubusercontent.com/u/129230632?v=4',
         "name": "Sebastian Ramirez",
+        "date": "29/06/2019",
         "status": "Experto en HTML"
     },
     {
@@ -39,6 +43,7 @@ export const cards: CardWorkshop[] = [
         "description": "Explora el poder de Python en nuestro taller. Desde principiantes hasta expertos, descubre cómo escribir código eficiente, crear aplicaciones web y automatizar tareas",
         "profile_img": 'https://i.pinimg.com/736x/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg',
         "name": "Arian Rodriguez",
+        "date": "29/06/2019",
         "status": "Experto en HTML"
     }
 ]
