@@ -1,5 +1,5 @@
 ---
-import VerifiedIcon from "../assets/VerifiedIcon.astro"
+import VerifiedIcon from "../assets/VerifiedIcon.astro";
 ---
 
 <section
@@ -20,7 +20,7 @@ import VerifiedIcon from "../assets/VerifiedIcon.astro"
           >Política de Privacidad de Aneimera UPC</span
         >
       </div>
-      <VerifiedIcon/>
+      <VerifiedIcon />
     </header>
     <div
       class="bg-slate-50 mt-28 bg-slate-50/70 divide-y-2 divide-slate-400/40"
@@ -76,11 +76,13 @@ import VerifiedIcon from "../assets/VerifiedIcon.astro"
           datos para garantizar la seguridad de tu información.<br /><br /><span
             class="font-bold text-lg">Como usuario tienes derecho a:</span
           ><br /><span class="text-red-600/90">Acceder a tu información:</span> solicitar
-          una copia de la información personal que tenemos sobre ti.<br /><span class="text-red-600/90">Rectificar tu información:</span>corregir cualquier información incorrecta o incompleta.<br
-          /><span class="text-red-600/90">Eliminar tu Información:</span>
-          solicitar la eliminación de tu información personal de manera inmmediata.<br /><span
-            class="text-red-600/90">Retirar el consentimiento:</span
+          una copia de la información personal que tenemos sobre ti.<br /><span
+            class="text-red-600/90">Rectificar tu información:</span
+          >corregir cualquier información incorrecta o incompleta.<br /><span
+            class="text-red-600/90">Eliminar tu Información:</span
           >
+          solicitar la eliminación de tu información personal de manera inmmediata.<br
+          /><span class="text-red-600/90">Retirar el consentimiento:</span>
           retirar tu consentimiento para el procesamiento de tus datos en cualquier
           momento.<br /><br /><span class="font-bold text-lg"
             >Cambios en la Política de Privacidad:</span
@@ -96,6 +98,7 @@ import VerifiedIcon from "../assets/VerifiedIcon.astro"
         class="flex flex-row p-5 gap-3 flex-wrap justify-center sm:flex-nowrap sm:justify-end"
       >
         <button
+          aria-label="Cerrar Modal de Politica de privacidad"
           class="rounded-xl w-full xs:w-auto bg-slate-100 text-black border-[1px] border-black py-2 px-5
            hover:bg-slate-300 transition-all duration-200 ease"
           onclick="hidePoliticasModal()"
@@ -103,6 +106,7 @@ import VerifiedIcon from "../assets/VerifiedIcon.astro"
           Cancelar
         </button>
         <button
+          aria-label="Cerrar Modal de Politica de privacidad"
           class="rounded-xl w-full xs:w-auto bg-red-700 text-blanco py-2 px-5
           hover:bg-red-800 transition-all duration-200 ease"
           onclick="hidePoliticasModal()"
