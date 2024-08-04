@@ -1,1 +1,0 @@
-En este folder (Home) se deben crear las vistas, footer y header no son una vista, son componentes que se usaran en reiteradas partes del codigo
