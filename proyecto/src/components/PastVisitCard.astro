@@ -1,0 +1,42 @@
+---
+const { visit_img, title, visit_date, description } = Astro.props;
+---
+
+<article class="w-full flex flex-col bg-slate-200">
+    <div>
+        <img class="w-full h-[22rem] object-cover sm:object-fill" src={visit_img} />
+    </div>
+    <div class="flex flex-col py-6 px-5">
+        <div class="flex flex-col gap-5">
+            <div class="flex flex-row justify-between items-center">
+                <h2 class="font-medium">{title}</h2>
+                <p class="text-sm">
+                    <span class="font-medium mr-1.5" style="font-size: 17px;">Fecha:</span>{visit_date}
+                </p>
+            </div>
+            <p
+                class="description font-normal text-sm md:text-base py-1 tracking-wide text-wrap 
+                    leading-relaxed text-slate-900"
+                style="line-height: 1.65;"
+            >
+                {description}
+            </p>
+        </div>
+    </div>
+</article>
+
+<style>
+    .icon:hover {
+        scale: 1.2;
+    }
+
+    @media (min-width: 1024px) {
+        .description {
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+</style>
