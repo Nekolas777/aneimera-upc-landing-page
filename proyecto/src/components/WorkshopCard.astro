@@ -1,43 +1,55 @@
 ---
 import ExternalIcon from "../assets/LinkExternal.astro";
 ---
+
 <article class="w-full flex flex-col bg-slate-200">
-    <figure>
-        <img
-            class="w-full h-80 object-fill"
-            src={Astro.props.workshop_img}
-        />
-    </figure>
-    <div class="flex flex-col p-5">
-        <div class="flex flex-col gap-3">
-            <h2 class="font-medium">{ Astro.props.title }</h2>
-            <p class="py-1 tracking-wide leading-relaxed text-sm md:text-base text-slate-900"
-                style="line-height: 1.65;"
+  <figure>
+    <img class="w-full h-80 object-fill" src={Astro.props.workshop_img} />
+  </figure>
+  <div class="flex flex-col p-5">
+    <div class="flex flex-col gap-3">
+      <div class="flex flex-row justify-between items-center">
+        <h2 class="font-medium">{Astro.props.title}</h2>
+        <p class="text-sm">
+          <span class="font-medium mr-1.5" style="font-size: 17px;">Fecha:</span
+          >{Astro.props.date}
+        </p>
+      </div>
+      <p
+        class="py-1 tracking-wide leading-relaxed text-sm md:text-base text-slate-900"
+        style="line-height: 1.65;"
+      >
+        {Astro.props.description}
+      </p>
+      <div class="flex flex-row justify-between items-center">
+        <div class="flex flex-row gap-3">
+          <img
+            class="rounded-full w-[3.5rem] h-[3.5rem] border-[1px]"
+            src={Astro.props.profile_img}
+          />
+          <div class="flex flex-col justify-center gap-1">
+            <h3 class="font-normal">{Astro.props.name}</h3>
+            <span class="text-[13px] tracking-wide text-slate-500"
+              >{Astro.props.status}</span
             >
-                { Astro.props.description }
-            </p>
-            <div class="flex flex-row justify-between items-center">
-                <div class="flex flex-row gap-3">
-                    <img
-                        class="rounded-full w-[3.5rem] h-[3.5rem] border-[1px]"
-                        src={ Astro.props.profile_img } />
-                    <div class="flex flex-col justify-center gap-1">
-                        <h3 class="font-normal">{ Astro.props.name }</h3>
-                        <span class="text-[13px] tracking-wide text-slate-500"
-                            >{ Astro.props.status }</span
-                        >
-                    </div>
-                </div>
-                <div class="cursor-pointer">
-                    <ExternalIcon class="icon" />
-                </div>
-            </div>
+          </div>
         </div>
+        <a
+          href={Astro.props.form_link}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Abrir formulario del taller ${Astro.props.title}`}
+          class="cursor-pointer"
+        >
+          <ExternalIcon class="icon" />
+        </a>
+      </div>
     </div>
+  </div>
 </article>
 
 <style>
-    .icon:hover {
+  .icon:hover {
     color: red;
-    }
+  }
 </style>

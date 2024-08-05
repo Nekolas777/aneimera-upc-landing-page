@@ -1,3 +1,8 @@
+---
+import PoliticasPrivacidad from "./PoliticasPrivacidad.astro";
+import TerminosCondiciones from "./TerminosCondiciones.astro";
+---
+
 <footer>
   <section class="Footer w-full">
     <div class="bg-rojo px-5 py-10">
@@ -51,16 +56,16 @@
             >
           </div>
         </div>
-        <div class="mt-4 hidden">
+        <div class="mt-4">
           <div class="font-bold mb-8 sub_titulo text-blanco">Legal</div>
           <div
             class="flex flex-col gap-4 text-gris text-start items-center md:items-start"
           >
-            <button aria-label="Mostrar politica de privacidad"
+            <button aria-label="Mostrar politica de privacidad" onclick="showPoliticasModal()"
               ><span class="hover:underline">Politica de privacidad</span
               ></button
             >
-            <button aria-label="Mostrar terminos y condiciones de Aneimera UPC"
+            <button aria-label="Mostrar terminos y condiciones de Aneimera UPC" onclick="showTerminosModal()"
               ><span class="hover:underline">Terminos y condiciones</span
               ></button
             >
@@ -72,6 +77,8 @@
       </div>
     </div>
   </section>
+  <PoliticasPrivacidad/>
+  <TerminosCondiciones/>
 </footer>
 
 <style>
@@ -92,3 +99,21 @@
     }
   }
 </style>
+
+<script is:inline>
+  
+  function showPoliticasModal() {
+    const modal = document.getElementById('politicas-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.classList.add('no-scroll');
+  }
+
+  function showTerminosModal() {
+    const modal = document.getElementById('terminos-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.classList.add('no-scroll');
+  }
+
+</script>

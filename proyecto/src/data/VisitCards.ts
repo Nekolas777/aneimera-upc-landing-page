@@ -1,12 +1,13 @@
 interface CardVisit {
-    visit_img: string;
-    title: string;
-    visit_date?: string;
-    description: string;
-    link_url: string;
+  visit_img: string;
+  title: string;
+  visit_date?: string;
+  description: string;
+  link_url: string;
 }
 
-// Aqui almacenaremos la data de los cards de manera dinámica
+/* Aqui almacenaremos la data de los cards de manera dinámica (inserta aqui para crear las
+ cards con la data correspondiente de la interfaz CardVisit) */
 export const cards: CardVisit[] = [
     {
         "visit_img": "../../Imagenes/visit-llanday.webp",

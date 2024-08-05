@@ -1,126 +1,206 @@
 ---
-import 'glider-js/glider.min.css';
+import "glider-js/glider.min.css";
 import { Image } from "astro:assets";
 import EventoPasadoUno from "../../../Imagenes/EventoPas1.webp";
 import EventoPasadoDos from "../../../Imagenes/EventoPas2.webp";
 import EventoPasadoTres from "../../../Imagenes/EventoPas3.webp";
+import EventoPasadoCuatro from "../../../Imagenes/USAT.webp";
+import EventoPasadoCinco from "../../../Imagenes/cusco.webp";
+import EventoPasadoSeis from "../../../Imagenes/una.webp";
+import EventoPasadoSiete from "../../../Imagenes/unrpg.webp";
+import LeftArrow from "../../assets/LeftArrow.astro";
+import RightArrow from "../../assets/RightArrow.astro";
 ---
 
 <section>
   <div class="contenedor pb-16">
     <div class="carousel__contenedor">
-      <button aria-label="Anterior" class="carousel__anterior min-w-14 pr-3">
-        <img src="Imagenes/left-arrow.png" alt="" />
+      <button
+        aria-label="Anterior"
+        class="carousel__anterior min-w-14 pr-3 -ml-6 sm:-ml-0"
+      >
+        <LeftArrow />
       </button>
       <div class="carousel__lista pb-3">
-        <div class="carousel__elemento flex flex-col">
-            <img class="h-80 object-cover" src="Imagenes/EventoPas1.webp" alt="evento"/>
-            <h1 class="pl-2 md:pl-10 text-2xl pt-3 font-semibold text-black opacity-90 uppercase"><b>Coneimera Huancayo</b></h1>
-            <p class="pl-2 md:pl-12 flex-1 font-normal text-normal md:text-lg 
-                tracking-wide text-balance leading-relaxed text-slate-100">
-                Congreso y exposición internacional de ingeniería
-                mecánica, mecatrónica, eléctrica, electrónica y
-                ramas afines<br>
-            </p>
-            <p class="pl-2 md:pl-12 flex-1 font-normal text-normal md:text-base 
-                tracking-wide text-balance leading-relaxed text-slate-100">
-                Fecha: 30/09/2012 - 6/10/2012
-            </p>
+        <div class="carousel__elemento flex flex-col w-full">
+          <Image
+            src={EventoPasadoUno}
+            alt="evento-pasado-uno"
+            class="h-80 min-w-[250px] sm:min-w-0 -ml-10 xs:-ml-4 sm:-ml-0 object-fill md:object-fill"
+          />
+          <h1
+            class="pl-5 md:pl-12 text-2xl pt-4 pb-2 font-semibold text-black opacity-90 uppercase"
+          >
+            <b>Coneimera Huancayo</b>
+          </h1>
+          <p
+            class="pl-5 md:pl-12 flex-1 font-normal text-normal md:text-lg
+              tracking-wide text-balance leading-relaxed text-slate-100"
+          >
+            Congreso y exposición internacional de ingeniería mecánica,
+            mecatrónica, eléctrica, electrónica y ramas afines<br />
+          </p>
+          <p
+            class="pl-5 pt-4 text-slate-50/80 md:pl-12 flex-1 font-normal text-normal md:text-base
+              tracking-wide text-balance leading-relaxed italic"
+          >
+            Fecha: 30/09/2012 - 6/10/2012
+          </p>
         </div>
-        <div class="carousel__elemento flex flex-col">
-            <img class="h-80" src="/Imagenes/EventoPas2.webp" alt="evento" />
-            <h1 class="pl-2 md:pl-10 text-2xl font-semibold pt-3 uppercase"><b>Coneimera UNP</b></h1>
-            <p class="pl-2 md:pl-12 flex-1 font-normal text-normal md:text-lg 
-                tracking-wide text-balance leading-relaxed text-slate-100">
-                Congreso y exposición internacional de ingeniería
-                mecánica, mecatrónica, eléctrica, electrónica y
-                ramas afines. Coneimera 2016 Piura<br>
-            </p>
-            <p class="pl-2 md:pl-12 flex-1 font-normal text-normal md:text-base 
-                tracking-wide text-balance leading-relaxed text-slate-100">
-                Fecha: 09/2016
-            </p>
+        <div class="carousel__elemento flex flex-col w-full">
+          <Image
+            src={EventoPasadoDos}
+            alt="evento-pasado-uno"
+            class="h-80 min-w-[250px] sm:min-w-0 -ml-10 xs:-ml-4 sm:-ml-0 object-fill md:object-fill"
+          />
+          <h1
+            class="pl-5 md:pl-12 text-2xl pt-4 pb-2 font-semibold text-black opacity-90 uppercase"
+          >
+            <b>Coneimera UNP</b>
+          </h1>
+          <p
+            class="pl-5 md:pl-12 flex-1 font-normal text-normal md:text-lg
+              tracking-wide text-balance leading-relaxed text-slate-100"
+          >
+            Congreso y exposición internacional de ingeniería mecánica,
+            mecatrónica, eléctrica, electrónica y ramas afines. Coneimera 2016
+            Piura<br />
+          </p>
+          <p
+            class="pl-5 pt-4 text-slate-50/80 md:pl-12 flex-1 font-normal text-normal md:text-base
+              tracking-wide text-balance leading-relaxed italic"
+          >
+            Fecha: 09/2016
+          </p>
         </div>
-        <div class="carousel__elemento flex flex-col">
-            <img class="h-80" src="Imagenes/EventoPas3.webp" alt="evento"/>
-            <h1 class="pl-2 md:pl-10 text-2xl font-semibold pt-3 uppercase"><b>Coneimera UNT</b></h1>
-            <p class="pl-2 md:pl-12 flex-1 font-normal text-normal md:text-lg 
-                tracking-wide text-balance leading-relaxed text-slate-100">
-                Concurso de proyectos en Trujillo, realizado en el
-                año 2017<br>
-            </p>
-            <p class="pl-2 md:pl-12 flex-1 font-normal text-normal md:text-base 
-                tracking-wide text-balance leading-relaxed text-slate-100">
-                Fecha: 10/2017
-            </p>
+        <div class="carousel__elemento flex flex-col w-full">
+          <Image
+            src={EventoPasadoTres}
+            alt="evento-pasado-uno"
+            class="h-80 min-w-[250px] sm:min-w-0 -ml-10 xs:-ml-4 sm:-ml-0 object-fill md:object-fill"
+          />
+          <h1
+            class="pl-5 md:pl-12 text-2xl pt-4 pb-2 font-semibold text-black opacity-90 uppercase"
+          >
+            <b>Coneimera UNT</b>
+          </h1>
+          <p
+            class="pl-5 md:pl-12 flex-1 font-normal text-normal md:text-lg
+              tracking-wide text-balance leading-relaxed text-slate-100"
+          >
+            Concurso de proyectos en Trujillo, realizado en el año 2017<br />
+          </p>
+          <p
+            class="pl-5 pt-4 text-slate-50/80 md:pl-12 flex-1 font-normal text-normal md:text-base
+              tracking-wide text-balance leading-relaxed italic"
+          >
+            Fecha: 10/2017
+          </p>
         </div>
-        <div class="carousel__elemento flex flex-col">
-            <img class="h-80" src="Imagenes/USAT.png" alt="evento"/>
-            <h1 class="pl-2 md:pl-10 text-2xl font-semibold pt-3 uppercase"><b>Coneimera USAT</b></h1>
-            <p class="pl-2 md:pl-12 flex-1 font-normal text-normal md:text-lg 
-                tracking-wide text-balance leading-relaxed text-slate-100">
-                Concurso de proyectos en Chiclayo, realizado en el
-                año 2018<br>
-            </p>
-            <p class="pl-2 md:pl-12 flex-1 font-normal text-normal md:text-base 
-                tracking-wide text-balance leading-relaxed text-slate-100">
-                Fecha: 24/09/2018 - 29/09/2018
-            </p>
+        <div class="carousel__elemento flex flex-col w-full">
+          <Image
+            src={EventoPasadoCuatro}
+            alt="evento-pasado-uno"
+            class="h-80 w-full min-w-[250px] sm:min-w-0 -ml-10 xs:-ml-4 sm:-ml-0 object-fill md:object-fill"
+          />
+          <h1
+            class="pl-5 md:pl-12 text-2xl pt-4 pb-2 font-semibold text-black opacity-90 uppercase"
+          >
+            <b>Coneimera USAT</b>
+          </h1>
+          <p
+            class="pl-5 md:pl-12 flex-1 font-normal text-normal md:text-lg
+              tracking-wide text-balance leading-relaxed text-slate-100"
+          >
+            Concurso de proyectos en Chiclayo, realizado en el año 2018<br />
+          </p>
+          <p
+            class="pl-5 pt-4 text-slate-50/80 md:pl-12 flex-1 font-normal text-normal md:text-base
+              tracking-wide text-balance leading-relaxed italic"
+          >
+            Fecha: 24/09/2018 - 29/09/2018
+          </p>
         </div>
-        <div class="carousel__elemento flex flex-col">
-            <img class="h-80" src="Imagenes/cusco.png" alt="evento"/>
-            <h1 class="pl-2 md:pl-10 text-2xl font-semibold pt-3 uppercase"><b>Coneimera Cusco</b></h1>
-            <p class="pl-2 md:pl-12 flex-1 font-normal text-normal md:text-lg 
-                tracking-wide text-balance leading-relaxed text-slate-100">
-                Concurso de proyectos en Cusco, realizado en el
-                año 2019<br>
-            </p>
-            <p class="pl-2 md:pl-12 flex-1 font-normal text-normal md:text-base 
-                tracking-wide text-balance leading-relaxed text-slate-100">
-                Fecha: 07/10/2019 - 12/10/2019
-            </p>
+        <div class="carousel__elemento flex flex-col w-full">
+          <Image
+            src={EventoPasadoCinco}
+            alt="evento-pasado-uno"
+            class="h-80 min-w-[250px] sm:min-w-0 -ml-10 xs:-ml-4 sm:-ml-0 object-fill md:object-fill"
+          />
+          <h1
+            class="pl-5 md:pl-12 text-2xl pt-4 pb-2 font-semibold text-black opacity-90 uppercase"
+          >
+            <b>Coneimera Cusco</b>
+          </h1>
+          <p
+            class="pl-5 md:pl-12 flex-1 font-normal text-normal md:text-lg
+              tracking-wide text-balance leading-relaxed text-slate-100"
+          >
+            Concurso de proyectos en Cusco, realizado en el año 2019<br />
+          </p>
+          <p
+            class="pl-5 pt-4 text-slate-50/80 md:pl-12 flex-1 font-normal text-normal md:text-base
+              tracking-wide text-balance leading-relaxed italic"
+          >
+            Fecha: 07/10/2019 - 12/10/2019
+          </p>
         </div>
-        <div class="carousel__elemento flex flex-col">
-            <img class="h-80" src="Imagenes/una.png" alt="evento"/>
-            <h1 class="pl-2 md:pl-10 text-2xl font-semibold pt-3 uppercase"><b>Coneimera UNA Puno</b></h1>
-            <p class="pl-2 md:pl-12 flex-1 font-normal text-normal md:text-lg 
-                tracking-wide text-balance leading-relaxed text-slate-100">
-                Concurso de proyectos en Puno, realizado en el
-                año 2021<br>
-            </p>
-            <p class="pl-2 md:pl-12 flex-1 font-normal text-normal md:text-base 
-                tracking-wide text-balance leading-relaxed text-slate-100">
-                Fecha: 09/2021
-            </p>
+        <div class="carousel__elemento flex flex-col w-full">
+          <Image
+            src={EventoPasadoSeis}
+            alt="evento-pasado-uno"
+            class="h-80 min-w-[250px] sm:min-w-0 -ml-10 xs:-ml-4 sm:-ml-0 object-fill md:object-fill"
+          />
+          <h1
+            class="pl-5 md:pl-12 text-2xl pt-4 pb-2 font-semibold text-black opacity-90 uppercase"
+          >
+            <b>Coneimera UNA PUNO</b>
+          </h1>
+          <p
+            class="pl-5 md:pl-12 flex-1 font-normal text-normal md:text-lg
+              tracking-wide text-balance leading-relaxed text-slate-100"
+          >
+            Concurso de proyectos en Puno, realizado en el año 2021<br />
+          </p>
+          <p
+            class="pl-5 pt-4 text-slate-50/80 md:pl-12 flex-1 font-normal text-normal md:text-base
+              tracking-wide text-balance leading-relaxed italic"
+          >
+            Fecha: 09/2021
+          </p>
         </div>
-        <div class="carousel__elemento flex flex-col">
-            <img class="h-80" src="Imagenes/unrpg.png" alt="evento"/>
-            <h1 class="pl-2 md:pl-10 text-2xl font-semibold pt-3 uppercase"><b>Coneimera UNRPG</b></h1>
-            <p class="pl-2 md:pl-12 flex-1 font-normal text-normal md:text-lg 
-                tracking-wide text-balance leading-relaxed text-slate-100">
-                Concurso de proyectos en Lambayeque, realizado en el
-                año 2022<br>
-            </p>
-            <p class="pl-2 md:pl-12 flex-1 font-normal text-normal md:text-base 
-                tracking-wide text-balance leading-relaxed text-slate-100">
-                Fecha: 29/08/2022 - 02/09/2022
-            </p>
+        <div class="carousel__elemento flex flex-col w-full">
+          <Image
+            src={EventoPasadoSiete}
+            alt="evento-pasado-uno"
+            class="h-80 min-w-[250px] sm:min-w-0 -ml-10 xs:-ml-4 sm:-ml-0 object-fill md:object-fill"
+          />
+          <h1
+            class="pl-5 md:pl-12 text-2xl pt-4 pb-2 font-semibold text-black opacity-90 uppercase"
+          >
+            <b>Coneimera UNRPG</b>
+          </h1>
+          <p
+            class="pl-5 md:pl-12 flex-1 font-normal text-normal md:text-lg
+              tracking-wide text-balance leading-relaxed text-slate-100"
+          >
+            Concurso de proyectos en Lambayeque, realizado en el año 2022<br />
+          </p>
+          <p
+            class="pl-5 pt-4 text-slate-50/80 md:pl-12 flex-1 font-normal text-normal md:text-base
+              tracking-wide text-balance leading-relaxed italic"
+          >
+            Fecha: 29/08/2022 - 02/09/2022
+          </p>
         </div>
-    </div>
       </div>
 
       <button aria-label="Siguiente" class="carousel__siguiente min-w-14 pl-3">
-        <img src="Imagenes/right-arrow.png" alt="evento" />
+        <RightArrow />
       </button>
     </div>
-
     <div role="tablist" class="carousel__indicadores"></div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-            <script
-                src="https://kit.fontawesome.com/2c36e9b7b1.js"
-                crossorigin="anonymous"
-            ></script>
 </section>
 
 <style>
@@ -332,9 +412,8 @@ import EventoPasadoTres from "../../../Imagenes/EventoPas3.webp";
 </style>
 
 <script>
-  import Glider from 'glider-js';
+  import Glider from "glider-js";
   document.addEventListener("astro:page-load", () => {
-    
     const carouselList = document.querySelector(".carousel__lista");
     const prevArrow = document.querySelector(".carousel__anterior");
     const nextArrow = document.querySelector(".carousel__siguiente");
