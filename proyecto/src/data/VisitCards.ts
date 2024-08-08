@@ -11,9 +11,9 @@ interface CardVisit {
 export const cards: CardVisit[] = [
     {
         "visit_img": "../../Imagenes/visit-llanday.webp",
-        "title": "Visita Técnica Llinday",
-        "description": "La visita técnica a las instalaciones de Llanday ofrece una oportunidad única para adentrarse en el mundo de la agricultura de precisión y la automatización agrícola. Durante la visita, los participantes tendrán la oportunidad de explorar de primera mano las tecnologías avanzadas utilizadas en la gestión de cultivos y la optimización de procesos agrícolas.",
-        "visit_date": "29/06/2019",
+        "title": "Visita Técnica Siemens",
+        "description": "No te pierdas la oportunidad de conocer una compañia lider en tecnología y como estan trnasformando industrias.",
+        "visit_date": "12/08/2024",
         "link_url": "https://www.google.com.pe"
     }
 ]
