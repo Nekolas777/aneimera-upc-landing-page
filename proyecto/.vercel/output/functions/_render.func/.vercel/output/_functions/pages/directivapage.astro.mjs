@@ -1,8 +1,8 @@
 /* empty css                                            */
 import { c as createComponent, r as renderTemplate, a as renderComponent } from '../chunks/astro/server_tDoqtdus.mjs';
 import 'kleur/colors';
-import { $ as $$Directiva } from '../chunks/Directiva_BbiUWpfY.mjs';
 import { $ as $$Layout } from '../chunks/Layout_BCUAjs3Z.mjs';
+import { $ as $$Directiva } from '../chunks/Directiva_BbiUWpfY.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$DirectivaPage = createComponent(($$result, $$props, $$slots) => {
