@@ -10,7 +10,7 @@ interface CardVisit {
  cards con la data correspondiente de la interfaz CardVisit) */
 export const cards: CardVisit[] = [
     {
-        "visit_img": "../../Imagenes/visit-llanday.webp",
+        "visit_img": "https://www.uch.edu.pe/sites/default/files/styles/blog_image/public/blog-img/arduino.jpg?itok=sWaQF4DE",
         "title": "Visita Técnica Siemens",
         "description": "No te pierdas la oportunidad de conocer una compañia lider en tecnología y como estan trnasformando industrias.",
         "visit_date": "12/08/2024",

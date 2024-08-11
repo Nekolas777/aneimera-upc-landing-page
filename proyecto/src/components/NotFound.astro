@@ -1,7 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import NotFoundImage from '../assets/Imagenes/not-found-cards.webp';
+---
+
 <div class="w-full mt-10 text-center flex flex-col gap-7">
-    <img
+    <Image
         class="w-full max-w-96 self-center"
-        src="../../../Imagenes/not-found-cards.webp"
+        src={NotFoundImage}
         alt="not-found-card-img"
     />
     <p class="mt-2 text-xl lg:text-2xl text-red-600 font-normal">

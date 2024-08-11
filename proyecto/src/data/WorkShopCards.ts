@@ -12,7 +12,7 @@ interface CardWorkshop {
 // Aqui almacenaremos la data de los cards de manera dinámica
 export const cards: CardWorkshop[] = [
     {
-        "workshop_img": '../../Imagenes/python-workshop.webp',
+        "workshop_img": 'https://www.uch.edu.pe/sites/default/files/styles/blog_image/public/blog-img/arduino.jpg?itok=sWaQF4DE',
         "title": "Programación con Python",
         "description": "Explora el poder de Python en nuestro taller. Desde principiantes hasta expertos, descubre cómo escribir código eficiente, crear aplicaciones web y automatizar tareas",
         "profile_img": 'https://www.show.news/__export/1693849403093/sites/debate/img/2023/09/04/nicola-porcella.jpg_943222218.jpg',
@@ -25,7 +25,7 @@ export const cards: CardWorkshop[] = [
         "workshop_img": 'https://www.uch.edu.pe/sites/default/files/styles/blog_image/public/blog-img/arduino.jpg?itok=sWaQF4DE',
         "title": "Programación con Arduino",
         "description": "Explora el poder de Python en nuestro taller. Desde principiantes hasta expertos, descubre cómo escribir código eficiente, crear aplicaciones web y automatizar tareas",
-        "profile_img": '../../Imagenes/profile-one.png',
+        "profile_img": 'https://avatars.githubusercontent.com/u/129230632?v=4',
         "name": "Luis Reyes",
         "date": "29/06/2019",
         "status": "Experto en HTML",

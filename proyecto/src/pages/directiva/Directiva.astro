@@ -1,11 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import PersonaUno from "../../../Imagenes/persona1.webp";
-import PersonaDos from "../../../Imagenes/persona2.webp";
-import PersonaTres from "../../../Imagenes/persona3.webp";
-import PersonaCuatro from "../../../Imagenes/persona4.webp";
-import AsesorUno from "../../../Imagenes/asesor1.webp";
-import AsesorDos from "../../../Imagenes/asesor2.webp";
+import PersonaUno from "../../assets/Imagenes/persona1.webp";
+import PersonaDos from "../../assets/Imagenes/persona2.webp";
+import PersonaTres from "../../assets/Imagenes/persona3.webp";
+import PersonaCuatro from "../../assets/Imagenes/persona4.webp";
+import AsesorUno from "../../assets/Imagenes/asesor1.webp";
+import AsesorDos from "../../assets/Imagenes/asesor2.webp";
+import ArrowImage from "../../assets/Imagenes/flecha.svg";
 ---
 
 <section class="pt-10 pb-16">
@@ -30,7 +31,7 @@ import AsesorDos from "../../../Imagenes/asesor2.webp";
               <h3 class="text-lg" style="font-weight:bold">William López</h3>
               <h3>Delegación</h3>
             </div>
-            <img class="icono" id="icono1" src="Imagenes/flecha.svg" alt="" />
+            <Image class="icono" id="icono1" src={ArrowImage} alt="" />
             <p class="descripcion" id="descripcion1">
               Estudiante de Ingeniería Mecatrónica con experiencia en proyectos
               de diseño y construcción, incluyendo un brazo robótico, un mástil
@@ -47,7 +48,7 @@ import AsesorDos from "../../../Imagenes/asesor2.webp";
               </h3>
               <h3>Delegación</h3>
             </div>
-            <img class="icono" id="icono2" src="Imagenes/flecha.svg" alt="" />
+            <Image class="icono" id="icono2" src={ArrowImage} alt="" />
             <p class="descripcion" id="descripcion2">
               Estudiante de octavo ciclo en la UPC, especializado en ingeniería
               enfocada en robótica y programación. Ganador del concurso PASKA
@@ -64,7 +65,7 @@ import AsesorDos from "../../../Imagenes/asesor2.webp";
               <h3 class="text-lg" style="font-weight:bold">Joanna Carrión</h3>
               <h3>Delegación</h3>
             </div>
-            <img class="icono" id="icono3" src="Imagenes/flecha.svg" alt="" />
+            <Image class="icono" id="icono3" src={ArrowImage} alt="" />
             <p class="descripcion" id="descripcion3">
               Estudiante de Ingeniería Electrónica en octavo ciclo, líder en
               proyectos en la UPC y presidente de IEEE ComSoc UPC en 2023.
@@ -80,7 +81,7 @@ import AsesorDos from "../../../Imagenes/asesor2.webp";
               <h3 class="text-lg" style="font-weight:bold">Carlos Sotacora</h3>
               <h3>Delegación</h3>
             </div>
-            <img class="icono" id="icono4" src="Imagenes/flecha.svg" alt="" />
+            <Image class="icono" id="icono4" src={ArrowImage} alt="" />
             <p class="descripcion" id="descripcion4">
               Estudiante de ingeniería mecatrónica en la UPC. Técnico
               electricista en automatización PLC y variadores de frecuencia, con
