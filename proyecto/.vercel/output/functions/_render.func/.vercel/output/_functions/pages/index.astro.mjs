@@ -2,7 +2,7 @@
 import { c as createComponent, r as renderTemplate, a as renderComponent } from '../chunks/astro/server_tDoqtdus.mjs';
 import 'kleur/colors';
 import { $ as $$Layout } from '../chunks/Layout_BCUAjs3Z.mjs';
-import { $ as $$Hero } from '../chunks/Hero_D2lAp8LQ.mjs';
+import { $ as $$Hero } from '../chunks/Hero_CSa5Hw7x.mjs';
 import { $ as $$AboutUs } from '../chunks/AboutUs_Bs3fsZ7E.mjs';
 import { $ as $$Goal } from '../chunks/Goal_CZWITcJX.mjs';
 import { $ as $$ContactSection } from '../chunks/ContactSection_DuGjYLNa.mjs';
