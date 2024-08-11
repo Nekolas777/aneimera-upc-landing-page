@@ -2,18 +2,6 @@
 import NotFound from "../../components/NotFound.astro";
 import VisitCard from "../../components/VisitCard.astro";
 import { cards } from "../../data/VisitCards";
-
-// Función para convertir fecha de DD/MM/AAAA a AAAA-MM-DD
-function convertDate(dateStr) {
-    const [day, month, year] = dateStr.split('/');
-    return new Date(`${year}-${month}-${day}`);
-}
-
-// Obtener la fecha actual
-const today = new Date();
-
-// Filtrar las tarjetas anteriores a la fecha actual
-const pastCards = cards.filter(card => convertDate(card.visit_date) > today);
 ---
 
 <section class="py-16 md:py-20 bg-blanco">

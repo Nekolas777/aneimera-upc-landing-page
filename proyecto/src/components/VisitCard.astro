@@ -51,7 +51,7 @@ const { visit_img, title, visit_date, description, link_url } = Astro.props;
 </article>
 
 <script>
-  document.addEventListener("DOMContentLoaded", (e) => {
+  document.addEventListener("astro:page-load", () => {
     let calendarButtons = document.querySelectorAll(".calendar-btn");
 
     calendarButtons.forEach((button) => {

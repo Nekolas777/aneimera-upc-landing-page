@@ -32,15 +32,9 @@ const cards = [
 ];
 
 const $$VisitasPasadas = createComponent(($$result, $$props, $$slots) => {
-  function convertDate(dateStr) {
-    const [day, month, year] = dateStr.split("/");
-    return /* @__PURE__ */ new Date(`${year}-${month}-${day}`);
-  }
-  const today = /* @__PURE__ */ new Date();
-  const pastCards = cards.filter((card) => convertDate(card.visit_date) < today);
   return renderTemplate`${maybeRenderHead()}<section class="pb-16 md:pb-20 bg-blanco"> <div class="section-container"> <h1 class="text-2xl md:text-3xl text-black font-medium">
 Visitas técnicas pasadas:
-</h1> ${pastCards.length > 0 ? renderTemplate`<div class="mt-10 grid grid-cols-1 md:grid-cols-2 grid-rows-auto gap-12"> ${pastCards.map((card) => renderTemplate`${renderComponent($$result, "PastVisitCard", $$PastVisitCard, { ...card })}`)} </div>` : renderTemplate`${renderComponent($$result, "NotFound", $$NotFound, {})}`} </div> </section>`;
+</h1> ${cards.length > 0 ? renderTemplate`<div class="mt-10 grid grid-cols-1 md:grid-cols-2 grid-rows-auto gap-12"> ${cards.map((card) => renderTemplate`${renderComponent($$result, "PastVisitCard", $$PastVisitCard, { ...card })}`)} </div>` : renderTemplate`${renderComponent($$result, "NotFound", $$NotFound, {})}`} </div> </section>`;
 }, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/eventos/VisitasPasadas.astro", void 0);
 
 const $$file = "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/eventos/VisitasPasadas.astro";

@@ -2,11 +2,11 @@
 import { c as createComponent, r as renderTemplate, a as renderComponent } from '../chunks/astro/server_tDoqtdus.mjs';
 import 'kleur/colors';
 import { $ as $$Layout } from '../chunks/Layout_BCUAjs3Z.mjs';
-import { $ as $$Hero } from '../chunks/Hero_CSa5Hw7x.mjs';
-import { $ as $$AboutUs } from '../chunks/AboutUs_Bs3fsZ7E.mjs';
-import { $ as $$Goal } from '../chunks/Goal_CZWITcJX.mjs';
-import { $ as $$ContactSection } from '../chunks/ContactSection_DuGjYLNa.mjs';
-import { $ as $$Questions } from '../chunks/Questions_CL9wPtmf.mjs';
+import { $ as $$Hero } from '../chunks/Hero_CYSA2GI1.mjs';
+import { $ as $$AboutUs } from '../chunks/AboutUs_CQSc3wJh.mjs';
+import { $ as $$Goal } from '../chunks/Goal_Co9BIuIW.mjs';
+import { $ as $$ContactSection } from '../chunks/ContactSection_Dog8OF5K.mjs';
+import { $ as $$Questions } from '../chunks/Questions_D2uQ-hgn.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Index = createComponent(($$result, $$props, $$slots) => {
