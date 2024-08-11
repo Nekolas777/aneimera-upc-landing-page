@@ -12,7 +12,7 @@ interface CardWorkshop {
 // Aqui almacenaremos la data de los cards de manera dinámica
 export const cards: CardWorkshop[] = [
     {
-        "workshop_img": 'https://www.uch.edu.pe/sites/default/files/styles/blog_image/public/blog-img/arduino.jpg?itok=sWaQF4DE',
+        "workshop_img": 'https://cdn.prod.website-files.com/5f5a53e153805db840dae2db/6458d604829148153fb7cd52_codigo-python-beautiful-soup.jpg',
         "title": "Programación con Python",
         "description": "Explora el poder de Python en nuestro taller. Desde principiantes hasta expertos, descubre cómo escribir código eficiente, crear aplicaciones web y automatizar tareas",
         "profile_img": 'https://www.show.news/__export/1693849403093/sites/debate/img/2023/09/04/nicola-porcella.jpg_943222218.jpg',
