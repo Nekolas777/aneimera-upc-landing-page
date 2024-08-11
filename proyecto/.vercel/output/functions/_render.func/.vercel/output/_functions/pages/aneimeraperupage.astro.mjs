@@ -2,9 +2,9 @@
 import { c as createComponent, r as renderTemplate, a as renderComponent } from '../chunks/astro/server_tDoqtdus.mjs';
 import 'kleur/colors';
 import { $ as $$Layout } from '../chunks/Layout_BCUAjs3Z.mjs';
-import { $ as $$QueEs } from '../chunks/QueEs_Df4AtFi4.mjs';
-import { $ as $$EventosPasados } from '../chunks/EventosPasados_D1SyNucj.mjs';
-import { $ as $$Coneimera2023 } from '../chunks/Coneimera2023_b-x4Y2YW.mjs';
+import { $ as $$QueEs } from '../chunks/QueEs_Bpy3bLBc.mjs';
+import { $ as $$EventosPasados } from '../chunks/EventosPasados_DOVDp6Nn.mjs';
+import { $ as $$Coneimera2023 } from '../chunks/Coneimera2023_ClrxlkN9.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$AneimeraPeruPage = createComponent(($$result, $$props, $$slots) => {

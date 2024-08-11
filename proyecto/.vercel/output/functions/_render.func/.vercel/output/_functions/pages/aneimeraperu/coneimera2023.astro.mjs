@@ -1,4 +1,4 @@
-import { _ as _page } from '../../chunks/Coneimera2023_b-x4Y2YW.mjs';
+import { _ as _page } from '../../chunks/Coneimera2023_ClrxlkN9.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const page = () => _page;

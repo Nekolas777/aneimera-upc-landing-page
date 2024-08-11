@@ -164,7 +164,7 @@ import PlusIcon from "../../assets/PlusIcon.astro";
         imagen.addEventListener("click", () => {
           const accordionItem = imagen.closest(".accordion-item");
           const accordionContent =
-            accordionItem.querySelector(".accordion-content");
+            accordionItem?.querySelector(".accordion-content")!;
           accordionContent.classList.toggle("open");
           if (accordionContent.classList.contains("open")) {
             (imagen as HTMLImageElement).src = "Imagenes/minus-solid.svg";

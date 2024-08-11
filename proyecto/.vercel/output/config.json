@@ -68,15 +68,15 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/home\\/goal\\/?$",
+			"src": "^\\/home\\/Goal\\/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/home\\/hero\\/?$",
+			"src": "^\\/home\\/Hero\\/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/home\\/questions\\/?$",
+			"src": "^\\/home\\/Questions\\/?$",
 			"dest": "_render"
 		},
 		{

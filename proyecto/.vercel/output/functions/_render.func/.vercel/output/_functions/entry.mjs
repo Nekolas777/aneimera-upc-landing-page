@@ -2658,9 +2658,9 @@ const pageMap = new Map([
     ["src/pages/EventosPage.astro", _page11],
     ["src/pages/home/AboutUs.astro", _page12],
     ["src/pages/home/ContactSection.astro", _page13],
-    ["src/pages/home/goal.astro", _page14],
-    ["src/pages/home/hero.astro", _page15],
-    ["src/pages/home/questions.astro", _page16],
+    ["src/pages/home/Goal.astro", _page14],
+    ["src/pages/home/Hero.astro", _page15],
+    ["src/pages/home/Questions.astro", _page16],
     ["src/pages/index.astro", _page17]
 ]);
 const serverIslandMap = new Map();
@@ -2672,7 +2672,7 @@ const _manifest = Object.assign(manifest, {
     middleware: onRequest
 });
 const _args = {
-    "middlewareSecret": "ba17bcfe-78db-4c45-974a-9ab8d7470764",
+    "middlewareSecret": "8cac7f35-31d3-4022-8224-da9893a3b1ee",
     "skewProtection": false
 };
 const _exports = createExports(_manifest, _args);

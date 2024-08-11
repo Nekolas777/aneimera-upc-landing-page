@@ -12,16 +12,16 @@ const $$Boton = createComponent(($$result, $$props, $$slots) => {
 }, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/components/Boton.astro", void 0);
 
 const $$Hero = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${maybeRenderHead()}<section class="header" data-astro-cid-hz6uuiks> <div class="xl:container mx-auto w-full md:w-2/3 text-center md:text-left" data-astro-cid-hz6uuiks> <div class="leading-relaxed mb-5" data-astro-cid-hz6uuiks> <h1 class="uppercase py-5 text-4xl text-white md:text-7xl font-semibold" data-astro-cid-hz6uuiks>
+  return renderTemplate`${maybeRenderHead()}<section class="header" data-astro-cid-cvz3cob3> <div class="xl:container mx-auto w-full md:w-2/3 text-center md:text-left" data-astro-cid-cvz3cob3> <div class="leading-relaxed mb-5" data-astro-cid-cvz3cob3> <h1 class="uppercase py-5 text-4xl text-white md:text-7xl font-semibold" data-astro-cid-cvz3cob3>
 ANEIMERA UPC
-</h1> <p class="py-5 text-xl md:text-2xl font-light text-white" style="line-height: 1.8;" data-astro-cid-hz6uuiks>
+</h1> <p class="py-5 text-xl md:text-2xl font-light text-white" style="line-height: 1.8;" data-astro-cid-cvz3cob3>
 Fomentamos el desarrollo de la investigación mediante la transmisión de
         conocimientos, ideas y experiencias
-</p> </div> <div class="py-5 text-lg" data-astro-cid-hz6uuiks> ${renderComponent($$result, "Boton", $$Boton, { "buttonSrc": "/EventosPage", "buttonText": "\xDAnete a nuestros talleres", "buttonColorBack": "bg-rojo", "buttonColorText": "text-white", "aria-label": "Ir a la seccion de Talleres y Eventos de Aneimera UPC", "data-astro-cid-hz6uuiks": true })} </div> </div> </section> `;
-}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/home/hero.astro", void 0);
+</p> </div> <div class="py-5 text-lg" data-astro-cid-cvz3cob3> ${renderComponent($$result, "Boton", $$Boton, { "buttonSrc": "/EventosPage", "buttonText": "\xDAnete a nuestros talleres", "buttonColorBack": "bg-rojo", "buttonColorText": "text-white", "aria-label": "Ir a la seccion de Talleres y Eventos de Aneimera UPC", "data-astro-cid-cvz3cob3": true })} </div> </div> </section> `;
+}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/home/Hero.astro", void 0);
 
-const $$file = "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/home/hero.astro";
-const $$url = "/home/hero";
+const $$file = "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/home/Hero.astro";
+const $$url = "/home/Hero";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,

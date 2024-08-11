@@ -1,10 +1,10 @@
 /* empty css                                            */
 import { c as createComponent, r as renderTemplate, a as renderComponent } from '../chunks/astro/server_tDoqtdus.mjs';
 import 'kleur/colors';
-import { $ as $$Visits } from '../chunks/Visits_B1P6GuVr.mjs';
-import { $ as $$Ponencias } from '../chunks/Ponencias_DfPB7nou.mjs';
+import { $ as $$Visits } from '../chunks/Visits_CYwL6Mcn.mjs';
+import { $ as $$Ponencias } from '../chunks/Ponencias_5l2qBJ7j.mjs';
 import { $ as $$Layout } from '../chunks/Layout_BCUAjs3Z.mjs';
-import { $ as $$VisitasPasadas } from '../chunks/VisitasPasadas_DPklHY10.mjs';
+import { $ as $$VisitasPasadas } from '../chunks/VisitasPasadas_Dd6Y3Uhg.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$EventosPage = createComponent(($$result, $$props, $$slots) => {
