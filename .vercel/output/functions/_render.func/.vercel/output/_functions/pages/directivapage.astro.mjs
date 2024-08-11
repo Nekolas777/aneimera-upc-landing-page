@@ -1,15 +1,15 @@
 /* empty css                                            */
 import { c as createComponent, r as renderTemplate, a as renderComponent } from '../chunks/astro/server_tDoqtdus.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../chunks/Layout_D0rFu-Ju.mjs';
-import { $ as $$Directiva } from '../chunks/Directiva_Br4Bny_C.mjs';
+import { $ as $$Layout } from '../chunks/Layout_wgLUvNuf.mjs';
+import { $ as $$Directiva } from '../chunks/Directiva_xqyVDLeg.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$DirectivaPage = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Directiva" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Directiva", $$Directiva, {})} ` })}`;
-}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/DirectivaPage.astro", void 0);
+}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/pages/DirectivaPage.astro", void 0);
 
-const $$file = "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/DirectivaPage.astro";
+const $$file = "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/pages/DirectivaPage.astro";
 const $$url = "/DirectivaPage";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

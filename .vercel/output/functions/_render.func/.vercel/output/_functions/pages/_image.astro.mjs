@@ -1,4 +1,4 @@
-import { g as getConfiguredImageService, i as imageConfig } from '../chunks/_astro_assets_D4im5GDl.mjs';
+import { g as getConfiguredImageService, i as imageConfig } from '../chunks/_astro_assets_BWD-ZD10.mjs';
 import { i as isRemotePath, f as isRemoteAllowed } from '../chunks/astro/assets-service_DL2Wziq5.mjs';
 import * as mime from 'mrmime';
 export { renderers } from '../renderers.mjs';

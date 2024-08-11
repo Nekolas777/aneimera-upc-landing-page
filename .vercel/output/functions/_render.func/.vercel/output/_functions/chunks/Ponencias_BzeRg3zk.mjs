@@ -1,7 +1,7 @@
 /* empty css                                    */
 import { c as createComponent, r as renderTemplate, m as maybeRenderHead, a as renderComponent } from './astro/server_tDoqtdus.mjs';
 import 'kleur/colors';
-import { $ as $$Image } from './_astro_assets_D4im5GDl.mjs';
+import { $ as $$Image } from './_astro_assets_BWD-ZD10.mjs';
 
 const PonenciaUno = new Proxy({"src":"/_astro/ponencia1.BuvKu0lY.webp","width":700,"height":500,"format":"webp"}, {
 						get(target, name, receiver) {
@@ -9,7 +9,7 @@ const PonenciaUno = new Proxy({"src":"/_astro/ponencia1.BuvKu0lY.webp","width":7
 								return structuredClone(target);
 							}
 							if (name === 'fsPath') {
-								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/assets/Imagenes/ponencia1.webp";
+								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/assets/Imagenes/ponencia1.webp";
 							}
 							
 							return target[name];
@@ -22,7 +22,7 @@ const PonenciaDos = new Proxy({"src":"/_astro/ponencia11.CvVOXG9h.webp","width":
 								return structuredClone(target);
 							}
 							if (name === 'fsPath') {
-								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/assets/Imagenes/ponencia11.webp";
+								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/assets/Imagenes/ponencia11.webp";
 							}
 							
 							return target[name];
@@ -58,9 +58,9 @@ Promover un ambiente de colaboración y apoyo mutuo donde los miembros
                 hover:bg-red-800 transition-all duration-200 ease">
 Mas información
 </a> </div> </div> </div> </section>`;
-}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/eventos/Ponencias.astro", void 0);
+}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/pages/eventos/Ponencias.astro", void 0);
 
-const $$file = "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/eventos/Ponencias.astro";
+const $$file = "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/pages/eventos/Ponencias.astro";
 const $$url = "/eventos/Ponencias";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

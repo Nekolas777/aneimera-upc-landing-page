@@ -1,7 +1,7 @@
 /* empty css                                    */
 import { c as createComponent, r as renderTemplate, m as maybeRenderHead, a as renderComponent } from './astro/server_tDoqtdus.mjs';
 import 'kleur/colors';
-import { $ as $$Image } from './_astro_assets_D4im5GDl.mjs';
+import { $ as $$Image } from './_astro_assets_BWD-ZD10.mjs';
 /* empty css                         */
 
 const AneimeraPeruQueEs = new Proxy({"src":"/_astro/aneimera-peru-que-es.Bp3FN-V2.webp","width":700,"height":500,"format":"webp"}, {
@@ -10,7 +10,7 @@ const AneimeraPeruQueEs = new Proxy({"src":"/_astro/aneimera-peru-que-es.Bp3FN-V
 								return structuredClone(target);
 							}
 							if (name === 'fsPath') {
-								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/assets/Imagenes/aneimera-peru-que-es.webp";
+								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/assets/Imagenes/aneimera-peru-que-es.webp";
 							}
 							
 							return target[name];
@@ -28,9 +28,9 @@ Busca el desarrollo de la investigación en las facultades de las
         hover:bg-red-800 transition-all duration-200 ease" target="_blank" rel="noopener noreferrer" aria-label="Ir a la pagina de Facebook de Aneimera UPC" data-astro-cid-67nlib7m>
 Más información
 </a> </div> ${renderComponent($$result, "Image", $$Image, { "src": AneimeraPeruQueEs, "alt": "que-es-aneimera-image", "class": "self-center h-96", "data-astro-cid-67nlib7m": true })} </div> </section> `;
-}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/aneimeraPeru/QueEs.astro", void 0);
+}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/pages/aneimeraPeru/QueEs.astro", void 0);
 
-const $$file = "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/aneimeraPeru/QueEs.astro";
+const $$file = "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/pages/aneimeraPeru/QueEs.astro";
 const $$url = "/aneimeraPeru/QueEs";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

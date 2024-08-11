@@ -1,6 +1,6 @@
 import { c as createComponent, r as renderTemplate, m as maybeRenderHead, a as renderComponent } from './astro/server_tDoqtdus.mjs';
 import 'kleur/colors';
-import { $ as $$Image } from './_astro_assets_D4im5GDl.mjs';
+import { $ as $$Image } from './_astro_assets_BWD-ZD10.mjs';
 
 const NotFoundImage = new Proxy({"src":"/_astro/not-found-cards.DCYmPniV.webp","width":1008,"height":917,"format":"webp"}, {
 						get(target, name, receiver) {
@@ -8,7 +8,7 @@ const NotFoundImage = new Proxy({"src":"/_astro/not-found-cards.DCYmPniV.webp","
 								return structuredClone(target);
 							}
 							if (name === 'fsPath') {
-								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/assets/Imagenes/not-found-cards.webp";
+								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/assets/Imagenes/not-found-cards.webp";
 							}
 							
 							return target[name];
@@ -23,6 +23,6 @@ No hay visitas programadas
         eventos!
 </p> <a class="bg-[#0061a9] self-center py-3 px-5 rounded-2xl text-white
         hover:bg-[#1e4360] transition-all duration-150 ease-in" href="https://www.facebook.com/profile.php?id=61556567363828" target="_blank">Ir a la página oficial</a> </div>`;
-}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/components/NotFound.astro", void 0);
+}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/components/NotFound.astro", void 0);
 
 export { $$NotFound as $ };

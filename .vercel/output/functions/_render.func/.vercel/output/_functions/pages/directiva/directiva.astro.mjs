@@ -1,4 +1,4 @@
-import { _ as _page } from '../../chunks/Directiva_Br4Bny_C.mjs';
+import { _ as _page } from '../../chunks/Directiva_xqyVDLeg.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const page = () => _page;

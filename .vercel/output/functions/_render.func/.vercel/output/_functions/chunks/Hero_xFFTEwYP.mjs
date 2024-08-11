@@ -10,7 +10,7 @@ const $$Boton = createComponent(($$result, $$props, $$slots) => {
   Astro2.self = $$Boton;
   const { buttonText, buttonSrc, buttonColorBack, buttonColorText } = Astro2.props;
   return renderTemplate`${maybeRenderHead()}<button> <a${addAttribute(buttonSrc, "href")}${addAttribute(`py-3 px-5 font-medium rounded-full cursor-pointer ${buttonColorBack} ${buttonColorText}`, "class")}>${buttonText}</a> </button>`;
-}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/components/Boton.astro", void 0);
+}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/components/Boton.astro", void 0);
 
 const $$Hero = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<section class="header" data-astro-cid-cvz3cob3> <div class="xl:container mx-auto w-full md:w-2/3 text-center md:text-left" data-astro-cid-cvz3cob3> <div class="leading-relaxed mb-5" data-astro-cid-cvz3cob3> <h1 class="uppercase py-5 text-4xl text-white md:text-7xl font-semibold" data-astro-cid-cvz3cob3>
@@ -19,9 +19,9 @@ ANEIMERA UPC
 Fomentamos el desarrollo de la investigación mediante la transmisión de
         conocimientos, ideas y experiencias
 </p> </div> <div class="py-5 text-lg" data-astro-cid-cvz3cob3> ${renderComponent($$result, "Boton", $$Boton, { "buttonSrc": "/EventosPage", "buttonText": "\xDAnete a nuestros talleres", "buttonColorBack": "bg-rojo", "buttonColorText": "text-white", "aria-label": "Ir a la seccion de Talleres y Eventos de Aneimera UPC", "data-astro-cid-cvz3cob3": true })} </div> </div> </section> `;
-}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/home/Hero.astro", void 0);
+}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/pages/home/Hero.astro", void 0);
 
-const $$file = "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/home/Hero.astro";
+const $$file = "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/pages/home/Hero.astro";
 const $$url = "/home/Hero";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

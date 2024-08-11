@@ -1,7 +1,7 @@
 /* empty css                                    */
 import { c as createComponent, r as renderTemplate, m as maybeRenderHead, a as renderComponent } from './astro/server_tDoqtdus.mjs';
 import 'kleur/colors';
-import { $ as $$Image } from './_astro_assets_D4im5GDl.mjs';
+import { $ as $$Image } from './_astro_assets_BWD-ZD10.mjs';
 /* empty css                             */
 
 const PersonaUno = new Proxy({"src":"/_astro/persona1.D7Y6zrSH.webp","width":100,"height":100,"format":"webp"}, {
@@ -10,7 +10,7 @@ const PersonaUno = new Proxy({"src":"/_astro/persona1.D7Y6zrSH.webp","width":100
 								return structuredClone(target);
 							}
 							if (name === 'fsPath') {
-								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/assets/Imagenes/persona1.webp";
+								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/assets/Imagenes/persona1.webp";
 							}
 							
 							return target[name];
@@ -23,7 +23,7 @@ const PersonaDos = new Proxy({"src":"/_astro/persona2.D53RM4Ze.webp","width":102
 								return structuredClone(target);
 							}
 							if (name === 'fsPath') {
-								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/assets/Imagenes/persona2.webp";
+								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/assets/Imagenes/persona2.webp";
 							}
 							
 							return target[name];
@@ -36,7 +36,7 @@ const PersonaTres = new Proxy({"src":"/_astro/persona3.D7KEhIkz.webp","width":10
 								return structuredClone(target);
 							}
 							if (name === 'fsPath') {
-								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/assets/Imagenes/persona3.webp";
+								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/assets/Imagenes/persona3.webp";
 							}
 							
 							return target[name];
@@ -49,7 +49,7 @@ const PersonaCuatro = new Proxy({"src":"/_astro/persona4.RerS7xuX.webp","width":
 								return structuredClone(target);
 							}
 							if (name === 'fsPath') {
-								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/assets/Imagenes/persona4.webp";
+								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/assets/Imagenes/persona4.webp";
 							}
 							
 							return target[name];
@@ -62,7 +62,7 @@ const AsesorUno = new Proxy({"src":"/_astro/asesor1.3p0ChRYz.webp","width":101,"
 								return structuredClone(target);
 							}
 							if (name === 'fsPath') {
-								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/assets/Imagenes/asesor1.webp";
+								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/assets/Imagenes/asesor1.webp";
 							}
 							
 							return target[name];
@@ -75,7 +75,7 @@ const AsesorDos = new Proxy({"src":"/_astro/asesor2.CaRKoPPU.webp","width":101,"
 								return structuredClone(target);
 							}
 							if (name === 'fsPath') {
-								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/assets/Imagenes/asesor2.webp";
+								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/assets/Imagenes/asesor2.webp";
 							}
 							
 							return target[name];
@@ -88,7 +88,7 @@ const ArrowImage = new Proxy({"src":"/_astro/flecha.CiC0P3tV.svg","width":512,"h
 								return structuredClone(target);
 							}
 							if (name === 'fsPath') {
-								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/assets/Imagenes/flecha.svg";
+								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/assets/Imagenes/flecha.svg";
 							}
 							
 							return target[name];
@@ -152,9 +152,9 @@ Elevar el prestigio de la Asociación mediante la promoción de
 Tenemos los mejores asesores en ingeniería mecatrónica, electrónica y
           afines para cumplir con los objetivos de la asociación
 </p> <div id="list-card" class="mt-20 sm:mt-24 flex flex-wrap gap-4 gap-y-20 sm:gap-y-24 justify-around" data-astro-cid-b2swljnz> <div class="dir-card" data-astro-cid-b2swljnz> ${renderComponent($$result, "Image", $$Image, { "class": "dir-img", "src": AsesorUno, "alt": "asesor-uno", "data-astro-cid-b2swljnz": true })} <div class="sub-dir-card" data-astro-cid-b2swljnz> <h3 style="font-weight:bold" data-astro-cid-b2swljnz>Nikolai Vinces</h3> <h3 data-astro-cid-b2swljnz>Delegacion</h3> </div> </div> <div class="dir-card" data-astro-cid-b2swljnz> ${renderComponent($$result, "Image", $$Image, { "class": "dir-img", "src": AsesorDos, "alt": "asesor-dos", "data-astro-cid-b2swljnz": true })} <div class="sub-dir-card" data-astro-cid-b2swljnz> <h3 style="font-weight:bold" data-astro-cid-b2swljnz>Carlos Valdez</h3> <h3 data-astro-cid-b2swljnz>Delegacion</h3> </div> </div> </div> </div> </div> </div> </section>  `;
-}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/directiva/Directiva.astro", void 0);
+}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/pages/directiva/Directiva.astro", void 0);
 
-const $$file = "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/directiva/Directiva.astro";
+const $$file = "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/pages/directiva/Directiva.astro";
 const $$url = "/directiva/Directiva";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

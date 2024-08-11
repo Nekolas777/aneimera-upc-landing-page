@@ -1,7 +1,7 @@
 /* empty css                                    */
 import { c as createComponent, r as renderTemplate, m as maybeRenderHead, a as renderComponent } from './astro/server_tDoqtdus.mjs';
 import 'kleur/colors';
-import { $ as $$Image } from './_astro_assets_D4im5GDl.mjs';
+import { $ as $$Image } from './_astro_assets_BWD-ZD10.mjs';
 
 const AboutImage1 = new Proxy({"src":"/_astro/about-image-1.DziLt8JV.webp","width":320,"height":185,"format":"webp"}, {
 						get(target, name, receiver) {
@@ -9,7 +9,7 @@ const AboutImage1 = new Proxy({"src":"/_astro/about-image-1.DziLt8JV.webp","widt
 								return structuredClone(target);
 							}
 							if (name === 'fsPath') {
-								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/assets/Imagenes/about-image-1.webp";
+								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/assets/Imagenes/about-image-1.webp";
 							}
 							
 							return target[name];
@@ -22,7 +22,7 @@ const AboutImage2 = new Proxy({"src":"/_astro/about-image-2.38ChisE_.webp","widt
 								return structuredClone(target);
 							}
 							if (name === 'fsPath') {
-								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/assets/Imagenes/about-image-2.webp";
+								return "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/assets/Imagenes/about-image-2.webp";
 							}
 							
 							return target[name];
@@ -43,9 +43,9 @@ Ser una asociación líder en la formación de ingenieros íntegros
                 investigación y su impacto positivo en el desarrollo profesional
                 y personal de sus miembros.
 </p> ${renderComponent($$result, "Image", $$Image, { "src": AboutImage2, "alt": "asociacion-lider-image" })} </div> </div> </section>`;
-}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/home/AboutUs.astro", void 0);
+}, "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/pages/home/AboutUs.astro", void 0);
 
-const $$file = "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/proyecto/src/pages/home/AboutUs.astro";
+const $$file = "C:/UniversidadUPC-Trabajos/CAS-UPC/Landing-Page/src/pages/home/AboutUs.astro";
 const $$url = "/home/AboutUs";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
