@@ -1,0 +1,119 @@
+---
+import PoliticasPrivacidad from "./PoliticasPrivacidad.astro";
+import TerminosCondiciones from "./TerminosCondiciones.astro";
+---
+
+<footer>
+  <section class="Footer w-full">
+    <div class="bg-rojo px-5 py-10">
+      <div class="flex mb-4 justify-around flex-row flex-wrap gap-x-10">
+        <div class="mt-4">
+          <div class="font-bold mb-8 sub_titulo text-blanco">
+            <h3>Links de apoyo</h3>
+          </div>
+          <ul class="flex flex-col gap-4 text-gris">
+            <li>
+              <a href="/" aria-label="Ir a la sección de inicio"
+                >&gt;&gt; <span class="hover:underline">Inicio</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="/AneimeraPeruPage"
+                aria-label="Ir a la sección de Aneimera Peru"
+                >&gt;&gt; <span class="hover:underline">Aneimera Peru</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="/DirectivaPage"
+                aria-label="Ir a la vista de Directiva de Aneimera"
+                >&gt;&gt; <span class="hover:underline">Directiva</span></a
+              >
+            </li>
+            <li>
+              <a href="/EventosPage" aria-label="Ir a la vista de Eventos"
+                >&gt;&gt; <span class="hover:underline">Eventos</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="mt-4">
+          <div class="font-bold mb-8 sub_titulo text-blanco">Contacto</div>
+          <div class="flex flex-col gap-4 text-gris">
+            <a
+              class="PhoneNumber"
+              href="https://wa.link/x57hls"
+              aria-label="Mandar mensaje al numero de Whatsapp de Aneimera UPC"
+              ><span class="hover:underline">+51 945 146 828</span></a
+            >
+            <a
+              class="Email"
+              href="mailto:aneimera.upc@gmail.com"
+              rel="noopener noreferrer"
+              aria-label="Enviar mensaje al correo de Aneimera UPC"
+              ><span class="hover:underline">aneimera.upc@gmail.com</span></a
+            >
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="font-bold mb-8 sub_titulo text-blanco">Legal</div>
+          <div
+            class="flex flex-col gap-4 text-gris text-start items-center md:items-start"
+          >
+            <button aria-label="Mostrar politica de privacidad" onclick="showPoliticasModal()"
+              ><span class="hover:underline">Politica de privacidad</span
+              ></button
+            >
+            <button aria-label="Mostrar terminos y condiciones de Aneimera UPC" onclick="showTerminosModal()"
+              ><span class="hover:underline">Terminos y condiciones</span
+              ></button
+            >
+          </div>
+        </div>
+      </div>
+      <div class="Copyright text-center pb-4 text-gris">
+        (c) Copyright ANEIMERA UPC. All rights reserved.
+      </div>
+    </div>
+  </section>
+  <PoliticasPrivacidad/>
+  <TerminosCondiciones/>
+</footer>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 678px) {
+    .sub_titulo,
+    a {
+      text-align: center;
+    }
+    .sub_titulo {
+      margin-bottom: 1rem;
+    }
+    .Copyright {
+      padding-top: 1rem;
+    }
+  }
+</style>
+
+<script is:inline>
+  
+  function showPoliticasModal() {
+    const modal = document.getElementById('politicas-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.classList.add('no-scroll');
+  }
+
+  function showTerminosModal() {
+    const modal = document.getElementById('terminos-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.classList.add('no-scroll');
+  }
+
+</script>

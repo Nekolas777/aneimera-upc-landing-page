@@ -1,0 +1,127 @@
+---
+import PrivacityIcon from "../assets/PrivacityIcon.astro";
+---
+
+<section
+  id="terminos-modal"
+  class="bg-slate-900/50 fixed top-0 left-0 bottom-0 right-0 hidden items-center justify-center z-50"
+>
+  <div
+    class="bg-slate-100 w-11/12 max-w-[650px] mx-auto relative rounded-lg overflow-hidden"
+  >
+    <header
+      class="w-full bg-rojo absolute left-0 top-0 h-28 px-5 flex flex-row items-center justify-between gap-1.5"
+    >
+      <div class="w-full flex-col items-center gap-2">
+        <h1 class="text-xl sm:text-3xl text-slate-50 font-semibold mb-1">
+          Términos y Condiciones
+        </h1>
+        <span class="text-slate-50/85 text-base sm:text-lg"
+          >Términos y Condiciones de Aneimera UPC</span
+        >
+      </div>
+      <PrivacityIcon />
+    </header>
+    <div
+      class="bg-slate-50 mt-28 bg-slate-50/70 divide-y-2 divide-slate-400/40"
+    >
+      <div
+        id="modal"
+        class="overflow-y-auto relative bg-slate-50 py-5 pl-5 pr-5 sm:pr-7 overflow-hidden"
+      >
+        <p class="text-justify xs:text-left">
+          <span class="font-bold text-lg">Introducción</span><br /> Estos términos
+          y condiciones rigen tu uso de los servicios y actividades proporcionados
+          por Aneimera UPC. Al utilizar nuestros servicios, aceptas cumplir con estos
+          Términos. Si no estás de acuerdo con alguna parte de estos Términos, no
+          deberías utilizar nuestros servicios.<br /><br /><span
+            class="font-bold text-lg">Definiciones</span
+          ><br /><span class="text-red-600/90">Aneimera UPC:</span> se refiere a
+          la organización estudiantil Aneimera UPC (Universidad Peruana de Ciencias
+          Aplicadas). <br /><span class="text-red-600/90">Servicios:</span> se refiere
+          a todos los eventos, talleres, actividades, y contenido proporcionado por
+          Aneimera UPC<br /><span class="text-red-600/90">Usuario:</span> se refiere
+          a cualquier persona que utilice los servicios de Aneimera UPC.
+          <br /><br /><span class="font-bold text-lg"
+            >Uso de servicios de legibilidad</span
+          ><br />Los servicios están disponibles solo para estudiantes,
+          profesores, y personal de UPC.<br /><span class="text-red-600/90"
+            >Registro:</span
+          >
+          algunos servicios pueden requerir que te registres y proporciones información
+          personal. Aceptas proporcionar información precisa y completa.<br
+          /><span class="text-red-600/90">Comportamiento:</span> te comprometes a
+          utilizar los servicios de manera legal y respetuosa. No debes participar
+          en actividades que puedan dañar la reputación de Aneimera UPC o de otros
+          usuarios.<br /><br /><span class="font-bold text-lg"
+            >Inscripción y Participación en Eventos
+          </span><br /><span class="text-red-600/90"
+            >Proceso de inscripción:</span
+          > las inscripciones a eventos se realizan a través de formularios publicados
+          en nuestras redes sociales y sitio web. Las plazas pueden ser limitadas
+          y se asignarán por orden de inscripción.
+          <br /><span class="text-red-600/90">Cancelaciones:</span> si necesitas
+          cancelar tu participación en un evento, te pedimos que lo hagas con al
+          menos 48 horas de antelación para permitir que otro usuario pueda ocupar
+          tu lugar.<br /><span class="text-red-600/90"
+            >Conducta en eventos:</span
+          > durante los eventos, debes comportarte de manera profesional y respetuosa.
+          Aneimera UPC se reserva el derecho de expulsar a cualquier participante
+          que infrinja estas normas.<br /><br /><span class="font-bold text-lg"
+            >Propiedad Intelectual</span
+          ><br /><span class="text-red-600/90">Proceso de inscripción:</span> todo
+          el contenido proporcionado por Aneimera UPC, incluyendo materiales de talleres,
+          artículos, y publicaciones, es propiedad de Aneimera UPC o sus licenciantes.
+          No puedes reproducir, distribuir, ni utilizar este contenido sin permiso
+          explícito.<br /><span class="text-red-600/90">Marcas:</span> las marcas
+          y logotipos de Aneimera UPC no pueden ser utilizados sin nuestro consentimiento
+          previo por escrito.<br /><br /><span class="font-bold text-lg"
+            >Limitación de responsabilidad</span
+          ><br /><span class="text-red-600/90">Servicios:</span> Aneimera UPC proporciona
+          sus servicios "tal cual" y no ofrece garantías de ningún tipo. No somos
+          responsables por cualquier daño o pérdida resultante del uso de nuestros
+          servicios.<br /><span class="text-red-600/90">Eventos:</span>
+          aunque hacemos nuestro mejor esfuerzo para asegurar la calidad de nuestros
+          eventos, no somos responsables por cancelaciones, cambios de horarios,
+          o cualquier inconveniente fuera de nuestro control.<br /><br /><span
+            class="font-bold text-lg">Modificaciones a los Términos</span
+          ><br /> Aneimera UPC se reserva el derecho de modificar estos Términos
+          en cualquier momento. Te notificaremos sobre cualquier cambio significativo
+          a través de nuestras redes sociales y sitio web. El uso continuo de nuestros
+          servicios después de dichos cambios constituye tu aceptación de los nuevos
+          Términos.<br /><br /><span class="text-red-600/80 font-medium"
+            >Contacto:</span
+          > Si tienes preguntas o inquietudes sobre estos Términos, contáctanos en
+          <span class="text-blue-500">aneimera.upc@gmail.com.</span>
+        </p>
+      </div>
+      <div
+        class="flex flex-row p-5 gap-3 flex-wrap justify-center sm:flex-nowrap sm:justify-end"
+      >
+        <button
+          aria-label="Cerrar Modal de Terminos y Condiciones"
+          class="rounded-xl w-full xs:w-auto bg-slate-100 text-black border-[1px] border-black py-2 px-5 hover:bg-slate-300 transition-all duration-200 ease"
+          onclick="hideTerminosModal()"
+        >
+          Cancelar
+        </button>
+        <button
+          aria-label="Cerrar Modal de Terminos y Condiciones"
+          class="rounded-xl w-full xs:w-auto bg-red-700 text-blanco py-2 px-5 hover:bg-red-800 transition-all duration-200 ease"
+          onclick="hideTerminosModal()"
+        >
+          Estoy de acuerdo
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  function hideTerminosModal() {
+    const modal = document.getElementById("terminos-modal");
+    modal.classList.remove("flex");
+    modal.classList.add("hidden");
+    document.body.classList.remove("no-scroll");
+  }
+</script>

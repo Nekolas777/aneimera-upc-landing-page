@@ -1,23 +1,114 @@
-<header class="bg-white fixed top-0 w-full z-10 opacity-90">
-    <section>
-        <div class="">
-            <div class="row">
-                <div class="grid grid-cols-2">
-                    <div class="logo flex justify-normal">
-                        <a href="#">
-                            <img src="Imagenes/Logo.png" alt="Logo" class="h-20 w-72">
-                        </a>
-                    </div>
-                    <nav class="nav-menu grid content-center">
-                        <ul class="text-black flex justify-center ">
-                            <li><a href="" class="hover:text-slate-400 md:me-6 decoration-transparent">Inicio</a></li>
-                            <li><a href="" class="hover:text-slate-400 me-4 hover:underline md:me-6 decoration-transparent">Aneimera peru</a></li>
-                            <li><a href="" class="hover:text-slate-400 me-4 hover:underline md:me-6 decoration-transparent">Directiva</a></li>
-                            <li><a href="" class="hover:text-slate-400 me-4 hover:underline md:me-6 decoration-transparent">Eventos</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </section>
+---
+import { Image } from "astro:assets";
+import EventoPasadoUno from "../../Imagenes/logo-aneimeraUPC.webp";
+---
+
+<!-- <div id="blur-overlay"></div> -->
+<header
+  id="main-header"
+  class="sticky w-full top-0 h-20 z-10 flex items-center"
+>
+  <div class="flex section-container items-center justify-between mx-auto">
+    <div class="logo flex">
+      <a href="/" class="flex items-center">
+        <Image
+          src={EventoPasadoUno}
+          alt="logo-aneimeraUPC"
+          height={40}
+          width={40}
+        />
+        <h1 class="ml-2 text-3xl font-bold text-black">ANEIMERA</h1>
+      </a>
+    </div>
+    <button
+      id="menu-toggle"
+      type="button"
+      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-Titulos rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+      aria-controls="navbar-sticky"
+      aria-expanded="false"
+      aria-label="Mostrar la barra de navegación"
+    >
+      <svg
+        class="w-5 h-5"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 17 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 1h15M1 7h15M1 13h15"></path>
+      </svg>
+    </button>
+    <div class="hidden absolute bg-slate-100/95 left-0 top-20 md:top-0 md:bg-transparent w-full md:relative md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul
+        class="flex flex-col p-4 md:p-0 md:mt-0 md:space-x-8 rtl:space-x-reverse md:flex-row"
+      >
+        <li>
+          <a
+            href="/"
+            class="text-center block py-2 px-3 text-Titulos hover:bg-gris rounded md:bg-transparent md:p-0"
+            aria-label="Ir a la sección de inicio"
+            >Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            href="/AneimeraPeruPage"
+            class="text-center block py-2 px-3 text-Titulos hover:bg-gris rounded md:p-0"
+            aria-label="Ir a la sección de Aneimera Perú"
+            >Aneimera Perú</a
+          >
+        </li>
+        <li>
+          <a
+            href="/DirectivaPage"
+            class="text-center block py-2 px-3 text-Titulos hover:bg-gris rounded md:p-0"
+            aria-label="Ir a la sección de Directiva de Aneimera"
+            >Directiva</a
+          >
+        </li>
+        <li>
+          <a
+            href="/EventosPage"
+            class="text-center block py-2 px-3 text-Titulos hover:bg-gris rounded md:p-0"
+            aria-label="Ir a la sección de Eventos"
+            >Eventos</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
 </header>
+
+<style>
+  .header-scrolled {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    document.getElementById("menu-toggle").addEventListener("click", () => {
+      const navbarSticky = document.getElementById("navbar-sticky");
+      navbarSticky.classList.toggle("hidden");
+      navbarSticky.classList.toggle("active");
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener("scroll", () => {
+      const header = document.getElementById("main-header");
+
+      if (window.scrollY > 0) {
+        header.classList.add("header-scrolled");
+      } else {
+        header.classList.remove("header-scrolled");
+      }
+    });
+  });
+</script>

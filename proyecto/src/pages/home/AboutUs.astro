@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import AboutImage1 from "../../../Imagenes/about-image-1.webp";
+import AboutImage2 from "../../../Imagenes/about-image-2.webp";
+---
+
+<section class="bg-gris py-16 md:py-20">
+    <div class="section-container mx-auto grid grid-cols-auto grid-rows-2 gap-10 md:grid-cols-2 md:grid-rows-1">
+        <div class="flex flex-col items-center gap-5 p-5 text-center sm:text-start">
+            <h2 class="font-semibold tracking-wider mb-2 uppercase">Nuestra misión</h2>
+            <p class="font-base text-base md:text-lg 
+                tracking-wide text-pretty text-center sm:text-justify" style="line-height: 1.8">
+                Promover el desarrollo integral de los estudiantes de ingeniería
+                de la UPC mediante la investigación, la innovación y fomentando
+                su participación activa tanto en la comunidad universitaria como
+                a nivel nacional.
+            </p>
+            <Image
+                src={AboutImage1}
+                alt="desarrollo-integral-image"
+            />
+        </div>
+        <div class="flex flex-col items-center gap-5 p-5 text-center sm:text-start">
+            <h2 class="font-semibold tracking-wider mb-2 uppercase">Nuestra visión</h2>
+            <p class="font-base text-base md:text-lg text-center sm:text-justify
+                tracking-wide text-pretty" style="line-height: 1.8">
+                Ser una asociación líder en la formación de ingenieros íntegros
+                y con visión global, reconocidos por su compromiso con la
+                investigación y su impacto positivo en el desarrollo profesional
+                y personal de sus miembros.
+            </p>
+            <Image
+                src={AboutImage2}
+                alt="asociacion-lider-image"
+            />
+        </div>
+    </div>
+</section>

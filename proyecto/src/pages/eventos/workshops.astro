@@ -1,0 +1,15 @@
+---
+import WorkshopCard from "../../components/WorkshopCard.astro";
+import { cards } from "../../data/WorkShopCards.ts";
+---
+
+<section class="py-16 md:py-20 bg-rojo">
+    <div class="section-container">
+        <h2 class="font-semibold tracking-wide uppercase text-white">Talleres disponibles:</h2>
+        <div
+            class="mt-10 grid grid-cols-1 md:grid-cols-2 grid-rows-auto gap-12"
+        >
+            {cards.map((card) => <WorkshopCard {...card} />)}
+        </div>
+    </div>
+</section>
