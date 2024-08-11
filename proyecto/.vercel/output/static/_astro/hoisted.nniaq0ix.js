@@ -1,0 +1,1 @@
+document.addEventListener("astro:page-load",()=>{document.querySelectorAll(".icono").forEach(o=>{o.addEventListener("click",()=>{o.classList.toggle("girar"),o.closest(".dir-card").querySelector(".descripcion").classList.toggle("open")})})});

@@ -1,0 +1,34 @@
+---
+import NotFound from "../../components/NotFound.astro";
+import PastVisitCard from "../../components/PastVisitCard.astro";
+import { cards } from "../../data/PastTechnicalVisits";
+
+// Función para convertir fecha de DD/MM/AAAA a AAAA-MM-DD
+function convertDate(dateStr) {
+    const [day, month, year] = dateStr.split('/');
+    return new Date(`${year}-${month}-${day}`);
+}
+
+// Obtener la fecha actual
+const today = new Date();
+
+// Filtrar las tarjetas anteriores a la fecha actual
+const pastCards = cards.filter(card => convertDate(card.visit_date) < today);
+---
+
+<section class="pb-16 md:pb-20 bg-blanco">
+    <div class="section-container">
+        <h1 class="text-2xl md:text-3xl text-black font-medium">
+            Visitas técnicas pasadas:
+        </h1>
+        {pastCards.length > 0 ? (
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 grid-rows-auto gap-12">
+                {pastCards.map((card) => (
+                    <PastVisitCard {...card} />
+                ))}
+            </div>
+        ) : (
+            <NotFound />
+        )}
+    </div>
+</section>
