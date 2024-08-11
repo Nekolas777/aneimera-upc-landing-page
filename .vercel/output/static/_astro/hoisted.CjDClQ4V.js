@@ -1,1 +1,0 @@
-document.addEventListener("astro:page-load",function(){document.querySelectorAll(".plus").forEach(e=>{e.addEventListener("click",()=>{const o=e.closest(".accordion-item")?.querySelector(".accordion-content");o.classList.toggle("open"),o.classList.contains("open")?e.src="Imagenes/minus-solid.svg":e.src="Imagenes/plus-solid.svg"})})});
