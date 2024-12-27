@@ -1,22 +1,34 @@
 ---
 import NotFound from "../../components/NotFound.astro";
 import VisitCard from "../../components/VisitCard.astro";
-import { cards } from "../../data/VisitCards";
+import type { TechnicalVisit } from "../../interfaces/technicalVisit";
+
+const { visits } = Astro.props as { visits: TechnicalVisit[] };
 ---
 
-<section class="py-16 md:py-20 bg-blanco">
-    <div class="section-container">
-        <h2 class="font-semibold uppercase text-black">Visitas técnicas programadas:</h2>
-        {
-            cards.length > 0 ? (
-                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 grid-rows-auto gap-12">
-                    {cards.map((card) => (
-                        <VisitCard {...card} />
-                    ))}
-                </div>
-            ) : (
-                <NotFound />
-            )
-        }
-    </div>
+<section class='py-16 md:py-20 bg-blanco'>
+  <div class='section-container'>
+    <h2 class='font-semibold uppercase text-black'>
+      Visitas técnicas programadas:
+    </h2>
+    {
+      visits.length > 0 ? (
+        <div class='mt-10 grid grid-cols-1 md:grid-cols-2 grid-rows-auto gap-12'>
+          {visits.map((visit: TechnicalVisit) => (
+            <VisitCard
+              key={visit.visitaTecninaId}
+              title={visit.titulo}
+              description={visit.descripcion}
+              visitDate={visit.fecha}
+              visitHour={visit.hora}
+              linkUrl={visit.enlace}
+              rutaImagen={visit.rutaImagen}
+            />
+          ))}
+        </div>
+      ) : (
+        <NotFound />
+      )
+    }
+  </div>
 </section>
