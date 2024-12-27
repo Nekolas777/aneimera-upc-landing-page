@@ -1,15 +1,69 @@
 ---
+import NotFoundWorkshops from "../../components/NotFoundWorkshops.astro";
 import WorkshopCard from "../../components/WorkshopCard.astro";
-import { cards } from "../../data/WorkShopCards";
+import { Environment } from "../../environment/environment";
+import type { Workshop } from "../../interfaces/workshop";
+
+const response = await fetch(`${Environment.API_URL}/Taller/get_all`);
+const data = await response.json();
+const workshops: Workshop[] = data.talleres;
 ---
 
-<section class="py-16 md:py-20 bg-rojo">
-    <div class="section-container">
-        <h2 class="font-semibold tracking-wide uppercase text-white">Talleres disponibles:</h2>
-        <div
-            class="mt-10 grid grid-cols-1 md:grid-cols-2 grid-rows-auto gap-12"
-        >
-            {cards.map((card) => <WorkshopCard {...card} />)}
+<section class='py-16 md:py-20 bg-rojo'>
+  <div class='section-container'>
+    <h2 class='font-semibold tracking-wide uppercase text-white'>
+      Talleres disponibles:
+    </h2>
+    {
+      workshops.length > 0 ? (
+        <div class='workshops-container mt-10 grid grid-cols-1 md:grid-cols-2 grid-rows-auto gap-12'>
+          {workshops.map((workshop, index) => (
+            <WorkshopCard
+              key={workshop.tallerId}
+              index={index}
+              titulo={workshop.titulo}
+              descripcion={workshop.descripcion}
+              fecha={workshop.fecha}
+              modalidad={workshop.modalidad}
+              enlace={workshop.enlace}
+              rutaImagen={workshop.rutaImagen}
+              expositorNombre={workshop.expositorNombre}
+              expositorRutaImagen={workshop.expositorRutaImagen}
+              expositorRol={workshop.expositorRol}
+            />
+          ))}
         </div>
+      ) : (
+        <NotFoundWorkshops />
+      )
+    }
+    <div
+      onclick='handleDisplayMoreWorkshops()'
+      class='more-workshops w-full underline text-center mt-16 text-xl lg:text-3xl text-white cursor-pointer'
+    >
+      <p>Ver más talleres</p>
     </div>
+  </div>
 </section>
+
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    const workshops = document.querySelectorAll(".workshop-card");
+    if (workshops.length <= 4) {
+      document.querySelector(".more-workshops").style.display = "none";
+    }
+  });
+
+  function handleDisplayMoreWorkshops() {
+      const workshops = document.querySelectorAll(".workshop-card.hidden");
+      let visibleWorkshops = 4;
+
+      for (let i = 0; i < 4 && i < workshops.length; i++) {
+        workshops[i].classList.remove("hidden");
+      }
+      visibleWorkshops += 4;
+      if (visibleWorkshops >= workshops.length) {
+        document.querySelector(".more-workshops").style.display = "none";
+      }
+    }
+</script>
