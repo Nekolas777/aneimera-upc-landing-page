@@ -1,55 +1,112 @@
 ---
 import ExternalIcon from "../assets/LinkExternal.astro";
+
+const {
+  index,
+  titulo,
+  descripcion,
+  fecha,
+  modalidad,
+  enlace,
+  rutaImagen,
+  expositorNombre,
+  expositorRutaImagen,
+  expositorRol,
+} = Astro.props;
+
+// para convertir la fecha en formato DD/MM/YY
+const formattedDate = new Date(fecha).toLocaleDateString("es-ES", {
+  day: "2-digit",
+  month: "2-digit",
+  year: "2-digit",
+});
 ---
 
-<article class="w-full flex flex-col bg-slate-200">
+<article
+  class=`workshop-card w-full flex flex-col bg-slate-200 ${index > 3 ? 'hidden' : ''}`
+>
   <figure>
-    <img class="w-full h-80 object-fill" src={Astro.props.workshop_img} />
+    <img
+      class='w-full h-80 object-fill'
+      src={`https://aneimeraupc.somee.com${rutaImagen}`}
+    />
   </figure>
-  <div class="flex flex-col p-5">
-    <div class="flex flex-col gap-3">
-      <div class="flex flex-row justify-between items-center">
-        <h2 class="font-medium">{Astro.props.title}</h2>
-        <p class="text-sm">
-          <span class="font-medium mr-1.5" style="font-size: 17px;">Fecha:</span
-          >{Astro.props.date}
+  <div class='flex flex-col p-5 h-full'>
+    <div class='flex flex-col gap-3 h-full'>
+      <div class='flex flex-row justify-between items-center gap-5'>
+        <h2 class='font-medium workshop-title flex-1 cursor-default' data-title="{titulo}" title=`${titulo}` >
+          {titulo}
+        </h2>
+        <p class='text-sm cursor-default'>
+          <span class='font-medium mr-1.5' style='font-size: 17px;'>Fecha:</span
+          >{formattedDate}
         </p>
       </div>
       <p
-        class="py-1 tracking-wide leading-relaxed text-sm md:text-base text-slate-900"
-        style="line-height: 1.65;"
+        class='description cursor-default py-1 tracking-wide leading-relaxed text-sm md:text-base text-slate-900'
+        style='line-height: 1.65;'
       >
-        {Astro.props.description}
+        {descripcion}
       </p>
-      <div class="flex flex-row justify-between items-center">
-        <div class="flex flex-row gap-3">
+      <div class='flex-grow'></div>
+      <div class='flex flex-row justify-between items-center'>
+        <div class='flex flex-row gap-3'>
           <img
-            class="rounded-full w-[3.5rem] h-[3.5rem] border-[1px]"
-            src={Astro.props.profile_img}
+            class='rounded-full w-[3.5rem] h-[3.5rem] border-[1px]'
+            src={`https://aneimeraupc.somee.com${expositorRutaImagen}`}
           />
-          <div class="flex flex-col justify-center gap-1">
-            <h3 class="font-normal">{Astro.props.name}</h3>
-            <span class="text-[13px] tracking-wide text-slate-500"
-              >{Astro.props.status}</span
+          <div class='flex flex-col justify-center gap-1'>
+            <h3 class='font-normal'>{expositorNombre}</h3>
+            <span class='text-[13px] tracking-wide text-slate-500'
+              >{expositorRol}</span
             >
           </div>
         </div>
         <a
-          href={Astro.props.form_link}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`Abrir formulario del taller ${Astro.props.title}`}
-          class="cursor-pointer"
+          href={enlace}
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label={`Abrir formulario del taller ${titulo}`}
+          class='cursor-pointer'
         >
-          <ExternalIcon class="icon" />
+          <ExternalIcon class='icon' />
         </a>
       </div>
     </div>
   </div>
 </article>
 
+<!-- <script is='inline'>
+  document.addEventListener("astro:page-load", () => {
+    const titles = document.querySelectorAll(".workshop-title");
+    titles.forEach((title) => {
+      const text = title.getAttribute("data-title");
+      if (text.length > 135) {
+        title.setAttribute("data-title", text.substring(0, 135) + "...");
+        title.textContent = text.substring(0, 135) + "...";
+      }
+    });
+  });
+</script> -->
+
 <style>
   .icon:hover {
     color: red;
+  }
+
+  .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .workshop-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 </style>

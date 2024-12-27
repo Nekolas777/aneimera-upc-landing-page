@@ -1,12 +1,19 @@
 ---
 import CalendarIcon from "../assets/CalendarIcon.astro";
 
-const { visit_img, title, visit_date, description, link_url } = Astro.props;
+const { title, description, visitDate, visitHour, linkUrl, rutaImagen } = Astro.props;
+
+const formattedDate = new Date(visitDate).toLocaleDateString('es-ES', {
+  day: '2-digit',
+  month: '2-digit',
+  year: '2-digit',
+});
+
 ---
 
 <article class="w-full flex flex-col bg-slate-200">
   <div>
-    <img class="w-full h-[22rem] object-cover sm:object-fill" src={visit_img} />
+    <img class="w-full h-[22rem] object-cover sm:object-fill" src={`https://aneimeraupc.somee.com${rutaImagen}`} />
   </div>
   <div class="flex flex-col py-6 px-5">
     <div class="flex flex-col gap-5">
@@ -14,7 +21,7 @@ const { visit_img, title, visit_date, description, link_url } = Astro.props;
         <h2 class="font-medium">{title}</h2>
         <p class="text-sm">
           <span class="font-medium mr-1.5" style="font-size: 17px;">Fecha:</span
-          >{visit_date}
+          >{formattedDate}
         </p>
       </div>
       <p
@@ -27,7 +34,7 @@ const { visit_img, title, visit_date, description, link_url } = Astro.props;
       <div class="flex flex-row justify-between items-center">
         <div class="flex flex-row gap-3">
           <a
-            href={link_url}
+            href={linkUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Ir a la pagina de Facebook de Aneimera UPC"
@@ -40,7 +47,7 @@ const { visit_img, title, visit_date, description, link_url } = Astro.props;
         <div
           class="calendar-btn cursor-pointer bg-[#3C3737] p-2 rounded-full
                     hover:bg-black transition-all duration-200 ease-in"
-          data-visit-date={visit_date}
+          data-visit-date={formattedDate}
           data-visit-title={title}
         >
           <CalendarIcon class="icon" />
