@@ -1,14 +1,26 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import Workshops from "./eventos/Workshops.astro";
 import Ponencias from "./eventos/Ponencias.astro";
 import Visits from "./eventos/Visits.astro";
 import VisitasPasadas from "./eventos/VisitasPasadas.astro";
+import { Environment } from "../environment/environment";
+import type { TechnicalVisit } from "../interfaces/technicalVisit";
+import { filterByCurrentVisits, filterByPastVisits } from "../helpers/index";
+
+const response = await fetch(`${Environment.API_URL}/VisitaTecnica/get_all`);
+const data = await response.json();
+
+const visitas: TechnicalVisit[] = data.visitaTecnicas;
+
+const currentsVisits = filterByCurrentVisits(visitas);
+
+const pastVisits = filterByPastVisits(visitas);
 ---
 
-<Layout title="Eventos">    
-    <Ponencias />
-    <Workshops />
-    <Visits />
-    <VisitasPasadas />
+<Layout title='Eventos'>
+  <Ponencias />
+  <Workshops />
+  <Visits visits={currentsVisits} />
+  <VisitasPasadas pastVisits={pastVisits} />
 </Layout>
