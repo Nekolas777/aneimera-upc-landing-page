@@ -14,9 +14,10 @@ const { visits } = Astro.props as { visits: TechnicalVisit[] };
     {
       visits.length > 0 ? (
         <div class='mt-10 grid grid-cols-1 md:grid-cols-2 grid-rows-auto gap-12'>
-          {visits.map((visit: TechnicalVisit) => (
+          {visits.map((visit: TechnicalVisit, index) => (
             <VisitCard
               key={visit.visitaTecninaId}
+              index={index}
               title={visit.titulo}
               description={visit.descripcion}
               visitDate={visit.fecha}
@@ -30,5 +31,34 @@ const { visits } = Astro.props as { visits: TechnicalVisit[] };
         <NotFound />
       )
     }
+    <div
+      onclick='handleDisplayMoreVisits()'
+      class='more-visits w-full underline text-center mt-16 text-xl lg:text-3xl text-slate-900/80 cursor-pointer'
+    >
+      <p>Ver más talleres</p>
+    </div>
   </div>
 </section>
+
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    const visits = document.querySelectorAll(".visit-card");
+    if (visits.length <= 4) {
+      document.querySelector(".more-visits").style.display = "none";
+    }
+  });
+
+  function handleDisplayMoreVisits() {
+    const visits = document.querySelectorAll(".visit-card.hidden");
+    let visibleVisits = 4;
+
+    for (let i = 0; i < 4 && i < visits.length; i++) {
+      visits[i].classList.remove("hidden");
+    }
+    visibleVisits += 4;
+    if (visibleVisits >= visits.length) {
+      document.querySelector(".more-visits").style.display = "none";
+    }
+  }
+</script>
+

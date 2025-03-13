@@ -55,15 +55,15 @@ const workshops: Workshop[] = data.talleres;
   });
 
   function handleDisplayMoreWorkshops() {
-      const workshops = document.querySelectorAll(".workshop-card.hidden");
-      let visibleWorkshops = 4;
+    const workshops = document.querySelectorAll(".workshop-card.hidden");
+    let visibleWorkshops = 4;
 
-      for (let i = 0; i < 4 && i < workshops.length; i++) {
-        workshops[i].classList.remove("hidden");
-      }
-      visibleWorkshops += 4;
-      if (visibleWorkshops >= workshops.length) {
-        document.querySelector(".more-workshops").style.display = "none";
-      }
+    for (let i = 0; i < 4 && i < workshops.length; i++) {
+      workshops[i].classList.remove("hidden");
     }
+    visibleWorkshops += 4;
+    if (visibleWorkshops >= workshops.length) {
+      document.querySelector(".more-workshops").style.display = "none";
+    }
+  }
 </script>
