@@ -1,6 +1,6 @@
 ---
 import Footer from "../components/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import Header from "../components/Header.astro";
 interface Props {
   title: string;
@@ -38,7 +38,7 @@ const { title } = Astro.props;
       href='../../src/assets/Imagenes/heroBackground.webp'
       as='image'
     />
-    <ViewTransitions fallback='none' />
+    <ClientRouter fallback='none' />
   </head>
 
   <body class='overflow-x-hidden min-h-screen'>

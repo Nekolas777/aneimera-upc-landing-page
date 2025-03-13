@@ -4,7 +4,7 @@ import WorkshopCard from "../../components/WorkshopCard.astro";
 import { Environment } from "../../environment/environment";
 import type { Workshop } from "../../interfaces/workshop";
 
-const response = await fetch(`${Environment.API_URL}/Taller/get_all`);
+const response = await fetch(`${Environment.API_URL}/api/Taller/get_all`);
 const data = await response.json();
 const workshops: Workshop[] = data.talleres;
 ---

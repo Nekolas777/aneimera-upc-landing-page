@@ -1,5 +1,6 @@
 ---
 import ExternalIcon from "../assets/LinkExternal.astro";
+import { Environment } from "../environment/environment";
 
 const {
   index,
@@ -28,13 +29,13 @@ const formattedDate = new Date(fecha).toLocaleDateString("es-ES", {
   <figure>
     <img
       class='w-full h-80 object-fill'
-      src={`https://aneimeraupc.somee.com${rutaImagen}`}
+      src={`${Environment.API_URL}${rutaImagen}`}
     />
   </figure>
   <div class='flex flex-col p-5 h-full'>
     <div class='flex flex-col gap-3 h-full'>
       <div class='flex flex-row justify-between items-center gap-5'>
-        <h2 class='font-medium workshop-title flex-1 cursor-default' data-title="{titulo}" title=`${titulo}` >
+        <h2 class='font-medium text-xl workshop-title flex-1 cursor-default' data-title="{titulo}" title=`${titulo}` >
           {titulo}
         </h2>
         <p class='text-sm cursor-default'>
@@ -43,7 +44,7 @@ const formattedDate = new Date(fecha).toLocaleDateString("es-ES", {
         </p>
       </div>
       <p
-        class='description cursor-default py-1 tracking-wide leading-relaxed text-sm md:text-base text-slate-900'
+        class='description cursor-default py-1 tracking-wide leading-relaxed text-sm md:text-base text-slate-900/90'
         style='line-height: 1.65;'
       >
         {descripcion}
@@ -53,7 +54,7 @@ const formattedDate = new Date(fecha).toLocaleDateString("es-ES", {
         <div class='flex flex-row gap-3'>
           <img
             class='rounded-full w-[3.5rem] h-[3.5rem] border-[1px]'
-            src={`https://aneimeraupc.somee.com${expositorRutaImagen}`}
+            src={`${Environment.API_URL}${expositorRutaImagen}`}
           />
           <div class='flex flex-col justify-center gap-1'>
             <h3 class='font-normal'>{expositorNombre}</h3>

@@ -4,7 +4,7 @@ import PonenciaDos from "../../assets/Imagenes/ponencia11.webp";
 import type { Speech } from "../../interfaces/speech";
 import { Environment } from "../../environment/environment";
 
-const response = await fetch(`${Environment.API_URL}/Ponencia/get_all`);
+const response = await fetch(`${Environment.API_URL}/api/Ponencia/get_all`);
 const data = await response.json();
 const ponencias: Speech[] = data.ponencias;
 
@@ -61,7 +61,7 @@ const closestPonencia: Speech = ponencias.reduce((closest, ponencia) => {
       </div>
       <div class='w-full h-full flex items-center'>
         <img
-          src={`https://aneimeraupc.somee.com${closestPonencia.rutaImagen}`}
+          src={`${Environment.API_URL}${closestPonencia.rutaImagen}`}
           alt='ponencia-uno-image'
           class='object-contain h-96 w-full'
         />

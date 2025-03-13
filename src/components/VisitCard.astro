@@ -1,5 +1,6 @@
 ---
 import CalendarIcon from "../assets/CalendarIcon.astro";
+import { Environment } from "../environment/environment";
 
 const { title, description, visitDate, visitHour, linkUrl, rutaImagen } = Astro.props;
 
@@ -13,7 +14,7 @@ const formattedDate = new Date(visitDate).toLocaleDateString('es-ES', {
 
 <article class="w-full flex flex-col bg-slate-200">
   <div>
-    <img class="w-full h-[22rem] object-cover sm:object-fill" src={`https://aneimeraupc.somee.com${rutaImagen}`} />
+    <img class="w-full h-[22rem] object-cover sm:object-fill" src={`${Environment.API_URL}${rutaImagen}`} />
   </div>
   <div class="flex flex-col py-6 px-5">
     <div class="flex flex-col gap-5">

@@ -8,7 +8,7 @@ import { Environment } from "../environment/environment";
 import type { TechnicalVisit } from "../interfaces/technicalVisit";
 import { filterByCurrentVisits, filterByPastVisits } from "../helpers/index";
 
-const response = await fetch(`${Environment.API_URL}/VisitaTecnica/get_all`);
+const response = await fetch(`${Environment.API_URL}/api/VisitaTecnica/get_all`);
 const data = await response.json();
 
 const visitas: TechnicalVisit[] = data.visitaTecnicas;
