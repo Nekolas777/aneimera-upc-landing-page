@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import ServerError from "../assets/Imagenes/server-error.png";
+---
+
+<Layout title='Error del servidor'>
+  <section class='h-screen w-full flex items-center justify-center'>
+    <div
+      class='mx-auto max-w-[550px] p-6
+      flex flex-col items-center gap-6 text-center bg-white rounde'
+    >
+      <Image
+        src={ServerError}
+        alt='Ilustración de error del servidor'
+        class='size-80 w-full'
+      />
+      <h1 class='mt-2 text-2xl sm:text-3xl font-bold text-red-700'>
+        ¡Oops! Algo salió mal
+      </h1>
+      <p class='text-gray-700 leading-relaxed'>
+        Parece que nuestro servidor tuvo un problema al procesar tu solicitud.
+        Por favor, intenta nuevamente más tarde o contacta con nuestro equipo de
+        soporte si el problema persiste.
+      </p>
+      <div class='flex flex-col sm:flex-row gap-3'>
+        <a
+          href='/'
+          class='py-3 px-5 bg-blue-700 text-white rounded-lg font-medium hover:bg-blue-800 transition-colors'
+        >
+          Ir a la página principal
+        </a>
+        <a
+          href='mailto:aneimera.upc@gmail.com'
+          rel='noopener noreferrer'
+          href='/contacto'
+          class='py-3 px-5 bg-gray-300 text-gray-800 rounded-lg font-medium hover:bg-gray-400/80 transition-colors'
+        >
+          Contactar soporte
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
