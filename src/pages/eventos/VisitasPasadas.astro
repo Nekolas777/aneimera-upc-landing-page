@@ -1,5 +1,4 @@
 ---
-import NotFound from "../../components/NotFound.astro";
 import PastVisitCard from "../../components/PastVisitCard.astro";
 import type { TechnicalVisit } from "../../interfaces/technicalVisit";
 
@@ -8,9 +7,9 @@ const { pastVisits } = Astro.props as { pastVisits: TechnicalVisit[] };
 
 <section>
   <div class='section-container pb-16 md:pb-20'>
-    <h2 class='font-semibold uppercase text-black'>
-        Visitas técnicas pasadas:
-      </h2>
+    <h2 class='font-semibold uppercase text-black text-center xs:text-left'>
+      Visitas técnicas pasadas:
+    </h2>
     {
       pastVisits.length > 0 ? (
         <div class='mt-10 grid grid-cols-1 md:grid-cols-2 grid-rows-auto gap-12'>

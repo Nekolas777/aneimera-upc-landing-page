@@ -19,12 +19,19 @@ const formattedDate = new Date(visitDate).toLocaleDateString("es-ES", {
     <img
       class='w-full h-[22rem] object-cover sm:object-fill'
       src={`${Environment.API_URL}${rutaImagen}`}
+      alt={`${title} image`}
+      onerror="this.src='/aneimera-upc.jpg';"
     />
   </div>
   <div class='flex flex-col py-6 px-5'>
     <div class='flex flex-col gap-5'>
       <div class='flex flex-row justify-between items-center'>
-        <h2 class='font-medium'>{title}</h2>
+        <h2
+          class='font-medium text-lg sm:text-xl truncate flex-1 cursor-default'
+          title={title}
+        >
+          {title}
+        </h2>
         <p class='text-sm'>
           <span class='font-medium mr-1.5' style='font-size: 17px;'>Fecha:</span
           >{formattedDate}

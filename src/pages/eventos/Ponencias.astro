@@ -43,7 +43,7 @@ const closestPonencia: Speech = ponencias.reduce((closest, ponencia) => {
           {closestPonencia.titulo}
         </h2>
         <p
-          class='tracking-wide text-wrap text-normal md:text-lg'
+          class='tracking-wide text-wrap text-normal md:text-lg line-clamp-5'
           style='line-height: 2'
         >
           {closestPonencia.descripcion}
@@ -62,7 +62,8 @@ const closestPonencia: Speech = ponencias.reduce((closest, ponencia) => {
       <div class='w-full h-full flex items-center'>
         <img
           src={`${Environment.API_URL}${closestPonencia.rutaImagen}`}
-          alt='ponencia-uno-image'
+          alt={`${closestPonencia.titulo} image`}
+          onerror="this.src='/aneimera-upc.jpg';"
           class='object-contain h-96 w-full'
         />
       </div>
@@ -73,7 +74,7 @@ const closestPonencia: Speech = ponencias.reduce((closest, ponencia) => {
       <div class='order-2 md:order-1 w-full h-full flex items-center'>
         <Image
           src={PonenciaDos}
-          alt='ponencia-uno-image'
+          alt={`${closestPonencia.titulo} image`}
           class='object-cover h-96'
         />
       </div>
@@ -83,7 +84,7 @@ const closestPonencia: Speech = ponencias.reduce((closest, ponencia) => {
       >
         <h2 class='uppercase font-semibold tracking-wide'>Misión y Objetivo</h2>
         <p
-          class='tracking-wide text-pretty leading-[1.9] text-normal md:text-lg'
+          class='tracking-wide text-pretty leading-[1.9] text-normal md:text-lg line-clamp-5'
           style='line-height: 2'
         >
           {closestPonencia.misionObjetivo}
