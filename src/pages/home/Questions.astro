@@ -156,20 +156,21 @@ import PlusIcon from "../../assets/PlusIcon.astro";
     }
   </style>
 
-  <script>
+  <script is:inline>
     document.addEventListener("astro:page-load", function () {
       const imagenes = document.querySelectorAll(".plus");
 
       imagenes.forEach((imagen) => {
         imagen.addEventListener("click", () => {
+          console.log("click");
           const accordionItem = imagen.closest(".accordion-item");
           const accordionContent =
-            accordionItem?.querySelector(".accordion-content")!;
+            accordionItem.querySelector(".accordion-content");
           accordionContent.classList.toggle("open");
           if (accordionContent.classList.contains("open")) {
-            (imagen as HTMLImageElement).src = "Imagenes/minus-solid.svg";
+            (imagen).src = "Imagenes/minus-solid.svg";
           } else {
-            (imagen as HTMLImageElement).src = "Imagenes/plus-solid.svg";
+            (imagen).src = "Imagenes/plus-solid.svg";
           }
         });
       });
