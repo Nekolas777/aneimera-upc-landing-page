@@ -110,70 +110,69 @@ import PlusIcon from "../../assets/PlusIcon.astro";
       </div>
     </div>
   </div>
+</section>
 
-  <style>
+<style>
+  .accordion {
+    width: 60%;
+  }
+  .accordion-item {
+    margin-bottom: 1rem;
+  }
+  .accordion-header {
+    background: #c42626;
+    color: #fefefe;
+    padding: 15px 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .accordion-header a {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .accordion-header svg {
+    height: 30px;
+    cursor: pointer;
+  }
+  .accordion-content {
+    margin-top: 10px;
+    overflow: hidden;
+    transition:
+      max-height 0.5s ease,
+      opacity 0.5s ease;
+    max-height: 0;
+    opacity: 0;
+  }
+  .open {
+    opacity: 1;
+    max-height: 500px;
+  }
+
+  @media screen and (max-width: 1025px) {
     .accordion {
-      width: 60%;
+      width: 100%;
     }
-    .accordion-item {
-      margin-bottom: 1rem;
-    }
-    .accordion-header {
-      background: #c42626;
-      color: #fefefe;
-      padding: 15px 30px;
-      border-radius: 10px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    .accordion-header a {
-      margin-top: auto;
-      margin-bottom: auto;
-    }
-    .accordion-header svg {
-      height: 30px;
-      cursor: pointer;
-    }
-    .accordion-content {
-      margin-top: 10px;
-      overflow: hidden;
-      transition:
-        max-height 0.5s ease,
-        opacity 0.5s ease;
-      max-height: 0;
-      opacity: 0;
-    }
-    .open {
-      opacity: 1;
-      max-height: 500px;
-    }
+  }
+</style>
 
-    @media screen and (max-width: 1025px) {
-      .accordion {
-        width: 100%;
-      }
-    }
-  </style>
+<script is:inline>
+  document.addEventListener("astro:page-load", function () {
+    const imagenes = document.querySelectorAll(".plus");
 
-  <script is:inline>
-    document.addEventListener("astro:page-load", function () {
-      const imagenes = document.querySelectorAll(".plus");
-
-      imagenes.forEach((imagen) => {
-        imagen.addEventListener("click", () => {
-          console.log("click");
-          const accordionItem = imagen.closest(".accordion-item");
-          const accordionContent =
-            accordionItem.querySelector(".accordion-content");
-          accordionContent.classList.toggle("open");
-          if (accordionContent.classList.contains("open")) {
-            (imagen).src = "Imagenes/minus-solid.svg";
-          } else {
-            (imagen).src = "Imagenes/plus-solid.svg";
-          }
-        });
+    imagenes.forEach((imagen) => {
+      imagen.addEventListener("click", () => {
+        const accordionItem = imagen.closest(".accordion-item");
+        const accordionContent =
+          accordionItem?.querySelector(".accordion-content");
+        accordionContent.classList.toggle("open");
+        if (accordionContent.classList.contains("open")) {
+          (imagen).src = "Imagenes/minus-solid.svg";
+        } else {
+          (imagen).src = "Imagenes/plus-solid.svg";
+        }
       });
     });
-  </script>
-</section>
+  });
+</script>
