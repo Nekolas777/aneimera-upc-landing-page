@@ -23,8 +23,8 @@ const formattedDate = new Date(visitDate).toLocaleDateString("es-ES", {
       onerror="this.src='/aneimera-upc.jpg';"
     />
   </div>
-  <div class='flex flex-col py-6 px-5'>
-    <div class='flex flex-col gap-5'>
+  <div class='flex flex-col py-6 px-5 h-full'>
+    <div class='flex flex-col gap-3 h-full'>
       <div class='flex flex-row justify-between items-center'>
         <h2
           class='font-medium text-lg sm:text-xl truncate flex-1 cursor-default'
@@ -44,6 +44,7 @@ const formattedDate = new Date(visitDate).toLocaleDateString("es-ES", {
       >
         {description}
       </p>
+      <div class='flex-grow'></div>
       <div class='flex flex-row justify-between items-center'>
         <div class='flex flex-row gap-3'>
           <a
@@ -51,7 +52,7 @@ const formattedDate = new Date(visitDate).toLocaleDateString("es-ES", {
             target='_blank'
             rel='noopener noreferrer'
             aria-label='Ir a la pagina de Facebook de Aneimera UPC'
-            class='px-4 py-2 bg-red-700 text-white text-lg mt-2 self-center sm:self-start
+            class='px-4 py-2 bg-red-700 text-white text-lg mt-2 self-center
                     hover:bg-red-800 transition-all duration-200 ease'
           >
             Más información
@@ -102,7 +103,7 @@ const formattedDate = new Date(visitDate).toLocaleDateString("es-ES", {
   @media (min-width: 1024px) {
     .description {
       display: -webkit-box;
-      -webkit-line-clamp: 5;
+      -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
