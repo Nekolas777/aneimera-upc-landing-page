@@ -100,13 +100,11 @@ const formattedDate = new Date(visitDate).toLocaleDateString("es-ES", {
     scale: 1.2;
   }
 
-  @media (min-width: 1024px) {
-    .description {
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+  .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 </style>
